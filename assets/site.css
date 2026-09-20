@@ -419,73 +419,57 @@ footer{padding:2.2rem var(--pad-x) 2.6rem;background:var(--sky)}
 .foot-dark .foot-row{border-top-color:rgba(255,255,255,.14);color:rgba(255,255,255,.45)}
 
 /* ================================================================
-   RESUME PAGE — dark editorial two-column (about.html)
+   RESUME PAGE — light editorial two-column (about.html, matches home)
 ================================================================ */
-.pnav--dark{background:var(--ink);border-bottom-color:rgba(255,255,255,.14);color:#fff}
-.pnav--dark .pnav__mid{color:rgba(255,255,255,.4)}
-.pnav--dark .pnav__back{color:rgba(255,255,255,.55)}
-.pnav--dark .pnav__back:hover{color:#fff;border-bottom-color:#fff}
-.pnav--dark .burger span{background:#fff}
-body.menu-open .burger span{background:var(--ink)}
-
-.resume{background:var(--ink);color:#fff;
+.resume{background:var(--sky);color:var(--ink);
   display:grid;grid-template-columns:minmax(230px,29%) minmax(0,1fr);
   gap:clamp(1.6rem,4vw,3.4rem);
   padding:clamp(1.2rem,3vw,2rem) var(--pad-x) clamp(3rem,8vh,5.5rem);
   align-items:start}
 @media(max-width:900px){.resume{grid-template-columns:1fr;gap:2rem}}
-.resume__photo{border-radius:14px;overflow:hidden;background:#161618;
+.resume__photo{border-radius:14px;overflow:hidden;background:rgba(255,255,255,.5);
+  box-shadow:0 24px 60px -30px rgba(11,11,12,.28);
   position:sticky;top:clamp(1rem,3vw,2rem)}
 @media(max-width:900px){.resume__photo{position:static}}
 .resume__photo img{width:100%;height:auto;display:block}
 .resume__id{padding:1.1rem .2rem 0}
 .resume__id h2{
   font-family:"Instrument Serif",Georgia,"Noto Serif SC","Source Han Serif SC",serif;
-  font-weight:400;font-size:1.7rem;line-height:1.25;margin:0;color:#fff}
+  font-weight:400;font-size:1.7rem;line-height:1.25;margin:0;color:var(--ink)}
 .resume__id .role{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;
-  color:rgba(255,255,255,.4);margin:.45rem 0 0}
-.motto-dark{
+  color:var(--ink-faint);margin:.45rem 0 0}
+.motto-r{
   font-family:"Instrument Serif",Georgia,"Noto Serif SC",serif;font-style:italic;
-  font-size:1.15rem;color:rgba(255,255,255,.85);margin:1.4rem 0 0;line-height:1.5}
-.motto-dark small{display:block;font-family:"Instrument Sans",sans-serif;font-style:normal;
-  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-top:.5rem}
+  font-size:1.15rem;color:var(--ink);margin:1.4rem 0 0;line-height:1.5}
+.motto-r small{display:block;font-family:"Instrument Sans",sans-serif;font-style:normal;
+  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-faint);margin-top:.5rem}
 
 .rblock{margin-bottom:clamp(2.4rem,5vh,3.6rem)}
 .rblock:last-child{margin-bottom:0}
 .rhead{display:flex;align-items:baseline;gap:.8rem;padding-bottom:.7rem;
-  border-bottom:1px solid rgba(255,255,255,.14);margin-bottom:1.3rem}
-.rhead .rlabel{font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:#fff}
-.rhead .rzh{font-size:.74rem;color:rgba(255,255,255,.4);letter-spacing:.12em}
+  border-bottom:1px solid var(--line);margin-bottom:1.3rem}
+.rhead .rlabel{font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:var(--ink)}
+.rhead .rzh{font-size:.74rem;color:var(--ink-faint);letter-spacing:.12em}
 .rhead .rno{margin-left:auto;font-family:"Instrument Serif",Georgia,serif;font-style:italic;
-  font-size:.95rem;color:rgba(255,255,255,.32)}
-.rblock>p{margin:0 0 .9rem;color:rgba(255,255,255,.66);font-size:.95rem;line-height:1.9;max-width:68ch}
+  font-size:.95rem;color:var(--ink-faint)}
+.rblock>p{margin:0 0 .9rem;color:var(--ink-soft);font-size:.95rem;line-height:1.9;max-width:68ch}
 .rblock>p:last-child{margin-bottom:0}
 
 .rxp{display:grid;grid-template-columns:clamp(118px,15%,160px) minmax(0,1fr);
-  gap:1.2rem;padding:1.3rem 0;border-top:1px solid rgba(255,255,255,.08)}
+  gap:1.2rem;padding:1.3rem 0;border-top:1px solid var(--line)}
 .rxp:first-of-type{border-top:0;padding-top:.2rem}
 @media(max-width:600px){.rxp{grid-template-columns:1fr;gap:.6rem}
   .rxp__time{white-space:normal}}
-.rxp__time{font-size:.78rem;letter-spacing:.05em;color:rgba(255,255,255,.42)}
+.rxp__time{font-size:.78rem;letter-spacing:.05em;color:var(--ink-faint)}
 .rxp__org{
   font-family:"Instrument Serif",Georgia,"Noto Serif SC","Source Han Serif SC",serif;
-  font-weight:400;font-size:1.18rem;line-height:1.35;margin:0 0 .55rem;color:#fff}
-.rbadge{display:inline-block;background:rgba(255,255,255,.09);color:rgba(255,255,255,.78);
+  font-weight:400;font-size:1.18rem;line-height:1.35;margin:0 0 .55rem;color:var(--ink)}
+.rbadge{display:inline-block;background:rgba(11,11,12,.06);color:var(--ink-soft);
   border-radius:999px;padding:.3rem .85rem;font-size:.7rem;letter-spacing:.14em;margin:0 0 .75rem}
-.rxp__desc{margin:0;color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.85}
+.rxp__desc{margin:0;color:var(--ink-soft);font-size:.9rem;line-height:1.85}
 
 .rskill{display:grid;grid-template-columns:clamp(110px,14%,150px) minmax(0,1fr);gap:1.2rem;
-  padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem;color:rgba(255,255,255,.68)}
+  padding:.75rem 0;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--ink-soft)}
 .rskill:last-child{border-bottom:0}
-.rskill .k{color:rgba(255,255,255,.36);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding-top:.2em}
+.rskill .k{color:var(--ink-faint);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding-top:.2em}
 @media(max-width:600px){.rskill{grid-template-columns:1fr;gap:.3rem}}
-
-.resume__cta{margin-top:1.6rem}
-.resume__cta .btn-play{background:#fff;color:var(--ink)}
-.resume__cta .btn-play:hover{background:rgba(255,255,255,.85);box-shadow:0 10px 24px -12px rgba(255,255,255,.4)}
-
-.pager--dark{border-top-color:rgba(255,255,255,.12);background:rgba(255,255,255,.12)}
-.pager--dark .pager__item{background:var(--ink)}
-.pager--dark .pager__item:hover{background:#18181b}
-.pager--dark .pager__k{color:rgba(255,255,255,.4)}
-.pager--dark .pager__t{color:#fff}
