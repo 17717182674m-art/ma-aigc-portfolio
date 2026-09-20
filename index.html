@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ma Zhongyu — AIGC Visual Designer · Personal Portfolio</title>
+<meta name="description" content="马仲钰 — AIGC 视觉设计师个人作品集。海报 / Banner / IP 形象 / 字体 / 插画 / AI 剧集设定 / TVC 广告。The worlds you imagine are waiting to be seen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=UnifrakturCook:wght@700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ================================================================
+   TOKENS
+================================================================ */
+:root{
+  --ink:#0b0b0c;
+  --ink-soft:rgba(11,11,12,.62);
+  --ink-faint:rgba(11,11,12,.38);
+  --line:rgba(11,11,12,.14);
+  --sky:#dbe6ee;
+  --paper:#eef3f7;
+  --nav-gap:clamp(1.1rem,2.2vw,2.15rem);
+  --pad-x:clamp(1.25rem,4vw,3.6rem);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --ease-in-out:cubic-bezier(.76,0,.24,1);
+  --poster:url("https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260908_122011_59c97465-4d23-4fdc-ac40-f6832f573e28.png&w=1920&q=85");
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:var(--sky);
+  font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.65;overflow-x:hidden;
+}
+body.menu-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+::selection{background:var(--ink);color:#fff}
+
+/* ================================================================
+   HERO MEDIA
+================================================================ */
+.hero{position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;background:var(--sky)}
+.hero__media{position:absolute;inset:0;z-index:0;
+  transform:scale(1.08);filter:blur(14px);opacity:0;
+  animation:mediaIn 1.9s var(--ease) .1s forwards}
+@keyframes mediaIn{to{transform:scale(1);filter:blur(0);opacity:1}}
+.hero__media::before{ /* blurred poster backdrop — mobile portrait only */
+  content:"";position:absolute;inset:-8%;z-index:0;display:none;
+  background:var(--poster) center 22%/cover no-repeat;
+  filter:blur(30px) saturate(104%);transform:scale(1.05)}
+.hero__media::after{ /* type overlay wash */
+  content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:
+    linear-gradient(to bottom,rgba(226,236,243,.55) 0%,rgba(226,236,243,.18) 34%,rgba(226,236,243,0) 58%),
+    radial-gradient(120% 70% at 50% 0%,rgba(255,255,255,.35),rgba(255,255,255,0) 60%)}
+.hero__media img,
+.hero__media video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 62%;display:block}
+.hero__media img{z-index:1}
+.hero__media video{z-index:2;opacity:0;transition:opacity 1.2s ease}
+.hero__media video.is-ready{opacity:1}
+
+/* ================================================================
+   NAV — in normal flow, z-index 60 (must sit ABOVE .menu, 50)
+================================================================ */
+.nav{
+  position:relative;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:clamp(1.1rem,2.4vw,1.9rem) var(--pad-x)}
+.logo{
+  font-family:"UnifrakturCook",serif;font-weight:700;
+  font-size:clamp(1.5rem,2.4vw,1.9rem);line-height:1;letter-spacing:.01em;white-space:nowrap}
+.nav__links{
+  display:flex;gap:var(--nav-gap);list-style:none;margin:0;padding:0;
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.nav__links a{
+  font-size:clamp(.95rem,1.05vw,1.05rem);letter-spacing:.005em;
+  padding:.15rem 0;display:inline-block;position:relative}
+.nav__links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:currentColor;
+  transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav__right{display:flex;align-items:center;gap:.6rem}
+.btn-play{
+  display:inline-block;background:var(--ink);color:#fff;border-radius:6px;
+  padding:.72rem 1.15rem;font-size:.95rem;line-height:1;white-space:nowrap;
+  transition:transform .45s var(--ease),background-color .45s var(--ease),box-shadow .45s var(--ease)}
+.btn-play:hover{transform:translateY(-2px);background:#1e1e21;box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.btn-play:active{transform:translateY(0)}
+
+/* hamburger */
+.burger{
+  display:none;width:44px;height:44px;margin-right:-8px;
+  position:relative;z-index:60;border-radius:8px;flex:0 0 auto}
+.burger span{
+  position:absolute;left:11px;height:1.6px;background:var(--ink);border-radius:2px;
+  transition:transform .55s var(--ease-in-out),opacity .3s ease,width .55s var(--ease-in-out)}
+.burger span:nth-child(1){top:17px;width:22px}
+.burger span:nth-child(2){top:22px;width:15px}
+.burger span:nth-child(3){top:27px;width:22px}
+.burger.is-active span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.burger.is-active span:nth-child(2){opacity:0;transform:translateX(10px)}
+.burger.is-active span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+/* ================================================================
+   HERO INNER — headline TOP-ANCHORED (no vertical centering)
+================================================================ */
+.hero__inner{
+  position:relative;z-index:10;flex:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  padding:clamp(2.2rem,8vh,5.5rem) var(--pad-x) 0;
+  pointer-events:none}
+.hero__eyebrow{
+  font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-soft);
+  white-space:nowrap;margin:0 0 1.6rem}
+.headline{
+  margin:0;
+  font-family:"Instrument Serif",Georgia,"Noto Serif SC","Source Han Serif SC","Songti SC",STSong,SimSun,serif;
+  font-weight:400;
+  font-size:clamp(2.9rem,7vw,6.2rem);
+  line-height:1.08;letter-spacing:.02em;
+  text-align:center}
+.line{
+  display:block;overflow:hidden;white-space:nowrap;
+  padding-bottom:.06em;margin-bottom:-.06em}
+.line>span{
+  display:block;transform:translateY(110%);opacity:0;
+  animation:lineUp 1.25s var(--ease) forwards}
+.line:nth-child(1)>span{animation-delay:.55s}
+@keyframes lineUp{to{transform:translateY(0);opacity:1}}
+.hero__name{
+  margin:1.3rem 0 0;font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ink);text-align:center;line-height:2}
+.hero__name span{color:var(--ink-faint);font-size:.68rem;letter-spacing:.2em}
+
+/* zane-style portal cards */
+.portal{
+  pointer-events:auto;
+  margin-top:clamp(2.2rem,7vh,4rem);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;
+  width:min(1080px,100%)}
+.portal__card{
+  display:flex;flex-direction:column;
+  background:rgba(255,255,255,.42);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:10px;padding:1.15rem 1.2rem 1rem;
+  transition:transform .45s var(--ease),background-color .45s var(--ease),box-shadow .45s var(--ease)}
+.portal__card:hover{transform:translateY(-4px);background:rgba(255,255,255,.62);box-shadow:0 18px 40px -18px rgba(0,0,0,.35)}
+.p-en{font-family:"Instrument Serif",Georgia,serif;font-size:1.3rem;line-height:1.15}
+.p-zh{font-size:.8rem;letter-spacing:.24em;color:var(--ink);margin-top:.3rem}
+.p-sub{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-top:.55rem}
+
+/* nav stagger */
+.rise{opacity:0;transform:translateY(-14px);animation:rise .95s var(--ease) forwards}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+.d1{animation-delay:.18s}.d2{animation-delay:.26s}.d3{animation-delay:.32s}
+.d4{animation-delay:.38s}.d5{animation-delay:.44s}.d6{animation-delay:.52s}
+
+/* ================================================================
+   SHARED SECTION SCAFFOLD — zane-style bilingual editorial numbering
+================================================================ */
+.section{padding:clamp(4.5rem,10vh,8.5rem) var(--pad-x);background:var(--sky)}
+.section--alt{background:var(--paper)}
+.wrap{max-width:1240px;margin:0 auto}
+.sec-head{display:flex;align-items:baseline;gap:1.1rem;border-top:1px solid var(--line);padding-top:1.1rem;margin-bottom:.4rem}
+.sec-head .no{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-size:1.05rem;color:var(--ink-faint)}
+.sec-head .en{font-size:.82rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.sec-head .zh{font-size:.82rem;color:var(--ink-faint);letter-spacing:.14em}
+.sec-title{
+  font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+  font-size:clamp(2.1rem,4.4vw,3.6rem);line-height:1.12;margin:.4rem 0 .5rem}
+.sec-sub{max-width:56ch;color:var(--ink-soft);font-size:.95rem;margin:0 0 2.6rem}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ================================================================
+   WORK — category groups, masonry columns
+================================================================ */
+.group{margin-bottom:clamp(3.5rem,8vh,6rem)}
+.group:last-child{margin-bottom:0}
+.group__head{
+  display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;
+  margin-bottom:1.4rem;padding-bottom:.7rem;border-bottom:1px solid var(--line)}
+.group__head .gno{font-family:"Instrument Serif",Georgia,serif;font-style:italic;color:var(--ink-faint)}
+.group__head .gen{font-size:.85rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500}
+.group__head .gzh{font-size:.85rem;color:var(--ink-faint);letter-spacing:.1em}
+.group__head .gcount{margin-left:auto;font-size:.72rem;letter-spacing:.2em;color:var(--ink-faint)}
+.masonry{columns:3;column-gap:1rem}
+@media(max-width:1000px){.masonry{columns:2}}
+@media(max-width:600px){.masonry{columns:1}}
+.masonry figure{margin:0 0 1rem;break-inside:avoid;overflow:hidden;border-radius:8px;background:rgba(255,255,255,.4)}
+.masonry img{width:100%;height:auto;transform:scale(1.001);
+  transition:transform 1s var(--ease),filter 1s var(--ease);filter:saturate(.92)}
+.masonry figure:hover img{transform:scale(1.035);filter:saturate(1.08)}
+
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;
+  padding:.28rem .8rem;font-size:.72rem;letter-spacing:.16em;color:var(--ink-soft);margin:0 .4rem .5rem 0}
+
+/* ================================================================
+   MOTION — TVC video cards
+================================================================ */
+.motion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+@media(max-width:900px){.motion-grid{grid-template-columns:1fr}}
+.motion-card{position:relative;border-radius:10px;overflow:hidden;background:var(--ink);aspect-ratio:16/9}
+.motion-card video{width:100%;height:100%;object-fit:cover;display:block}
+.motion-card .cover{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:opacity .6s ease}
+.motion-card.is-playing .cover{opacity:0}
+.motion-card__bar{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  display:flex;align-items:center;justify-content:space-between;gap:.8rem;
+  padding:2.2rem 1rem .8rem;color:#fff;
+  background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0));
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
+.motion-card .hint{opacity:.8}
+
+/* ================================================================
+   ABOUT
+================================================================ */
+.about-grid{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:clamp(2rem,5vw,4.5rem)}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-left .portrait{border-radius:10px;overflow:hidden;margin-bottom:1.2rem}
+.about-left .portrait img{width:100%;height:auto}
+.about-name{font-family:"Instrument Serif",Georgia,serif;font-size:1.7rem;line-height:1.2;margin:0}
+.about-role{font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-faint);margin-top:.35rem}
+.about-fact{display:flex;gap:.8rem;font-size:.88rem;padding:.5rem 0;border-bottom:1px solid var(--line)}
+.about-fact .k{color:var(--ink-faint);letter-spacing:.14em;font-size:.74rem;text-transform:uppercase;min-width:5.4em;padding-top:.15em}
+.about-block{margin-bottom:2.2rem}
+.about-block:last-child{margin-bottom:0}
+.about-block h3{
+  font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;
+  display:flex;align-items:baseline;gap:.8rem;margin:0 0 1rem}
+.about-block h3 .zh{color:var(--ink-faint);letter-spacing:.12em;text-transform:none;font-weight:400}
+.about-block p{margin:0;color:var(--ink-soft);font-size:.95rem;max-width:66ch}
+.xp{padding:1rem 0;border-top:1px solid var(--line)}
+.xp:first-of-type{border-top:0;padding-top:0}
+.xp__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem 1.2rem;margin-bottom:.45rem}
+.xp__time{font-size:.76rem;letter-spacing:.14em;color:var(--ink-faint)}
+.xp__org{font-family:"Instrument Serif",Georgia,serif;font-size:1.15rem}
+.xp__role{font-size:.8rem;letter-spacing:.1em;color:var(--ink-soft);margin-left:auto}
+.xp ul{margin:.2rem 0 0;padding-left:1.1rem;color:var(--ink-soft);font-size:.9rem}
+.xp li{margin:.2rem 0}
+.skill-row{display:flex;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.skill-row:last-child{border-bottom:0}
+.skill-row .k{color:var(--ink-faint);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;min-width:9.5em;padding-top:.2em}
+.motto{
+  font-family:"Instrument Serif",Georgia,serif;font-style:italic;
+  font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--ink);margin-top:2.4rem}
+.motto small{display:block;font-family:"Instrument Sans",sans-serif;font-style:normal;
+  font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-faint);margin-top:.6rem}
+
+/* ================================================================
+   CONTACT + FOOTER
+================================================================ */
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:2.6rem}
+@media(max-width:860px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+.contact-cell{background:var(--paper);padding:1.4rem 1.3rem}
+.contact-cell .k{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-faint)}
+.contact-cell .v{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(1.05rem,1.6vw,1.35rem);margin-top:.5rem;word-break:break-all}
+.contact-cell a.v:hover{text-decoration:underline;text-underline-offset:4px}
+.contact-cta{
+  margin-top:clamp(3rem,7vh,5rem);text-align:center}
+.contact-cta .big{
+  font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+  font-size:clamp(2.2rem,6vw,5rem);line-height:1.08;margin:0}
+.contact-cta .big em{font-style:italic;color:var(--ink-soft)}
+footer{padding:2.2rem var(--pad-x) 2.6rem;background:var(--sky)}
+.foot-row{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem 2rem;border-top:1px solid var(--line);padding-top:1.4rem;
+  font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint)}
+.foot-row .right{margin-left:auto}
+
+/* ================================================================
+   MOBILE MENU — fixed overlay, z-index 50 (below .nav 60)
+================================================================ */
+.menu{
+  position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;justify-content:center;
+  padding:0 var(--pad-x);background:rgba(233,240,246,.92);
+  -webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%);
+  clip-path:inset(0 0 100% 0);visibility:hidden;
+  transition:clip-path .85s var(--ease-in-out),visibility 0s linear .85s}
+.menu.is-open{clip-path:inset(0 0 0 0);visibility:visible;
+  transition:clip-path .85s var(--ease-in-out),visibility 0s linear 0s}
+.menu__list{list-style:none;margin:0;padding:0}
+.menu__list li{overflow:hidden}
+.menu__list a{
+  font-family:"Instrument Serif",Georgia,serif;
+  font-size:clamp(2.35rem,12vw,3.4rem);line-height:1.22;padding:.12em 0;display:block;
+  transform:translateY(115%);opacity:0;
+  transition:transform .8s var(--ease),opacity .6s ease}
+.menu.is-open .menu__list a{transform:translateY(0);opacity:1}
+.menu.is-open .menu__list li:nth-child(1) a{transition-delay:.26s}
+.menu.is-open .menu__list li:nth-child(2) a{transition-delay:.33s}
+.menu.is-open .menu__list li:nth-child(3) a{transition-delay:.40s}
+.menu.is-open .menu__list li:nth-child(4) a{transition-delay:.47s}
+.menu__rule{height:1px;background:rgba(11,11,12,.16);margin:2.2rem 0 0;
+  transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease)}
+.menu.is-open .menu__rule{transform:scaleX(1);transition-delay:.5s}
+.menu__foot{margin-top:2.2rem;opacity:0;transform:translateY(22px);
+  transition:transform .8s var(--ease),opacity .6s ease}
+.menu.is-open .menu__foot{opacity:1;transform:translateY(0);transition-delay:.56s}
+.menu__foot .btn-play{display:inline-block;padding:.95rem 1.6rem;font-size:1rem}
+
+/* ================================================================
+   RESPONSIVE
+================================================================ */
+@media (max-width:900px){
+  .nav__links,.nav__right .btn-play{display:none}
+  .burger{display:block}
+  .hero__media img,.hero__media video{object-position:center 60%}
+  .line{white-space:normal}
+  .headline{font-size:clamp(2.4rem,6.4vw,3.6rem)}
+  .hero__name span{display:block;margin-top:.2rem}
+  .portal{grid-template-columns:repeat(2,1fr)}
+  .about-grid{gap:2rem}
+}
+@media (max-width:900px) and (orientation:portrait){
+  .hero__media::before{display:block}
+  .hero__media img,.hero__media video{
+    top:auto;bottom:0;height:64svh;object-position:center 62%;
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.6) 9%,#000 20%);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.6) 9%,#000 20%)}
+}
+@media (max-width:560px){
+  .headline{font-size:clamp(2.1rem,8.4vw,3rem);line-height:1.12}
+  .hero__inner{padding-top:clamp(1.75rem,7vh,3rem)}
+  .hero__media img,.hero__media video{object-position:center 58%}
+  .hero__eyebrow{font-size:.6rem;letter-spacing:.18em;white-space:normal;text-align:center;line-height:1.8;margin-bottom:1.2rem}
+  .hero__name{font-size:.7rem;letter-spacing:.18em}
+  .hero__name span{font-size:.62rem;letter-spacing:.14em}
+  .portal{gap:.6rem}
+  .portal__card{padding:.9rem .85rem .8rem}
+  .p-en{font-size:1.05rem}
+  .p-zh{font-size:.72rem;letter-spacing:.18em}
+  .p-sub{font-size:.58rem;margin-top:.4rem}
+}
+@media (max-width:380px){.headline{font-size:2rem}}
+@media (max-height:520px) and (orientation:landscape){
+  .headline{font-size:clamp(1.7rem,5vw,2.4rem);max-width:22ch}
+  .hero__inner{padding-top:.75rem}
+  .menu__list a{font-size:clamp(1.4rem,5vw,1.9rem)}
+  .menu__rule{margin-top:1.2rem}.menu__foot{margin-top:1.2rem}
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}
+  .hero__media{opacity:1;transform:none;filter:none}
+  .line>span{transform:none;opacity:1}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <img src="https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260908_122011_59c97465-4d23-4fdc-ac40-f6832f573e28.png&amp;w=1920&amp;q=85"
+         alt="A vintage turntable resting on a mossy rock in an alpine meadow at golden hour">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto"
+           poster="https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260908_122011_59c97465-4d23-4fdc-ac40-f6832f573e28.png&amp;w=1920&amp;q=85"
+           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260908_125738_eb584080-9f98-489e-adb2-014760aa34da.mp4" aria-hidden="true"></video>
+  </div>
+
+  <header class="nav">
+    <a class="logo rise d1" href="#top" aria-label="Ma — home">Ma.</a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li class="rise d2"><a href="#work">Work</a></li>
+        <li class="rise d3"><a href="#motion">Motion</a></li>
+        <li class="rise d4"><a href="#about">About</a></li>
+        <li class="rise d5"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav__right">
+      <a class="btn-play rise d6" href="#contact">Let's Talk</a>
+      <button class="burger rise d6" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="hero__inner">
+    <p class="hero__eyebrow">AIGC Personal Portfolio · 2026</p>
+    <h1 class="headline">
+      <span class="line"><span>AIGC 个人作品集</span></span>
+    </h1>
+    <p class="hero__name rise d2">马仲钰 <span>/ MA ZHONGYU · AIGC VISUAL DESIGNER</span></p>
+    <nav class="portal" aria-label="Site sections">
+      <a class="portal__card rise d3" href="#work">
+        <span class="p-en">Visual Design</span>
+        <span class="p-zh">视觉设计</span>
+        <span class="p-sub">Poster · Banner · IP · Type</span>
+      </a>
+      <a class="portal__card rise d4" href="#motion">
+        <span class="p-en">Motion / TVC</span>
+        <span class="p-zh">动态影像</span>
+        <span class="p-sub">Brand Film · Advertising</span>
+      </a>
+      <a class="portal__card rise d5" href="#about">
+        <span class="p-en">About Me</span>
+        <span class="p-zh">个人简介</span>
+        <span class="p-sub">Profile · Experience · Skills</span>
+      </a>
+      <a class="portal__card rise d6" href="#contact">
+        <span class="p-en">Contact</span>
+        <span class="p-zh">联系合作</span>
+        <span class="p-sub">Open to Collaboration</span>
+      </a>
+    </nav>
+  </div>
+</section>
+
+<!-- mobile menu -->
+<div class="menu" id="menu">
+  <ul class="menu__list">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#motion">Motion</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="menu__rule"></div>
+  <div class="menu__foot">
+    <a class="btn-play" href="#contact">Let's Talk</a>
+  </div>
+</div>
+
+<!-- ══════════════════════ 01 WORK ══════════════════════ -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="no">01</span><span class="en">Selected Works</span><span class="zh">精选作品</span></div>
+    <h2 class="sec-title reveal">Visual, character &amp; type —<br><em>a world built frame by frame.</em></h2>
+    <p class="sec-sub reveal">从概念构思、生成工作流到最终视觉落地 —— 以下为 2024–2026 年间完成的 AIGC 与设计项目精选。</p>
+
+    <!-- 01 海报 -->
+    <div class="group reveal">
+      <div class="group__head"><span class="gno">a.</span><span class="gen">Poster</span><span class="gzh">海报设计</span><span class="gcount">12 pieces</span></div>
+      <div class="masonry">
+        <figure><img loading="lazy" src="assets/img/poster-01.webp" alt="Poster — Serenity Coastal Girl"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-02.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-03.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-04.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-05.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-06.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-07.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-08.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-09.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-10.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-11.webp" alt="Poster design"></figure>
+        <figure><img loading="lazy" src="assets/img/poster-12.webp" alt="Poster design"></figure>
+      </div>
+    </div>
+
+    <!-- 02 Banner -->
+    <div class="group reveal">
+      <div class="group__head"><span class="gno">b.</span><span class="gen">Banner</span><span class="gzh">Banner 设计</span><span class="gcount">11 pieces</span></div>
+      <div class="masonry">
+        <figure><img loading="lazy" src="assets/img/banner-01.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-02.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-03.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-04.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-05.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-06.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-07.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-08.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-09.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-10.webp" alt="Banner design"></figure>
+        <figure><img loading="lazy" src="assets/img/banner-11.webp" alt="Banner design"></figure>
+      </div>
+    </div>
+
+    <!-- 03 IP -->
+    <div class="group reveal">
+      <div class="group__head"><span class="gno">c.</span><span class="gen">IP Design</span><span class="gzh">IP 形象设计</span><span class="gcount">4 IPs · 12 pieces</span></div>
+      <p style="margin:.2rem 0 1.4rem"><span class="tag">MOMOQI · 情绪陪伴型</span><span class="tag">IP2</span><span class="tag">IP3</span><span class="tag">IP4</span></p>
+      <div class="masonry">
+        <figure><img loading="lazy" src="assets/img/ip1-01.webp" alt="IP design — MOMOQI main visual"></figure>
+        <figure><img loading="lazy" src="assets/img/ip1-02.webp" alt="IP design — MOMOQI"></figure>
+        <figure><img loading="lazy" src="assets/img/ip2-01.webp" alt="IP design"></figure>
+        <figure><img loading="lazy" src="assets/img/ip1-03.webp" alt="IP design — MOMOQI extension"></figure>
+        <figure><img loading="lazy" src="assets/img/ip3-01.webp" alt="IP design"></figure>
+        <figure><img loading="lazy" src="assets/img/ip4-01.webp" alt="IP design"></figure>
+        <figure><img loading="lazy" src="assets/img/ip2-02.webp" alt="IP design extension"></figure>
+        <figure><img loading="lazy" src="assets/img/ip3-02.webp" alt="IP design extension"></figure>
+        <figure><img loading="lazy" src="assets/img/ip4-02.webp" alt="IP design extension"></figure>
+        <figure><img loading="lazy" src="assets/img/ip2-03.webp" alt="IP design scene"></figure>
+        <figure><img loading="lazy" src="assets/img/ip3-03.webp" alt="IP design scene"></figure>
+        <figure><img loading="lazy" src="assets/img/ip4-03.webp" alt="IP design scene"></figure>
+      </div>
+    </div>
+
+    <!-- 04 APP -->
+    <div class="group reveal">
+      <div class="group__head"><span class="gno">d.</span><span class="gen">App Splash</span><span class="gzh">APP 启动页设计</span><span class="gcount">6 pieces</span></div>
+      <div class="masonry">
+        <figure><img loading="lazy" src="assets/img/app-01.webp" alt="App splash screen design"></figure>
+        <figure><img loading="lazy" src="assets/img/app-02.webp" alt="App splash screen design"></figure>
+        <figure><img loading="lazy" src="assets/img/app-03.webp" alt="App splash screen design"></figure>
+        <figure><img loading="lazy" src="assets/img/app-04.webp" alt="App splash screen design"></figure>
+        <figure><img loading="lazy" src="assets/img/app-05.webp" alt="App splash screen design"></figure>
+        <figure><img loading="lazy" src="assets/img/app-06.webp" alt="App splash screen design"></figure>
+      </div>
+    </div>
+
+    <!-- 05 字体 -->
+    <div class="group reveal">
+      <div class="group__head"><span class="gno">e.</span><span class="gen">Type Design</span><span class="gzh">字体设计</span><span class="gcount">11 pieces</span></div>
+      <div class="masonry">
+        <figure><img loading="lazy" src="assets/img/font-01.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-02.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-03.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-04.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-05.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-06.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-07.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-08.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-09.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-10.webp" alt="Type design"></figure>
+        <figure><img loading="lazy" src="assets/img/font-11.webp" alt="Type design"></figure>
+      </div>
+    </div>
+
+    <!-- 06 插画 -->
+    <div class="group reveal">
+      <div class="group__head"><span class="gno">f.</span><span class="gen">Illustration</span><span class="gzh">插画设计</span><span class="gcount">14 pieces</span></div>
+      <div class="masonry">
+        <figure><img loading="lazy" src="assets/img/illus-01.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-02.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-03.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-04.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-05.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-06.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-07.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-08.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-09.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-10.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-11.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-12.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-13.webp" alt="Illustration"></figure>
+        <figure><img loading="lazy" src="assets/img/illus-14.webp" alt="Illustration"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ 02 MOTION ══════════════════════ -->
+<section class="section section--alt" id="motion">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="no">02</span><span class="en">Motion / TVC</span><span class="zh">动态影像 · 广告</span></div>
+    <h2 class="sec-title reveal">Brand films, <em>directed by prompts.</em></h2>
+    <p class="sec-sub reveal">TVC 视觉创意与全流程把控：概念、分镜、图像与视频生成、剪辑合成。悬停预览，点击播放声音。</p>
+    <div class="motion-grid">
+      <div class="motion-card reveal" data-video="assets/videos/tvc1.mp4">
+        <img class="cover" loading="lazy" src="assets/img/tvc1.jpg" alt="TVC 冰河时代 封面">
+        <video muted loop playsinline preload="none"></video>
+        <div class="motion-card__bar"><span>Ice Age · 冰河时代</span><span class="hint">Hover to preview</span></div>
+      </div>
+      <div class="motion-card reveal" data-video="assets/videos/tvc2.mp4">
+        <img class="cover" loading="lazy" src="assets/img/tvc2.jpg" alt="TVC 电商广告 封面">
+        <video muted loop playsinline preload="none"></video>
+        <div class="motion-card__bar"><span>E-commerce · 电商广告</span><span class="hint">Hover to preview</span></div>
+      </div>
+      <div class="motion-card reveal" data-video="assets/videos/tvc3.mp4">
+        <img class="cover" loading="lazy" src="assets/img/tvc3.jpg" alt="TVC 香水广告 封面">
+        <video muted loop playsinline preload="none"></video>
+        <div class="motion-card__bar"><span>Perfume · 香水广告</span><span class="hint">Hover to preview</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ 03 ABOUT ══════════════════════ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="no">03</span><span class="en">About Me</span><span class="zh">个人简介</span></div>
+    <h2 class="sec-title reveal">Design a better tomorrow.</h2>
+
+    <div class="about-grid">
+      <aside class="about-left reveal">
+        <div class="portrait"><img src="assets/img/portrait.webp" alt="马仲钰个人照片"></div>
+        <p class="about-name">马仲钰 <span style="color:var(--ink-faint)">/ Ma Zhongyu</span></p>
+        <p class="about-role">AIGC Visual Designer</p>
+        <div style="margin-top:1.4rem">
+          <div class="about-fact"><span class="k">Birth</span><span>1998.10</span></div>
+          <div class="about-fact"><span class="k">From</span><span>河北 · 沧州</span></div>
+          <div class="about-fact"><span class="k">Base</span><span>北京 · 朝阳</span></div>
+          <div class="about-fact"><span class="k">Degree</span><span>大专 · 河北工业职业技术学院 · 物联网应用技术（2016.09 – 2019.06）</span></div>
+          <div class="about-fact"><span class="k">Focus</span><span>AIGC 视觉设计师（求职意向）</span></div>
+        </div>
+        <p class="motto">把想象，变成看得见的世界。<small>Design a better tomorrow</small></p>
+      </aside>
+
+      <div>
+        <div class="about-block reveal">
+          <h3>Profile <span class="zh">个人介绍</span></h3>
+          <p>我是一名热爱创意与技术的 AIGC 视觉设计师，善于将想法转化为具有视觉冲击力的作品。具备扎实设计基础与丰富的项目经验，能够在多元化的创意场中快速捕捉需求、提出创意并高效落地。我相信好的设计可以传递情绪、连接人与世界，未来希望在更大的平台上，持续探索影像与 AI 的更多可能。</p>
+        </div>
+
+        <div class="about-block reveal">
+          <h3>Work Experience <span class="zh">工作经历</span></h3>
+          <div class="xp">
+            <div class="xp__row"><span class="xp__time">2025.05 — 2026.08</span><span class="xp__org">星迹互动科技有限公司</span><span class="xp__role">AIGC 视觉设计师</span></div>
+            <ul>
+              <li>主导 AIGC 视觉项目的创意策划与执行，涵盖海报、KV、短视频等多种形式；</li>
+              <li>负责 IP 形象设计与品牌视觉体系搭建，推动创意落地与视觉风格统一；</li>
+              <li>负责 AI 漫剧项目的分镜设计、图像生成、视频制作与剪辑，把控整体叙事节奏与视觉风格；</li>
+              <li>负责 TVC 视觉创意与全流程把控，输出品牌广告片视觉方案与动态图像设计。</li>
+            </ul>
+          </div>
+          <div class="xp">
+            <div class="xp__row"><span class="xp__time">2023.10 — 2025.04</span><span class="xp__org">北京丹青映画传媒科技有限公司</span><span class="xp__role">平面设计师</span></div>
+            <ul>
+              <li>参与公司多个引进 IP 项目视觉开发；</li>
+              <li>独立产出项目 KV、概念海报、社交媒体宣传长图等物料，统一 IP 对外视觉风格；</li>
+              <li>协同内容、影视部门完成 IP 改编项目视觉落地，支撑项目展会与市场传播。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-block reveal">
+          <h3>Skills <span class="zh">专业技能</span></h3>
+          <div class="skill-row"><span class="k">AIGC Tools</span><span>libtv · 即梦 · Stable Diffusion · ComfyUI · ChatGPT —— 图像 / 视频生成与创意探索</span></div>
+          <div class="skill-row"><span class="k">Design</span><span>Photoshop · Adobe Illustrator · Figma · WorkBuddy · 剪映</span></div>
+          <div class="skill-row"><span class="k">Core</span><span>视觉创意 · 插画设计 · 三维建模 · 视频剪辑与后期合成 · 品牌设计</span></div>
+          <div class="skill-row"><span class="k">Plus</span><span>审美能力 · 文案理解 · 项目执行</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ 04 CONTACT ══════════════════════ -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="no">04</span><span class="en">Contact</span><span class="zh">联系方式</span></div>
+    <div class="contact-grid reveal">
+      <div class="contact-cell"><div class="k">Name / 姓名</div><div class="v">马仲钰</div></div>
+      <div class="contact-cell"><div class="k">Email / 邮箱</div><a class="v" href="mailto:1239461802@qq.com">1239461802@qq.com</a></div>
+      <div class="contact-cell"><div class="k">Phone / 电话</div><a class="v" href="tel:17717182674">177 1718 2674</a></div>
+      <div class="contact-cell"><div class="k">Base / 坐标</div><div class="v">北京 · 朝阳</div></div>
+    </div>
+    <div class="contact-cta reveal">
+      <p class="big">Let's create<br><em>something new.</em></p>
+      <p style="margin-top:1rem"><a class="btn-play" href="mailto:1239461802@qq.com">Get in Touch</a></p>
+      <p style="margin-top:2.2rem;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-faint)">Open to collaboration · 欢迎联系</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-row">
+    <span>© 2026 Ma Zhongyu · 马仲钰</span>
+    <span>AIGC Personal Portfolio</span>
+    <span class="right">Thanks for watching</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- MOBILE MENU ---------- */
+  var menu = document.getElementById('menu');
+  var burger = document.getElementById('burger');
+
+  function setMenu(next){
+    menu.classList.toggle('is-open', next);
+    burger.classList.toggle('is-active', next);
+    document.body.classList.toggle('menu-open', next);
+    burger.setAttribute('aria-expanded', next ? 'true' : 'false');
+    burger.setAttribute('aria-label', next ? 'Close menu' : 'Open menu');
+  }
+
+  burger.addEventListener('click', function(){ setMenu(!menu.classList.contains('is-open')); });
+  menu.addEventListener('click', function(e){
+    if (e.target.closest('a')) setMenu(false);
+  });
+  window.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) setMenu(false);
+  });
+  window.addEventListener('resize', function(){
+    if (menu.classList.contains('is-open') && window.innerWidth > 900) setMenu(false);
+  });
+
+  /* ---------- HERO VIDEO ---------- */
+  var video = document.getElementById('heroVideo');
+
+  function reveal(){ video.classList.add('is-ready'); }
+  if (video.readyState >= 3) reveal();
+  else video.addEventListener('loadeddata', reveal, { once:true });
+
+  function kick(){
+    var p = video.play();
+    if (p && p.catch) p.catch(function(){});
+  }
+  kick();
+  window.addEventListener('touchstart', kick, { once:true, passive:true });
+  window.addEventListener('click', kick, { once:true });
+
+  /* ---------- SCROLL REVEAL ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold:.12, rootMargin:'0px 0px -6% 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* ---------- TVC HOVER PREVIEW ---------- */
+  document.querySelectorAll('.motion-card').forEach(function(card){
+    var v = card.querySelector('video');
+    var src = card.getAttribute('data-video');
+    var loaded = false;
+
+    function load(){
+      if (loaded) return;
+      loaded = true;
+      v.src = src;
+      v.load();
+    }
+    card.addEventListener('mouseenter', function(){
+      load();
+      var p = v.play();
+      if (p && p.catch) p.catch(function(){});
+      card.classList.add('is-playing');
+    });
+    card.addEventListener('mouseleave', function(){
+      v.pause();
+      v.currentTime = 0;
+      card.classList.remove('is-playing');
+    });
+    /* touch: tap toggles preview */
+    card.addEventListener('click', function(){
+      load();
+      if (v.paused){ var p = v.play(); if (p && p.catch) p.catch(function(){}); card.classList.add('is-playing'); }
+      else { v.pause(); card.classList.remove('is-playing'); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
