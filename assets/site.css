@@ -296,23 +296,6 @@ footer{padding:2.2rem var(--pad-x) 2.6rem;background:var(--sky)}
 }
 
 /* ================================================================
-   AI SERIES — drama case blocks
-================================================================ */
-.drama{margin-bottom:clamp(4rem,9vh,7rem)}
-.drama:last-child{margin-bottom:0}
-.drama__hero{border-radius:10px;overflow:hidden;margin-bottom:1rem}
-.drama__hero img{width:100%;height:auto}
-.drama__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-@media(max-width:800px){.drama__grid{grid-template-columns:repeat(2,1fr)}}
-.drama__grid figure{margin:0;overflow:hidden;border-radius:8px;background:rgba(255,255,255,.4)}
-.drama__grid img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;
-  transition:transform 1s var(--ease)}
-.drama__grid figure:hover img{transform:scale(1.04)}
-.drama__grid figcaption{
-  font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--ink-faint);padding:.55rem .2rem 0;text-align:center}
-
-/* ================================================================
    DARK FOOTER SECTION — 尾页
 ================================================================ */
 .section--dark{background:var(--ink);color:#fff}
@@ -427,7 +410,3 @@ footer{padding:2.2rem var(--pad-x) 2.6rem;background:var(--sky)}
 .rskill:last-child{border-bottom:0}
 .rskill .k{color:var(--ink-faint);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding-top:.2em}
 @media(max-width:600px){.rskill{grid-template-columns:1fr;gap:.3rem}}
-
-/* AI Series — still-image sets nested inside a video category */
-.sets{display:grid;gap:clamp(1.8rem,4vh,3rem);margin-bottom:clamp(2.4rem,5vh,3.6rem)}
-.sets .drama{margin-bottom:0}
