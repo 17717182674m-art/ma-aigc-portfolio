@@ -300,12 +300,6 @@ footer{padding:2.2rem var(--pad-x) 2.6rem;background:var(--sky)}
 ================================================================ */
 .drama{margin-bottom:clamp(4rem,9vh,7rem)}
 .drama:last-child{margin-bottom:0}
-.drama__head{margin-bottom:1.6rem}
-.drama__title{
-  font-family:"Instrument Serif",Georgia,serif;font-weight:400;
-  font-size:clamp(1.9rem,3.8vw,3.1rem);line-height:1.15;margin:.2rem 0 .3rem}
-.drama__meta{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-faint)}
-.drama__desc{max-width:62ch;color:var(--ink-soft);font-size:.95rem;margin:.9rem 0 0}
 .drama__hero{border-radius:10px;overflow:hidden;margin-bottom:1rem}
 .drama__hero img{width:100%;height:auto}
 .drama__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
@@ -433,3 +427,7 @@ footer{padding:2.2rem var(--pad-x) 2.6rem;background:var(--sky)}
 .rskill:last-child{border-bottom:0}
 .rskill .k{color:var(--ink-faint);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding-top:.2em}
 @media(max-width:600px){.rskill{grid-template-columns:1fr;gap:.3rem}}
+
+/* AI Series — still-image sets nested inside a video category */
+.sets{display:grid;gap:clamp(1.8rem,4vh,3rem);margin-bottom:clamp(2.4rem,5vh,3.6rem)}
+.sets .drama{margin-bottom:0}
