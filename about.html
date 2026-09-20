@@ -12,7 +12,7 @@
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.rise{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-<header class="pnav">
+<header class="pnav pnav--dark">
   <a class="logo rise d1" href="index.html" aria-label="Ma — home">Ma.</a>
   <span class="pnav__mid rise d2">03 / About Me</span>
   <nav class="pnav__right" aria-label="Primary">
@@ -37,73 +37,84 @@
   </div>
 </div>
 
-<main>
-  <section class="section">
-    <div class="wrap">
-    <div class="sec-head reveal"><span class="no">03</span><span class="en">About Me</span><span class="zh">个人简介</span></div>
-    <h2 class="sec-title reveal">Design a better tomorrow.</h2>
-
-    <div class="about-grid">
-      <aside class="about-left reveal">
-        <div class="portrait"><img src="assets/img/portrait.webp" alt="马仲钰个人照片"></div>
-        <p class="about-name">马仲钰 <span style="color:var(--ink-faint)">/ Ma Zhongyu</span></p>
-        <p class="about-role">AIGC Visual Designer</p>
-        <div style="margin-top:1.4rem">
-          <div class="about-fact"><span class="k">Birth</span><span>1998.10</span></div>
-          <div class="about-fact"><span class="k">From</span><span>河北 · 沧州</span></div>
-          <div class="about-fact"><span class="k">Base</span><span>北京 · 朝阳</span></div>
-          <div class="about-fact"><span class="k">Degree</span><span>大专 · 河北工业职业技术学院 · 物联网应用技术（2016.09 – 2019.06）</span></div>
-          <div class="about-fact"><span class="k">Focus</span><span>AIGC 视觉设计师（求职意向）</span></div>
-        </div>
-        <p class="motto">把想象，变成看得见的世界。<small>Design a better tomorrow</small></p>
-      </aside>
-
-      <div>
-        <div class="about-block reveal">
-          <h3>Profile <span class="zh">个人介绍</span></h3>
-          <p>我是一名热爱创意与技术的 AIGC 视觉设计师，善于将想法转化为具有视觉冲击力的作品。具备扎实设计基础与丰富的项目经验，能够在多元化的创意场中快速捕捉需求、提出创意并高效落地。我相信好的设计可以传递情绪、连接人与世界，未来希望在更大的平台上，持续探索影像与 AI 的更多可能。</p>
-        </div>
-
-        <div class="about-block reveal">
-          <h3>Work Experience <span class="zh">工作经历</span></h3>
-          <div class="xp">
-            <div class="xp__row"><span class="xp__time">2025.05 — 2026.08</span><span class="xp__org">星迹互动科技有限公司</span><span class="xp__role">AIGC 视觉设计师</span></div>
-            <ul>
-              <li>主导 AIGC 视觉项目的创意策划与执行，涵盖海报、KV、短视频等多种形式；</li>
-              <li>负责 IP 形象设计与品牌视觉体系搭建，推动创意落地与视觉风格统一；</li>
-              <li>负责 AI 漫剧项目的分镜设计、图像生成、视频制作与剪辑，把控整体叙事节奏与视觉风格；</li>
-              <li>负责 TVC 视觉创意与全流程把控，输出品牌广告片视觉方案与动态图像设计。</li>
-            </ul>
-          </div>
-          <div class="xp">
-            <div class="xp__row"><span class="xp__time">2023.10 — 2025.04</span><span class="xp__org">北京丹青映画传媒科技有限公司</span><span class="xp__role">平面设计师</span></div>
-            <ul>
-              <li>参与公司多个引进 IP 项目视觉开发；</li>
-              <li>独立产出项目 KV、概念海报、社交媒体宣传长图等物料，统一 IP 对外视觉风格；</li>
-              <li>协同内容、影视部门完成 IP 改编项目视觉落地，支撑项目展会与市场传播。</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="about-block reveal">
-          <h3>Skills <span class="zh">专业技能</span></h3>
-          <div class="skill-row"><span class="k">AIGC Tools</span><span>libtv · 即梦 · Stable Diffusion · ComfyUI · ChatGPT —— 图像 / 视频生成与创意探索</span></div>
-          <div class="skill-row"><span class="k">Design</span><span>Photoshop · Adobe Illustrator · Figma · WorkBuddy · 剪映</span></div>
-          <div class="skill-row"><span class="k">Core</span><span>视觉创意 · 插画设计 · 三维建模 · 视频剪辑与后期合成 · 品牌设计</span></div>
-          <div class="skill-row"><span class="k">Plus</span><span>审美能力 · 文案理解 · 项目执行</span></div>
-        </div>
+<main class="resume">
+  <!-- 左栏：人像 + 基本信息（粘性固定） -->
+  <aside class="resume__photo reveal">
+    <img src="assets/img/portrait.webp" alt="马仲钰个人照片">
+    <div class="resume__id">
+      <h2>马仲钰 <span style="color:rgba(255,255,255,.38);font-size:1.05rem">/ Ma Zhongyu</span></h2>
+      <p class="role">AIGC Visual Designer</p>
+      <div class="rfacts">
+        <div class="row"><span class="k">Birth</span><span>1998.10</span></div>
+        <div class="row"><span class="k">From</span><span>河北 · 沧州</span></div>
+        <div class="row"><span class="k">Base</span><span>北京 · 朝阳</span></div>
+        <div class="row"><span class="k">Focus</span><span>AIGC 视觉设计师（求职意向）</span></div>
       </div>
+      <p class="motto-dark">把想象，变成看得见的世界。<small>Design a better tomorrow</small></p>
     </div>
+  </aside>
+
+  <!-- 右栏：编号式简历区块 -->
+  <div class="resume__body">
+    <section class="rblock reveal">
+      <div class="rhead"><span class="rlabel">Profile</span><span class="rzh">个人介绍</span><span class="rno">01</span></div>
+      <p>专注于 AIGC 视觉设计与 AI 内容创作，具备广告视觉、品牌设计、IP 形象、AI 剧集资产制作与生成式内容工作流经验。</p>
+      <p>擅长将传统视觉设计方法与 AIGC 工具结合，完成从创意构思、视觉资产生成到最终内容落地的完整流程。我相信好的设计可以传递情绪、连接人与世界，未来希望在更大的平台上，持续探索影像与 AI 的更多可能。</p>
+    </section>
+
+    <section class="rblock reveal">
+      <div class="rhead"><span class="rlabel">Work Experience</span><span class="rzh">工作经历</span><span class="rno">02</span></div>
+
+      <article class="rxp">
+        <div class="rxp__time">2025.05 — 2026.08</div>
+        <div>
+          <h3 class="rxp__org">星迹互动科技有限公司</h3>
+          <span class="rbadge">AIGC 视觉设计师</span>
+          <p class="rxp__desc">主导 AIGC 视觉项目的创意策划与执行，涵盖海报、KV、短视频等多种形式；负责 IP 形象设计与品牌视觉体系搭建，推动创意落地与视觉风格统一；负责 AI 漫剧项目的分镜设计、图像生成、视频制作与剪辑，把控整体叙事节奏与视觉风格；负责 TVC 视觉创意与全流程把控，输出品牌广告片视觉方案与动态图像设计。</p>
+        </div>
+      </article>
+
+      <article class="rxp">
+        <div class="rxp__time">2023.10 — 2025.04</div>
+        <div>
+          <h3 class="rxp__org">北京丹青映画传媒科技有限公司</h3>
+          <span class="rbadge">平面设计师</span>
+          <p class="rxp__desc">参与公司多个引进 IP 项目视觉开发；独立产出项目 KV、概念海报、社交媒体宣传长图等物料，统一 IP 对外视觉风格；协同内容、影视部门完成 IP 改编项目视觉落地，支撑项目展会与市场传播。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="rblock reveal">
+      <div class="rhead"><span class="rlabel">Skills</span><span class="rzh">专业技能</span><span class="rno">03</span></div>
+      <div class="rskill"><span class="k">AIGC Tools</span><span>libtv · 即梦 · Stable Diffusion · ComfyUI · ChatGPT —— 图像 / 视频生成与创意探索</span></div>
+      <div class="rskill"><span class="k">Design</span><span>Photoshop · Adobe Illustrator · Figma · WorkBuddy · 剪映</span></div>
+      <div class="rskill"><span class="k">Core</span><span>视觉创意 · 插画设计 · 三维建模 · 视频剪辑与后期合成 · 品牌设计</span></div>
+      <div class="rskill"><span class="k">Plus</span><span>审美能力 · 文案理解 · 项目执行</span></div>
+    </section>
+
+    <section class="rblock reveal">
+      <div class="rhead"><span class="rlabel">Education</span><span class="rzh">教育背景</span><span class="rno">04</span></div>
+      <article class="rxp">
+        <div class="rxp__time">2016.09 — 2019.06</div>
+        <div>
+          <h3 class="rxp__org">河北工业职业技术学院</h3>
+          <span class="rbadge">大专 · 物联网应用技术</span>
+        </div>
+      </article>
+    </section>
+
+    <div class="resume__cta reveal">
+      <a class="btn-play" href="contact.html">Get in Touch →</a>
     </div>
-  </section>
+  </div>
 </main>
 
-<nav class="pager" aria-label="Chapter navigation">
+<nav class="pager pager--dark" aria-label="Chapter navigation">
   <a class="pager__item" href="series.html"><span class="pager__k">← Prev</span><span class="pager__t">AI Series · AI 剧集</span></a>
   <a class="pager__item pager__item--next" href="app.html"><span class="pager__k">Next →</span><span class="pager__t">App Design · APP 设计</span></a>
 </nav>
 
-<footer>
+<footer class="foot-dark">
   <div class="foot-row">
     <span>© 2026 Ma Zhongyu · 马仲钰</span>
     <span>03 / About Me</span>
