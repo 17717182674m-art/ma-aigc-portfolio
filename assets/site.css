@@ -205,41 +205,6 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   padding:.28rem .8rem;font-size:.72rem;letter-spacing:.16em;color:var(--ink-soft);margin:0 .4rem .5rem 0}
 
 /* ================================================================
-   ABOUT
-================================================================ */
-.about-grid{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:clamp(2rem,5vw,4.5rem)}
-@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
-.about-left .portrait{border-radius:10px;overflow:hidden;margin-bottom:1.2rem}
-.about-left .portrait img{width:100%;height:auto}
-.about-name{font-family:"Instrument Serif",Georgia,serif;font-size:1.7rem;line-height:1.2;margin:0}
-.about-role{font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-faint);margin-top:.35rem}
-.about-fact{display:flex;gap:.8rem;font-size:.88rem;padding:.5rem 0;border-bottom:1px solid var(--line)}
-.about-fact .k{color:var(--ink-faint);letter-spacing:.14em;font-size:.74rem;text-transform:uppercase;min-width:5.4em;padding-top:.15em}
-.about-block{margin-bottom:2.2rem}
-.about-block:last-child{margin-bottom:0}
-.about-block h3{
-  font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;
-  display:flex;align-items:baseline;gap:.8rem;margin:0 0 1rem}
-.about-block h3 .zh{color:var(--ink-faint);letter-spacing:.12em;text-transform:none;font-weight:400}
-.about-block p{margin:0;color:var(--ink-soft);font-size:.95rem;max-width:66ch}
-.xp{padding:1rem 0;border-top:1px solid var(--line)}
-.xp:first-of-type{border-top:0;padding-top:0}
-.xp__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem 1.2rem;margin-bottom:.45rem}
-.xp__time{font-size:.76rem;letter-spacing:.14em;color:var(--ink-faint)}
-.xp__org{font-family:"Instrument Serif",Georgia,serif;font-size:1.15rem}
-.xp__role{font-size:.8rem;letter-spacing:.1em;color:var(--ink-soft);margin-left:auto}
-.xp ul{margin:.2rem 0 0;padding-left:1.1rem;color:var(--ink-soft);font-size:.9rem}
-.xp li{margin:.2rem 0}
-.skill-row{display:flex;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
-.skill-row:last-child{border-bottom:0}
-.skill-row .k{color:var(--ink-faint);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;min-width:9.5em;padding-top:.2em}
-.motto{
-  font-family:"Instrument Serif",Georgia,serif;font-style:italic;
-  font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--ink);margin-top:2.4rem}
-.motto small{display:block;font-family:"Instrument Sans",sans-serif;font-style:normal;
-  font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-faint);margin-top:.6rem}
-
-/* ================================================================
    CONTACT + FOOTER
 ================================================================ */
 .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:2.6rem}
@@ -301,7 +266,6 @@ footer{padding:2.2rem var(--pad-x) 2.6rem;background:var(--sky)}
   .headline{font-size:clamp(2.4rem,6.4vw,3.6rem)}
   .hero__name span{display:block;margin-top:.2rem}
   .portal{grid-template-columns:repeat(2,1fr)}
-  .about-grid{gap:2rem}
 }
 @media (max-width:900px) and (orientation:portrait){
   .hero__media::before{display:block}
@@ -413,10 +377,6 @@ footer{padding:2.2rem var(--pad-x) 2.6rem;background:var(--sky)}
 @media(max-width:600px){
   .pager{grid-template-columns:1fr}
   .pager__item--next{align-items:flex-start;text-align:left}}
-
-/* dark chapter footer */
-.foot-dark{background:var(--ink)}
-.foot-dark .foot-row{border-top-color:rgba(255,255,255,.14);color:rgba(255,255,255,.45)}
 
 /* ================================================================
    RESUME PAGE — light editorial two-column (about.html, matches home)
