@@ -3,77 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>APP 设计 App Design — 马仲钰 AIGC 作品集</title>
-<meta name="description" content="APP 启动页与界面视觉设计。">
+<title>App Design — Ma Zhongyu</title>
+<meta name="description" content="马仲钰 APP 界面设计 — 启动页、界面与体验。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=UnifrakturCook:wght@700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<noscript><style>.reveal{opacity:1!important;transform:none!important}.rise{opacity:1!important;transform:none!important}</style></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body>
-<header class="pnav">
-  <a class="logo rise d1" href="index.html" aria-label="Ma — home">Ma.</a>
-  <span class="pnav__mid rise d2">04 / App Design</span>
-  <nav class="pnav__right" aria-label="Primary">
-    <a class="pnav__back rise d3" href="index.html">← Home</a>
-    <button class="burger rise d4" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <span></span><span></span><span></span>
-    </button>
+
+<div class="trans" id="trans"></div>
+<div class="cur" id="cur"><div class="cur__dot"></div><span class="cur__label"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html">Ma Zhongyu</a>
+  <nav class="nav__menu" aria-label="Primary">
+    <a href="work.html" data-nav>Work</a>
+    <a href="about.html" data-nav>About</a>
+    <a href="contact.html" data-nav>Contact</a>
   </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
 </header>
-<div class="menu" id="menu">
-  <ul class="menu__list">
-    <li><a href="index.html">Home</a></li>
+
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="index.html">Index</a></li>
+    <li><a href="work.html">Work</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="visual.html">Work</a></li>
-    <li><a href="series.html">Series</a></li>
-    <li><a href="app.html">App</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="menu__rule"></div>
-  <div class="menu__foot">
-    <a class="btn-play" href="contact.html">Let's Talk</a>
-  </div>
+  <p class="drawer__foot">Based in China · Available for selected projects · 2026</p>
 </div>
 
-<main>
-  <section class="section section--alt">
-    <div class="wrap">
-    <div class="sec-head reveal"><span class="no">04</span><span class="en">App Design</span><span class="zh">APP 设计</span></div>
-    <h2 class="sec-title reveal">Interfaces that feel<br><em>quiet &amp; intentional.</em></h2>
-    <p class="sec-sub reveal">APP 启动页与界面视觉 —— 用生成式插画构建产品氛围，保持体验的克制与统一。</p>
-
-    <!-- 04 APP -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">d.</span><span class="gen">App Splash</span><span class="gzh">APP 启动页设计</span><span class="gcount">6 pieces</span></div>
-      <div class="masonry">
-        <figure><img loading="lazy" src="assets/img/app-01.webp" alt="App splash screen design"></figure>
-        <figure><img loading="lazy" src="assets/img/app-02.webp" alt="App splash screen design"></figure>
-        <figure><img loading="lazy" src="assets/img/app-03.webp" alt="App splash screen design"></figure>
-        <figure><img loading="lazy" src="assets/img/app-04.webp" alt="App splash screen design"></figure>
-        <figure><img loading="lazy" src="assets/img/app-05.webp" alt="App splash screen design"></figure>
-        <figure><img loading="lazy" src="assets/img/app-06.webp" alt="App splash screen design"></figure>
+<section class="phead">
+  <div class="wrap">
+    <div class="g12">
+      <div class="c1-8">
+        <p class="aux rv" style="margin-bottom:1.4rem">Work / 03 · APP 设计</p>
+        <h1 class="d1 rv-line">App Design</h1>
+      </div>
+      <div class="c9-13">
+        <p class="body rv" style="margin-top:auto">Splash screens and interface work — a life ledger app exploring quiet, editorial UI instead of the usual dashboard clutter.</p>
+        <div class="phead__meta"><span class="aux rv">6 Screens</span><span class="aux rv">Splash · Interface · Experience</span><span class="aux rv">2026</span></div>
       </div>
     </div>
+    <div class="phead__rule"></div>
+  </div>
+</section>
 
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">01</span>
+      <span class="t">Splash & Onboarding</span>
+      <span class="zh">启动页与引导</span>
     </div>
-  </section>
-</main>
+    <p class="body rv" style="margin-bottom:clamp(2rem,6vh,3rem)">以留白和单一强调色建立秩序感，让每个启动画面只讲一件事。</p>
+    <div class="gal">
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:463/1000;margin:0"><img src="assets/img/app-01.webp" alt="App splash screen" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:472/1000;margin:0"><img src="assets/img/app-02.webp" alt="App splash screen" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:474/1000;margin:0"><img src="assets/img/app-03.webp" alt="App splash screen" loading="lazy"></figure>
+      <figure class="gi gi--s2 gi--push rv-media" style="aspect-ratio:463/1000;margin:0"><img src="assets/img/app-04.webp" alt="App splash screen" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:463/1000;margin:0"><img src="assets/img/app-05.webp" alt="App splash screen" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:474/1000;margin:0"><img src="assets/img/app-06.webp" alt="App splash screen" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
 
-<nav class="pager" aria-label="Chapter navigation">
-  <a class="pager__item" href="series.html"><span class="pager__k">← Prev</span><span class="pager__t">AI Series · AI 剧集</span></a>
-  <a class="pager__item pager__item--next" href="contact.html"><span class="pager__k">Next →</span><span class="pager__t">Contact · 联系方式</span></a>
-</nav>
+<section class="band band--night">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">02</span>
+      <span class="t">Live Product</span>
+      <span class="zh">线上产品</span>
+    </div>
+    <div class="g12">
+      <div class="c1-6">
+        <p class="lead rv" style="color:var(--night-2)">Yi Bi · Life Ledger — a working product, not a mockup. The full experience runs in the browser.</p>
+        <p class="body rv" style="margin-top:1.4rem;color:var(--night-2)">「一笔 · 生活账本」是一个已经可以真实使用的产品：记一笔、看趋势、复盘消费结构。界面保持极简，把注意力留给数字本身。</p>
+        <p style="margin-top:2.4rem"><a class="aux-2 rv" href="https://yibi-life-ledger.fey-star-4750.chatgpt.site/" target="_blank" rel="noopener" data-cursor="open" style="border-bottom:1px solid var(--line-night);padding-bottom:.4rem">Open Live Product ↗</a></p>
+      </div>
+      <div class="c7-13">
+        <div class="vgal">
+          <figure class="vg rv-media" style="aspect-ratio:472/1000"><img src="assets/img/app-02.webp" alt="App interface" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+          <figure class="vg rv-media" style="aspect-ratio:474/1000"><img src="assets/img/app-03.webp" alt="App interface" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer>
-  <div class="foot-row">
-    <span>© 2026 Ma Zhongyu · 马仲钰</span>
-    <span>04 / App Design</span>
-    <span class="right">Open to collaboration · 欢迎联系</span>
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="ppager">
+      <a href="series.html" data-cursor="link"><span class="k">Previous</span><span class="t">AI Series Index</span></a>
+      <a href="work.html" data-cursor="link"><span class="k">Index</span><span class="t">All Projects</span></a>
+      <a href="project-01.html" data-cursor="view"><span class="k">Next</span><span class="t">Don't Delete Me</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <span>© 2026 Ma Zhongyu · 马仲钰</span>
+      <span>Work 03 · App Design</span>
+      <span>Open to collaboration</span>
+    </div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/editorial.js"></script>
 </body>
 </html>

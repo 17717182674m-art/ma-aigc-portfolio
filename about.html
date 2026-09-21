@@ -3,108 +3,169 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>个人简介 About — 马仲钰 AIGC 作品集</title>
-<meta name="description" content="马仲钰 — AIGC 视觉设计师。个人介绍、工作经历与专业技能。">
+<title>About — Ma Zhongyu · Visual Designer &amp; AIGC Creator</title>
+<meta name="description" content="马仲钰 Ma Zhongyu — Visual Designer &amp; AIGC Creator。个人简介、工作经历与专业能力。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=UnifrakturCook:wght@700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<noscript><style>.reveal{opacity:1!important;transform:none!important}.rise{opacity:1!important;transform:none!important}</style></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body>
-<header class="pnav">
-  <a class="logo rise d1" href="index.html" aria-label="Ma — home">Ma.</a>
-  <span class="pnav__mid rise d2">01 / About Me</span>
-  <nav class="pnav__right" aria-label="Primary">
-    <a class="pnav__back rise d3" href="index.html">← Home</a>
-    <button class="burger rise d4" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <span></span><span></span><span></span>
-    </button>
+
+<div class="trans" id="trans"></div>
+<div class="cur" id="cur"><div class="cur__dot"></div><span class="cur__label"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html">Ma Zhongyu</a>
+  <nav class="nav__menu" aria-label="Primary">
+    <a href="work.html" data-nav>Work</a>
+    <a href="about.html" data-nav>About</a>
+    <a href="contact.html" data-nav>Contact</a>
   </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
 </header>
-<div class="menu" id="menu">
-  <ul class="menu__list">
-    <li><a href="index.html">Home</a></li>
+
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="index.html">Index</a></li>
+    <li><a href="work.html">Work</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="visual.html">Work</a></li>
-    <li><a href="series.html">Series</a></li>
-    <li><a href="app.html">App</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="menu__rule"></div>
-  <div class="menu__foot">
-    <a class="btn-play" href="contact.html">Let's Talk</a>
-  </div>
+  <p class="drawer__foot">Based in China · Available for selected projects · 2026</p>
 </div>
 
-<main class="resume">
-  <!-- 左栏：人像 + 基本信息（粘性固定） -->
-  <aside class="resume__photo reveal">
-    <img src="assets/img/portrait.webp" alt="马仲钰个人照片">
-    <div class="resume__id">
-      <h2>马仲钰 <span style="color:rgba(255,255,255,.38);font-size:1.05rem">/ Ma Zhongyu</span></h2>
-      <p class="role">AIGC Visual Designer</p>
-      <p class="motto-r">把想象，变成看得见的世界。<small>Design a better tomorrow</small></p>
+<!-- ══════════════ ABOUT ══════════════ -->
+<section class="phead">
+  <div class="wrap">
+    <div class="g12">
+      <div class="c1-6">
+        <p class="aux rv" style="margin-bottom:1.4rem">About · 关于</p>
+        <h1 class="d1 rv-line">About</h1>
+      </div>
+      <div class="c7-13">
+        <p class="lead rv">I'm Ma Zhongyu — a visual designer working between brand systems, print-grade graphics and AI-generated motion. I build images that hold up as a system, not as one-off pieces.</p>
+        <p class="body rv" style="margin-top:1.6rem">马仲钰，视觉设计师。工作范围涵盖品牌视觉、海报与 Banner、字体与 IP 形象、AI 影像与短剧设定、以及 APP 界面体验。习惯从「系统」出发：先定规则、再铺细节，让一个视觉语言可以在海报、屏幕与动态影像之间无缝迁移。</p>
+        <p class="body rv" style="margin-top:1.2rem">近几年专注于生成式 AI 在商业视觉中的落地——从提示词结构、角色一致性，到成片剪辑与调色，整套流程独立完成。</p>
+      </div>
     </div>
-  </aside>
+    <div class="phead__rule"></div>
+  </div>
+</section>
 
-  <!-- 右栏：编号式简历区块 -->
-  <div class="resume__body">
-    <section class="rblock reveal">
-      <div class="rhead"><span class="rlabel">Profile</span><span class="rzh">个人介绍</span><span class="rno">01</span></div>
-      <p>专注于 AIGC 视觉设计与 AI 内容创作，具备广告视觉、品牌设计、IP 形象、AI 剧集资产制作与生成式内容工作流经验。</p>
-      <p>擅长将传统视觉设计方法与 AIGC 工具结合，完成从创意构思、视觉资产生成到最终内容落地的完整流程。我相信好的设计可以传递情绪、连接人与世界，未来希望在更大的平台上，持续探索影像与 AI 的更多可能。</p>
-    </section>
-
-    <section class="rblock reveal">
-      <div class="rhead"><span class="rlabel">Work Experience</span><span class="rzh">工作经历</span><span class="rno">02</span></div>
-
-      <article class="rxp">
-        <div class="rxp__time">2025.05 — 2026.08</div>
-        <div>
-          <h3 class="rxp__org">星迹互动科技有限公司</h3>
-          <span class="rbadge">AIGC 视觉设计师</span>
-          <p class="rxp__desc">主导 AIGC 视觉项目的创意策划与执行，涵盖海报、KV、短视频等多种形式；负责 IP 形象设计与品牌视觉体系搭建，推动创意落地与视觉风格统一；负责 AI 漫剧项目的分镜设计、图像生成、视频制作与剪辑，把控整体叙事节奏与视觉风格；负责 TVC 视觉创意与全流程把控，输出品牌广告片视觉方案与动态图像设计。</p>
+<!-- ══════════════ PROFILE ══════════════ -->
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="g12">
+      <div class="c1-5">
+        <figure class="m-p45 rv-media" style="margin:0">
+          <img src="assets/img/portrait.webp" alt="Portrait of Ma Zhongyu" loading="lazy">
+        </figure>
+        <p class="cap">Ma Zhongyu · 马仲钰</p>
+      </div>
+      <div class="c7-13">
+        <div class="sec-head rv" style="margin-bottom:2rem">
+          <span class="no">01</span>
+          <span class="t">Profile</span>
+          <span class="zh">个人简介</span>
         </div>
-      </article>
+        <p class="body rv">A designer who treats every brief as a chance to build a visual language rather than a single deliverable. My work starts with typography and grid, then extends into imagery, motion and interface.</p>
+        <p class="body rv" style="margin-top:1.2rem">我把排版和网格当成地基。无论是一张海报、一条竖屏短剧，还是一个 APP 的启动页，先想清楚它们共享的视觉规则，再让每个载体各自发挥。</p>
 
-      <article class="rxp">
-        <div class="rxp__time">2023.10 — 2025.04</div>
-        <div>
-          <h3 class="rxp__org">北京丹青映画传媒科技有限公司</h3>
-          <span class="rbadge">平面设计师</span>
-          <p class="rxp__desc">参与公司多个引进 IP 项目视觉开发；独立产出项目 KV、概念海报、社交媒体宣传长图等物料，统一 IP 对外视觉风格；协同内容、影视部门完成 IP 改编项目视觉落地，支撑项目展会与市场传播。</p>
+        <div class="kv" style="margin-top:2.4rem">
+          <p class="kv__k">Focus</p>
+          <ul class="kv__list">
+            <li>Brand identity &amp; visual systems</li>
+            <li>Poster, banner &amp; typographic design</li>
+            <li>AI-generated moving image &amp; short drama</li>
+            <li>Interface &amp; experience design</li>
+          </ul>
         </div>
-      </article>
-    </section>
-
-    <section class="rblock reveal">
-      <div class="rhead"><span class="rlabel">Skills</span><span class="rzh">专业技能</span><span class="rno">03</span></div>
-      <div class="rskill"><span class="k">AIGC Tools</span><span>libtv · 即梦 · Stable Diffusion · ComfyUI · ChatGPT —— 图像 / 视频生成与创意探索</span></div>
-      <div class="rskill"><span class="k">Design</span><span>Photoshop · Adobe Illustrator · Figma · WorkBuddy · 剪映</span></div>
-      <div class="rskill"><span class="k">Core</span><span>视觉创意 · 插画设计 · 三维建模 · 视频剪辑与后期合成 · 品牌设计</span></div>
-      <div class="rskill"><span class="k">Plus</span><span>审美能力 · 文案理解 · 项目执行</span></div>
-    </section>
-
-    <div class="resume__cta reveal">
-      <a class="btn-play" href="contact.html">Get in Touch →</a>
+      </div>
     </div>
   </div>
-</main>
+</section>
 
-<nav class="pager" aria-label="Chapter navigation">
-  <a class="pager__item" href="index.html"><span class="pager__k">← Back</span><span class="pager__t">Home · 首页</span></a>
-  <a class="pager__item pager__item--next" href="visual.html"><span class="pager__k">Next →</span><span class="pager__t">Visual Design · 视觉设计</span></a>
-</nav>
+<!-- ══════════════ EXPERIENCE ══════════════ -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">02</span>
+      <span class="t">Experience</span>
+      <span class="zh">工作经历</span>
+    </div>
 
-<footer>
-  <div class="foot-row">
-    <span>© 2026 Ma Zhongyu · 马仲钰</span>
-    <span>01 / About Me</span>
-    <span class="right">Open to collaboration · 欢迎联系</span>
+    <div class="xp rv">
+      <span class="xp__y aux mono">2025 — 2026</span>
+      <h2 class="d4 xp__r" style="margin:0">Xingji Interactive Technology</h2>
+      <span class="xp__o aux">AIGC Visual Designer · 星际互动科技</span>
+    </div>
+    <p class="body rv" style="padding:1.2rem 0 2.2rem">负责品牌与产品线的整体视觉输出：海报 / Banner 体系、IP 形象与字体规范、AI 短剧与广告影像的设定与成片。搭建可复用的视觉模板，把单次交付变成可持续迭代的系统。</p>
+
+    <div class="xp rv">
+      <span class="xp__y aux mono">2023 — 2025</span>
+      <h2 class="d4 xp__r" style="margin:0">Danqing Yinghua</h2>
+      <span class="xp__o aux">Visual Designer · 丹青映画</span>
+    </div>
+    <p class="body rv" style="padding:1.2rem 0 0">参与影视与商业项目的视觉设计工作，从概念草图、风格板到最终定稿；积累了完整的印刷与屏幕端交付经验。</p>
+  </div>
+</section>
+
+<!-- ══════════════ CAPABILITIES ══════════════ -->
+<section class="band band--night">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">03</span>
+      <span class="t">Capabilities</span>
+      <span class="zh">专业能力</span>
+    </div>
+
+    <div class="g12" style="row-gap:clamp(2rem,5vh,3.4rem)">
+      <div class="c1-6 rv">
+        <p class="kv__k">Visual</p>
+        <div class="tags"><span>Poster</span><span>Banner</span><span>Brand Identity</span><span>Typography</span><span>IP Character</span><span>Illustration</span><span>Key Visual</span></div>
+      </div>
+      <div class="c7-13 rv">
+        <p class="kv__k">Motion &amp; AI</p>
+        <div class="tags"><span>AI Film</span><span>Short Drama</span><span>Storyboard</span><span>Editing</span><span>Color Grading</span><span>Prompt System</span><span>Character Consistency</span></div>
+      </div>
+      <div class="c1-6 rv">
+        <p class="kv__k">AI Tools</p>
+        <div class="tags"><span>Midjourney</span><span>Stable Diffusion</span><span>ComfyUI</span><span>Runway</span><span>Kling</span><span>Jimeng</span></div>
+      </div>
+      <div class="c7-13 rv">
+        <p class="kv__k">Software</p>
+        <div class="tags"><span>Photoshop</span><span>Illustrator</span><span>After Effects</span><span>Premiere Pro</span><span>Figma</span><span>Blender</span></div>
+      </div>
+      <div class="c1-6 rv">
+        <p class="kv__k">Languages</p>
+        <div class="tags"><span>中文</span><span>English</span></div>
+      </div>
+      <div class="c7-13 rv">
+        <p class="kv__k">Availability</p>
+        <div class="tags"><span>Freelance</span><span>Collaboration</span><span>Creative Projects</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ NEXT ══════════════ -->
+<section class="band band--tight">
+  <div class="wrap">
+    <a class="mega-cta rv" href="contact.html" data-cursor="link">Let's talk</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <span>© 2026 Ma Zhongyu · 马仲钰</span>
+      <span>Visual Designer &amp; AIGC Creator</span>
+      <span>Open to collaboration</span>
+    </div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/editorial.js"></script>
 </body>
 </html>

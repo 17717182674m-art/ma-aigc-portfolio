@@ -3,159 +3,191 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>视觉设计 Visual Design — 马仲钰 AIGC 作品集</title>
-<meta name="description" content="海报 / Banner / IP 形象 / 字体 / 插画 — AIGC 与平面设计作品选集。">
+<title>Visual Design — Ma Zhongyu</title>
+<meta name="description" content="马仲钰视觉设计作品 — 海报 / Banner / IP 形象 / 字体 / 插画。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=UnifrakturCook:wght@700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<noscript><style>.reveal{opacity:1!important;transform:none!important}.rise{opacity:1!important;transform:none!important}</style></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body>
-<header class="pnav">
-  <a class="logo rise d1" href="index.html" aria-label="Ma — home">Ma.</a>
-  <span class="pnav__mid rise d2">02 / Visual Design</span>
-  <nav class="pnav__right" aria-label="Primary">
-    <a class="pnav__back rise d3" href="index.html">← Home</a>
-    <button class="burger rise d4" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <span></span><span></span><span></span>
-    </button>
+
+<div class="trans" id="trans"></div>
+<div class="cur" id="cur"><div class="cur__dot"></div><span class="cur__label"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html">Ma Zhongyu</a>
+  <nav class="nav__menu" aria-label="Primary">
+    <a href="work.html" data-nav>Work</a>
+    <a href="about.html" data-nav>About</a>
+    <a href="contact.html" data-nav>Contact</a>
   </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
 </header>
-<div class="menu" id="menu">
-  <ul class="menu__list">
-    <li><a href="index.html">Home</a></li>
+
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="index.html">Index</a></li>
+    <li><a href="work.html">Work</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="visual.html">Work</a></li>
-    <li><a href="series.html">Series</a></li>
-    <li><a href="app.html">App</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="menu__rule"></div>
-  <div class="menu__foot">
-    <a class="btn-play" href="contact.html">Let's Talk</a>
-  </div>
+  <p class="drawer__foot">Based in China · Available for selected projects · 2026</p>
 </div>
 
-<main>
-  <section class="section">
-    <div class="wrap">
-    <div class="sec-head reveal"><span class="no">02</span><span class="en">Visual Design</span><span class="zh">视觉设计</span></div>
-    <h2 class="sec-title reveal">Visual, character &amp; type —<br><em>a world built frame by frame.</em></h2>
-    <p class="sec-sub reveal">从概念构思、生成工作流到最终视觉落地 —— 以下为 2024–2026 年间完成的 AIGC 与设计项目精选。</p>
-
-    <!-- 01 海报 -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">a.</span><span class="gen">Poster</span><span class="gzh">海报设计</span><span class="gcount">12 pieces</span></div>
-      <div class="masonry">
-        <figure><img loading="lazy" src="assets/img/poster-01.webp" alt="Poster — Serenity Coastal Girl"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-02.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-03.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-04.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-05.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-06.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-07.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-08.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-09.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-10.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-11.webp" alt="Poster design"></figure>
-        <figure><img loading="lazy" src="assets/img/poster-12.webp" alt="Poster design"></figure>
+<section class="phead">
+  <div class="wrap">
+    <div class="g12">
+      <div class="c1-8">
+        <p class="aux rv" style="margin-bottom:1.4rem">Work / 01 · 视觉设计</p>
+        <h1 class="d1 rv-line">Visual Design</h1>
+      </div>
+      <div class="c9-13">
+        <p class="body rv" style="margin-top:auto">Posters, banners, IP characters, typography and illustration — the graphic layer of the practice, built as reusable systems rather than single pieces.</p>
+        <div class="phead__meta"><span class="aux rv">60 Pieces</span><span class="aux rv">Poster · Banner · IP · Type · Illustration</span><span class="aux rv">2024—2026</span></div>
       </div>
     </div>
+    <div class="phead__rule"></div>
+  </div>
+</section>
 
-    <!-- 02 Banner -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">b.</span><span class="gen">Banner</span><span class="gzh">Banner 设计</span><span class="gcount">11 pieces</span></div>
-      <div class="masonry">
-        <figure><img loading="lazy" src="assets/img/banner-01.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-02.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-03.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-04.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-05.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-06.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-07.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-08.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-09.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-10.webp" alt="Banner design"></figure>
-        <figure><img loading="lazy" src="assets/img/banner-11.webp" alt="Banner design"></figure>
-      </div>
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">01</span>
+      <span class="t">Poster</span>
+      <span class="zh">海报设计</span>
     </div>
-
-    <!-- 03 IP -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">c.</span><span class="gen">IP Design</span><span class="gzh">IP 形象设计</span><span class="gcount">4 IPs · 12 pieces</span></div>
-      <p style="margin:.2rem 0 1.4rem"><span class="tag">MOMOQI · 情绪陪伴型</span><span class="tag">IP2</span><span class="tag">IP3</span><span class="tag">IP4</span></p>
-      <div class="masonry">
-        <figure><img loading="lazy" src="assets/img/ip1-01.webp" alt="IP design — MOMOQI main visual"></figure>
-        <figure><img loading="lazy" src="assets/img/ip1-02.webp" alt="IP design — MOMOQI"></figure>
-        <figure><img loading="lazy" src="assets/img/ip2-01.webp" alt="IP design"></figure>
-        <figure><img loading="lazy" src="assets/img/ip1-03.webp" alt="IP design — MOMOQI extension"></figure>
-        <figure><img loading="lazy" src="assets/img/ip3-01.webp" alt="IP design"></figure>
-        <figure><img loading="lazy" src="assets/img/ip4-01.webp" alt="IP design"></figure>
-        <figure><img loading="lazy" src="assets/img/ip2-02.webp" alt="IP design extension"></figure>
-        <figure><img loading="lazy" src="assets/img/ip3-02.webp" alt="IP design extension"></figure>
-        <figure><img loading="lazy" src="assets/img/ip4-02.webp" alt="IP design extension"></figure>
-        <figure><img loading="lazy" src="assets/img/ip2-03.webp" alt="IP design scene"></figure>
-        <figure><img loading="lazy" src="assets/img/ip3-03.webp" alt="IP design scene"></figure>
-        <figure><img loading="lazy" src="assets/img/ip4-03.webp" alt="IP design scene"></figure>
-      </div>
+    <div class="gal">
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:675/1200;margin:0"><img src="assets/img/poster-01.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:675/1200;margin:0"><img src="assets/img/poster-02.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s6 rv-media" style="aspect-ratio:900/1200;margin:0"><img src="assets/img/poster-03.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 gi--push rv-media" style="aspect-ratio:960/1200;margin:0"><img src="assets/img/poster-04.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:848/1200;margin:0"><img src="assets/img/poster-05.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:799/1200;margin:0"><img src="assets/img/poster-06.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:800/1200;margin:0"><img src="assets/img/poster-07.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:766/1200;margin:0"><img src="assets/img/poster-08.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:800/1200;margin:0"><img src="assets/img/poster-09.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s6 rv-media" style="aspect-ratio:900/1200;margin:0"><img src="assets/img/poster-10.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 gi--push rv-media" style="aspect-ratio:800/1200;margin:0"><img src="assets/img/poster-11.webp" alt="Poster design" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:900/1200;margin:0"><img src="assets/img/poster-12.webp" alt="Poster design" loading="lazy"></figure>
     </div>
+  </div>
+</section>
 
-    <!-- 05 字体 -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">e.</span><span class="gen">Type Design</span><span class="gzh">字体设计</span><span class="gcount">11 pieces</span></div>
-      <div class="masonry">
-        <figure><img loading="lazy" src="assets/img/font-01.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-02.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-03.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-04.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-05.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-06.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-07.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-08.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-09.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-10.webp" alt="Type design"></figure>
-        <figure><img loading="lazy" src="assets/img/font-11.webp" alt="Type design"></figure>
-      </div>
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">02</span>
+      <span class="t">Banner</span>
+      <span class="zh">Banner 设计</span>
     </div>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/467;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-01.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/467;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-02.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/560;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-03.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/519;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-04.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/519;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-05.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/477;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-06.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/518;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-07.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/700;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-08.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/502;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-09.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/467;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-10.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+    <figure class="rv-media" style="margin:0 0 var(--gap);aspect-ratio:1400/467;overflow:hidden;background:var(--paper-3)"><img src="assets/img/banner-11.webp" alt="Banner design" loading="lazy" style="width:100%;height:100%;object-fit:cover"></figure>
+  </div>
+</section>
 
-    <!-- 06 插画 -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">f.</span><span class="gen">Illustration</span><span class="gzh">插画设计</span><span class="gcount">14 pieces</span></div>
-      <div class="masonry">
-        <figure><img loading="lazy" src="assets/img/illus-01.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-02.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-03.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-04.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-05.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-06.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-07.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-08.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-09.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-10.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-11.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-12.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-13.webp" alt="Illustration"></figure>
-        <figure><img loading="lazy" src="assets/img/illus-14.webp" alt="Illustration"></figure>
-      </div>
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">03</span>
+      <span class="t">IP Character</span>
+      <span class="zh">IP 形象</span>
     </div>
+    <div class="gal">
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/788;margin:0"><img src="assets/img/ip1-01.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/1050;margin:0"><img src="assets/img/ip1-02.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 gi--push rv-media" style="aspect-ratio:1/1;margin:0"><img src="assets/img/ip1-03.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/788;margin:0"><img src="assets/img/ip2-01.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/1050;margin:0"><img src="assets/img/ip2-02.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 gi--push rv-media" style="aspect-ratio:1/1;margin:0"><img src="assets/img/ip2-03.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/788;margin:0"><img src="assets/img/ip3-01.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/1050;margin:0"><img src="assets/img/ip3-02.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 gi--push rv-media" style="aspect-ratio:1/1;margin:0"><img src="assets/img/ip3-03.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/788;margin:0"><img src="assets/img/ip4-01.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/1050;margin:0"><img src="assets/img/ip4-02.webp" alt="IP character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 gi--push rv-media" style="aspect-ratio:1/1;margin:0"><img src="assets/img/ip4-03.webp" alt="IP character design" loading="lazy"></figure>
+    </div>  </div>
+</section>
+
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">04</span>
+      <span class="t">Typography</span>
+      <span class="zh">字体设计</span>
     </div>
-  </section>
-</main>
+    <div class="gal">
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1/1;margin:0"><img src="assets/img/font-01.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/933;margin:0"><img src="assets/img/font-02.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/1050;margin:0"><img src="assets/img/font-03.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s6 gi--push rv-media" style="aspect-ratio:1120/1400;margin:0"><img src="assets/img/font-04.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s6 rv-media" style="aspect-ratio:1400/707;margin:0"><img src="assets/img/font-05.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1120/1400;margin:0"><img src="assets/img/font-06.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1/1;margin:0"><img src="assets/img/font-07.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/933;margin:0"><img src="assets/img/font-08.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s6 rv-media" style="aspect-ratio:1400/933;margin:0"><img src="assets/img/font-09.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s6 rv-media" style="aspect-ratio:1400/933;margin:0"><img src="assets/img/font-10.webp" alt="Typography design" loading="lazy"></figure>
+      <figure class="gi gi--s4 gi--push rv-media" style="aspect-ratio:1400/933;margin:0"><img src="assets/img/font-11.webp" alt="Typography design" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
 
-<nav class="pager" aria-label="Chapter navigation">
-  <a class="pager__item" href="about.html"><span class="pager__k">← Prev</span><span class="pager__t">About Me · 个人简介</span></a>
-  <a class="pager__item pager__item--next" href="series.html"><span class="pager__k">Next →</span><span class="pager__t">AI Series · AI 剧集</span></a>
-</nav>
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">05</span>
+      <span class="t">Illustration</span>
+      <span class="zh">插画</span>
+    </div>
+    <div class="gal">
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:675/1200;margin:0"><img src="assets/img/illus-01.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:960/1200;margin:0"><img src="assets/img/illus-02.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:960/1200;margin:0"><img src="assets/img/illus-03.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s2 gi--push rv-media" style="aspect-ratio:960/1200;margin:0"><img src="assets/img/illus-04.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:960/1200;margin:0"><img src="assets/img/illus-05.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:900/1200;margin:0"><img src="assets/img/illus-06.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:960/1200;margin:0"><img src="assets/img/illus-07.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:1145/1200;margin:0"><img src="assets/img/illus-08.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:960/1200;margin:0"><img src="assets/img/illus-09.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:900/1200;margin:0"><img src="assets/img/illus-10.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s2 gi--push rv-media" style="aspect-ratio:675/1200;margin:0"><img src="assets/img/illus-11.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:960/1200;margin:0"><img src="assets/img/illus-12.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:1200/1200;margin:0"><img src="assets/img/illus-13.webp" alt="Illustration" loading="lazy"></figure>
+      <figure class="gi gi--s2 rv-media" style="aspect-ratio:675/1200;margin:0"><img src="assets/img/illus-14.webp" alt="Illustration" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
 
-<footer>
-  <div class="foot-row">
-    <span>© 2026 Ma Zhongyu · 马仲钰</span>
-    <span>02 / Visual Design</span>
-    <span class="right">Open to collaboration · 欢迎联系</span>
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="ppager">
+      <a href="project-03.html" data-cursor="link"><span class="k">Previous</span><span class="t">Liubai · Fragrance Identity</span></a>
+      <a href="work.html" data-cursor="link"><span class="k">Index</span><span class="t">All Projects</span></a>
+      <a href="series.html" data-cursor="view"><span class="k">Next</span><span class="t">AI Series Index</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <span>© 2026 Ma Zhongyu · 马仲钰</span>
+      <span>Work 01 · Visual Design</span>
+      <span>Open to collaboration</span>
+    </div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/editorial.js"></script>
 </body>
 </html>

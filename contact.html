@@ -3,77 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>联系我 Contact — 马仲钰 AIGC 作品集</title>
-<meta name="description" content="马仲钰的个人联系方式。Welcome to get in touch.">
+<title>Contact — Ma Zhongyu · Visual Designer &amp; AIGC Creator</title>
+<meta name="description" content="联系马仲钰 Ma Zhongyu — Email / WeChat / Social。Available for freelance collaboration and creative projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=UnifrakturCook:wght@700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<noscript><style>.reveal{opacity:1!important;transform:none!important}.rise{opacity:1!important;transform:none!important}</style></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/editorial.css">
 </head>
-<body>
-<header class="pnav">
-  <a class="logo rise d1" href="index.html" aria-label="Ma — home">Ma.</a>
-  <span class="pnav__mid rise d2">05 / Contact</span>
-  <nav class="pnav__right" aria-label="Primary">
-    <a class="pnav__back rise d3" href="index.html">← Home</a>
-    <button class="burger rise d4" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <span></span><span></span><span></span>
-    </button>
+<body class="band--night">
+
+<div class="trans" id="trans"></div>
+<div class="cur" id="cur"><div class="cur__dot"></div><span class="cur__label"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html">Ma Zhongyu</a>
+  <nav class="nav__menu" aria-label="Primary">
+    <a href="work.html" data-nav>Work</a>
+    <a href="about.html" data-nav>About</a>
+    <a href="contact.html" data-nav>Contact</a>
   </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
 </header>
-<div class="menu" id="menu">
-  <ul class="menu__list">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="visual.html">Work</a></li>
-    <li><a href="series.html">Series</a></li>
+
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="index.html">Index</a></li>
+    <li><a href="work.html">Work</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="app.html">App</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="menu__rule"></div>
-  <div class="menu__foot">
-    <a class="btn-play" href="contact.html">Let's Talk</a>
-  </div>
+  <p class="drawer__foot">Based in China · Available for selected projects · 2026</p>
 </div>
 
-<main>
-  <section class="section section--dark">
+<div style="background:var(--night);color:var(--paper);min-height:100svh">
+
+  <!-- ══════════════ HEADLINE ══════════════ -->
+  <section style="padding:clamp(7rem,20vh,13rem) 0 clamp(1.4rem,4vh,2.6rem)">
     <div class="wrap">
-    <div class="sec-head reveal"><span class="no">05</span><span class="en">Contact</span><span class="zh">联系方式</span></div>
-    <p class="dark-eyebrow reveal">Thanks for watching · 感谢观看</p>
-    <h2 class="sec-title reveal" style="font-size:clamp(2.6rem,6vw,5.2rem)">Let's create<br><em>something new.</em></h2>
-    <div class="contact-grid reveal">
-      <div class="contact-cell"><div class="k">Name / 姓名</div><div class="v">马仲钰</div></div>
-      <div class="contact-cell"><div class="k">Email / 邮箱</div><a class="v" href="mailto:1239461802@qq.com">1239461802@qq.com</a></div>
-      <div class="contact-cell"><div class="k">Phone / 电话</div><a class="v" href="tel:17717182674">177 1718 2674</a></div>
-      <div class="contact-cell"><div class="k">Base / 坐标</div><div class="v">北京 · 朝阳</div></div>
-    </div>
-    <div class="reveal" style="margin-top:2.4rem">
-      <a class="btn-play" href="mailto:1239461802@qq.com">Get in Touch</a>
-    </div>
-    <div class="foot-row reveal" style="margin-top:clamp(3rem,8vh,5rem)">
-      <span>© 2026 Ma Zhongyu · 马仲钰</span>
-      <span>AIGC Personal Portfolio</span>
-      <span class="right">Open to collaboration · 欢迎联系</span>
-    </div>
+      <p class="aux rv" style="margin-bottom:1.6rem">Contact · 联系方式</p>
+      <h1 class="d1 rv-line" style="color:var(--paper)">Let's create<br>something interesting.</h1>
+      <p class="lead rv" style="margin-top:clamp(1.6rem,4vh,2.6rem);max-width:40ch;color:var(--night-2)">
+        Open for selected projects, freelance collaboration and creative partnerships. Tell me what you're building.
+      </p>
     </div>
   </section>
-</main>
 
-<nav class="pager" aria-label="Chapter navigation">
-  <a class="pager__item" href="app.html"><span class="pager__k">← Prev</span><span class="pager__t">App Design · APP 设计</span></a>
-  <a class="pager__item pager__item--next" href="index.html"><span class="pager__k">→ Home</span><span class="pager__t">Back to top · 返回首页</span></a>
-</nav>
+  <!-- ══════════════ CONTACT LIST ══════════════ -->
+  <section style="padding:clamp(2.4rem,8vh,6rem) 0">
+    <div class="wrap">
+      <div class="contact-list rv">
+        <div class="contact-row">
+          <span class="k">Email</span>
+          <a class="v" href="mailto:1239461802@qq.com" data-cursor="link">1239461802@qq.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="k">WeChat</span>
+          <span class="v">17717182674</span>
+        </div>
+        <div class="contact-row">
+          <span class="k">Social</span>
+          <span class="v">小红书 · 抖音 · 站酷 &nbsp;/&nbsp; Ma Zhongyu</span>
+        </div>
+        <div class="contact-row">
+          <span class="k">Based in</span>
+          <span class="v">中国 · 北京</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="foot-row">
-    <span>© 2026 Ma Zhongyu · 马仲钰</span>
-    <span>05 / Contact</span>
-    <span class="right">Open to collaboration · 欢迎联系</span>
+  <!-- ══════════════ AVAILABILITY ══════════════ -->
+  <section style="padding:clamp(1.4rem,5vh,4rem) 0">
+    <div class="wrap">
+      <div class="g12">
+        <div class="c1-6 rv">
+          <p class="kv__k" style="color:var(--night-3)">Availability</p>
+          <p class="d4" style="color:var(--paper);text-transform:uppercase;letter-spacing:.02em">Available for<br>freelance collaboration<br>creative projects</p>
+        </div>
+        <div class="c9-13 rv">
+          <p class="kv__k" style="color:var(--night-3)">Response</p>
+          <p class="body" style="color:var(--night-2)">Usually within 24 hours. 通常会尽快回复，欢迎直接说明项目类型、周期与预期产出。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ MEGA CTA ══════════════ -->
+  <section style="padding:clamp(2rem,7vh,6rem) 0 clamp(3rem,10vh,8rem)">
+    <div class="wrap">
+      <a class="mega-cta rv" href="mailto:1239461802@qq.com" data-cursor="open" style="color:var(--paper)">Get in touch</a>
+    </div>
+  </section>
+
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <span>© 2026 Ma Zhongyu · 马仲钰</span>
+      <span>Visual Designer &amp; AIGC Creator</span>
+      <span>Open to collaboration</span>
+    </div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/editorial.js"></script>
 </body>
 </html>

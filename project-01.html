@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Don't Delete Me — AI Short Film · Ma Zhongyu</title>
+<meta name="description" content="Project 01 — Don't Delete Me, AI short film。剧情概念、角色设计、分镜生成与成片交付全流程。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/editorial.css">
+</head>
+<body>
+
+<div class="trans" id="trans"></div>
+<div class="cur" id="cur"><div class="cur__dot"></div><span class="cur__label"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html">Ma Zhongyu</a>
+  <nav class="nav__menu" aria-label="Primary">
+    <a href="work.html" data-nav>Work</a>
+    <a href="about.html" data-nav>About</a>
+    <a href="contact.html" data-nav>Contact</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
+</header>
+
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="index.html">Index</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="drawer__foot">Based in China · Available for selected projects · 2026</p>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="pd-hero">
+  <div class="wrap">
+    <p class="aux rv">Project 01</p>
+    <h1 class="pd-hero__t rv-line">Don't Delete Me</h1>
+    <p class="lead rv" style="margin-top:1.6rem">A short film about the things we keep in the cloud and the parts of ourselves we try to erase.</p>
+
+    <div class="pd-meta">
+      <div class="pd-meta__c rv"><p class="k">Type</p><p class="v">AI Short Film</p></div>
+      <div class="pd-meta__c rv"><p class="k">Year</p><p class="v">2026</p></div>
+      <div class="pd-meta__c rv"><p class="k">Role</p><p class="v">Direction · Visual Design · Edit</p></div>
+      <div class="pd-meta__c rv"><p class="k">Duration</p><p class="v">03:57</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ HERO VISUAL ══════════════ -->
+<div class="bleed rv-mask" style="aspect-ratio:16/9">
+  <img src="assets/img/drama2-01.webp" alt="Don't Delete Me — hero visual">
+</div>
+
+<!-- ══════════════ 01 OVERVIEW ══════════════ -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">01</span>
+      <span class="t">Overview</span>
+      <span class="zh">项目概述</span>
+    </div>
+
+    <div class="g12">
+      <div class="c1-5">
+        <p class="d4 rv">A story told in fragments of memory.</p>
+      </div>
+      <div class="c6-13">
+        <p class="body rv">An AI-native short film built around a single idea: what happens to a person's digital traces after they let go. The visual language leans on cold screens, warm skin tones and a lot of negative space, so the emotional beat lands on the face rather than on the spectacle.</p>
+        <p class="body rv" style="margin-top:1.2rem">全片以「记忆碎片」结构推进，画面在冷调屏幕光与暖调皮肤之间来回切换。生成阶段重点解决角色一致性与镜头连续性，让 AI 素材看起来像一次真实拍摄，而不是一组独立图像。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 02 ROLE / TOOLS ══════════════ -->
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">02</span>
+      <span class="t">Role &amp; Tools</span>
+      <span class="zh">角色与工具</span>
+    </div>
+
+    <div class="g12">
+      <div class="c1-4 rv"><div class="kv"><p class="kv__k">Role</p><ul class="kv__list"><li>Direction</li><li>Character Design</li><li>Visual Development</li><li>Storyboard</li><li>Editing &amp; Grade</li></ul></div></div>
+      <div class="c5-8 rv"><div class="kv"><p class="kv__k">Tools</p><ul class="kv__list"><li>Midjourney</li><li>ComfyUI</li><li>Runway</li><li>Kling</li><li>After Effects</li><li>Premiere Pro</li></ul></div></div>
+      <div class="c9-13 rv"><div class="kv"><p class="kv__k">Deliverables</p><ul class="kv__list"><li>Master film 3840×2160</li><li>Vertical cutdown 1080×1920</li><li>Character sheets</li><li>Key visual &amp; poster</li><li>Scene style guide</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 03 PROCESS ══════════════ -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">03</span>
+      <span class="t">Process</span>
+      <span class="zh">制作流程</span>
+    </div>
+
+    <div class="step rv">
+      <span class="step__n">01</span>
+      <h2 class="step__h">Concept &amp; Script</h2>
+      <p class="body step__b">定下情绪主轴与叙事结构，输出分场脚本与节拍表。先确定「观众在第几秒被击中」，再回头补画面。</p>
+    </div>
+    <div class="step rv">
+      <span class="step__n">02</span>
+      <h2 class="step__h">Character Design</h2>
+      <p class="body step__b">建立角色三视图与面部特征描述词库，固定五官、发型与服装细节，保证跨镜头的角色一致性。</p>
+    </div>
+    <div class="step rv">
+      <span class="step__n">03</span>
+      <h2 class="step__h">Key Visual &amp; Scene</h2>
+      <p class="body step__b">产出主视觉与场景风格板，统一光源方向、色调与材质表现，作为后续所有生成画面的参照基准。</p>
+    </div>
+    <div class="step rv">
+      <span class="step__n">04</span>
+      <h2 class="step__h">Generation</h2>
+      <p class="body step__b">按分镜批量生成、筛选与补帧。每个镜头保留多版本备选，优先保证运动连贯与构图稳定。</p>
+    </div>
+    <div class="step rv">
+      <span class="step__n">05</span>
+      <h2 class="step__h">Edit &amp; Grade</h2>
+      <p class="body step__b">剪辑节奏、音效铺陈与统一调色，输出横竖双版本，适配大屏与竖屏短视频平台。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 04 SEQUENCE ══════════════ -->
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">04</span>
+      <span class="t">Sequence</span>
+      <span class="zh">画面序列</span>
+    </div>
+
+    <figure class="m-cine rv-media" style="margin:0 0 var(--gap)">
+      <img src="assets/img/drama1-05.webp" alt="Wide establishing frame" loading="lazy">
+    </figure>
+
+    <div class="duo duo--offset" style="margin-bottom:var(--gap)">
+      <figure class="m-43 rv-media" style="margin:0"><img src="assets/img/drama1-04.webp" alt="Character close-up" loading="lazy"></figure>
+      <figure class="m-43 rv-media" style="margin:0"><img src="assets/img/drama2-04.webp" alt="Interior scene" loading="lazy"></figure>
+    </div>
+
+    <div class="trio">
+      <figure class="m-sq rv-media" style="margin:0"><img src="assets/img/drama2-02.webp" alt="Frame 03" loading="lazy"></figure>
+      <figure class="m-sq rv-media" style="margin:0"><img src="assets/img/drama2-03.webp" alt="Frame 04" loading="lazy"></figure>
+      <figure class="m-sq rv-media" style="margin:0"><img src="assets/img/drama2-05.webp" alt="Frame 05" loading="lazy"></figure>
+    </div>
+
+    <figure class="m-full rv-media" style="margin:var(--gap) 0 0">
+      <img src="assets/img/drama1-06.webp" alt="Final wide frame" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════════ 05 FILM ══════════════ -->
+<section class="band band--night">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">05</span>
+      <span class="t">Film</span>
+      <span class="zh">成片</span>
+    </div>
+
+    <div class="film rv-mask">
+      <video controls preload="none" playsinline poster="assets/img/v/short-112233.jpg">
+        <source src="assets/videos/short-112233.mp4" type="video/mp4">
+      </video>
+      <div class="film-play"><span>Play Film</span></div>
+      <div class="film__bar">
+        <div class="film__meta">
+          <span class="aux-2">Film 03:57</span>
+          <span class="aux-2">AI Short · 短片习作</span>
+        </div>
+        <span class="aux-2">Directed / Created by Ma Zhongyu</span>
+      </div>
+    </div>
+
+    <p class="aux-2 rv" style="margin:clamp(2rem,6vh,3.4rem) 0 1rem">Episodic Work · 竖屏短剧</p>
+    <div class="vgal">
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1080/1920">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-fn3.jpg"><source src="assets/videos/drama-fn3.mp4" type="video/mp4"></video>
+        <figcaption>Forbidden Night · Ep3</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1920/1080">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-office1.jpg"><source src="assets/videos/drama-office1.mp4" type="video/mp4"></video>
+        <figcaption>Office Nobody · Ep1</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-cd8.jpg"><source src="assets/videos/drama-cd8.mp4" type="video/mp4"></video>
+        <figcaption>迟来的爱也很甜 · Ep8</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1024/576">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-zq1.jpg"><source src="assets/videos/drama-zq1.mp4" type="video/mp4"></video>
+        <figcaption>真前进归来 · Ep1</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 06 STILLS ══════════════ -->
+<section class="band" id="stills">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">06</span>
+      <span class="t">Stills &amp; Design</span>
+      <span class="zh">剧集设定</span>
+    </div>
+
+    <div class="gal">
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/934;margin:0"><img src="assets/img/drama1-01.webp" alt="Character sheet" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1/1;margin:0"><img src="assets/img/drama1-02.webp" alt="Character design" loading="lazy"></figure>
+      <figure class="gi gi--s4 rv-media" style="aspect-ratio:1400/933;margin:0"><img src="assets/img/drama1-03.webp" alt="Scene design" loading="lazy"></figure>
+
+      <figure class="gi gi--s3 gi--push rv-media" style="aspect-ratio:1400/1050;margin:0"><img src="assets/img/drama1-04.webp" alt="Frame" loading="lazy"></figure>
+      <figure class="gi gi--s3 gi--push rv-media" style="aspect-ratio:1400/788;margin:0"><img src="assets/img/drama1-07.webp" alt="Frame" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:1400/1120;margin:0"><img src="assets/img/drama1-08.webp" alt="Frame" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:1400/788;margin:0"><img src="assets/img/drama2-01.webp" alt="Frame" loading="lazy"></figure>
+
+      <figure class="gi gi--s6 rv-media" style="aspect-ratio:1400/788;margin:0"><img src="assets/img/drama2-04.webp" alt="Scene" loading="lazy" style="object-position:center 40%"></figure>
+      <figure class="gi gi--s6 rv-media" style="aspect-ratio:1400/788;margin:0"><img src="assets/img/drama2-06.webp" alt="Scene" loading="lazy"></figure>
+
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:1400/1050;margin:0"><img src="assets/img/drama2-05.webp" alt="Frame" loading="lazy"></figure>
+      <figure class="gi gi--s3 rv-media" style="aspect-ratio:1400/933;margin:0"><img src="assets/img/drama1-03.webp" alt="Frame" loading="lazy"></figure>
+      <figure class="gi gi--s6 rv-media" style="aspect-ratio:1400/1050;margin:0"><img src="assets/img/drama1-01.webp" alt="Frame" loading="lazy" style="object-position:center 30%"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PAGER ══════════════ -->
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="ppager">
+      <a href="work.html" data-cursor="link"><span class="k">Index</span><span class="t">All Projects</span></a>
+      <a href="project-02.html" data-cursor="view"><span class="k">Next Project</span><span class="t">Yuefeng · Brand Identity</span></a>
+      <a href="series.html" data-cursor="view"><span class="k">Previous</span><span class="t">AI Series Index</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <span>© 2026 Ma Zhongyu · 马仲钰</span>
+      <span>Project 01 · Don't Delete Me</span>
+      <span>Open to collaboration</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/editorial.js"></script>
+</body>
+</html>

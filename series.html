@@ -3,107 +3,275 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI 剧集设定 AI Series — 马仲钰 AIGC 作品集</title>
-<meta name="description" content="AI 剧集的人设三视图、表情资产与场景空间规划。">
+<title>AI Series — Ma Zhongyu</title>
+<meta name="description" content="马仲钰 AI 影像作品 — AI 短剧 / AI 短片 / 商业广告。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=UnifrakturCook:wght@700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<noscript><style>.reveal{opacity:1!important;transform:none!important}.rise{opacity:1!important;transform:none!important}</style></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body>
-<header class="pnav">
-  <a class="logo rise d1" href="index.html" aria-label="Ma — home">Ma.</a>
-  <span class="pnav__mid rise d2">03 / AI Series</span>
-  <nav class="pnav__right" aria-label="Primary">
-    <a class="pnav__back rise d3" href="index.html">← Home</a>
-    <button class="burger rise d4" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <span></span><span></span><span></span>
-    </button>
+
+<div class="trans" id="trans"></div>
+<div class="cur" id="cur"><div class="cur__dot"></div><span class="cur__label"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html">Ma Zhongyu</a>
+  <nav class="nav__menu" aria-label="Primary">
+    <a href="work.html" data-nav>Work</a>
+    <a href="about.html" data-nav>About</a>
+    <a href="contact.html" data-nav>Contact</a>
   </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
 </header>
-<div class="menu" id="menu">
-  <ul class="menu__list">
-    <li><a href="index.html">Home</a></li>
+
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="index.html">Index</a></li>
+    <li><a href="work.html">Work</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="visual.html">Work</a></li>
-    <li><a href="series.html">Series</a></li>
-    <li><a href="app.html">App</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="menu__rule"></div>
-  <div class="menu__foot">
-    <a class="btn-play" href="contact.html">Let's Talk</a>
-  </div>
+  <p class="drawer__foot">Based in China · Available for selected projects · 2026</p>
 </div>
 
-<main>
-  <section class="section section--alt">
-    <div class="wrap">
-    <!-- a. AI Drama -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">a.</span><span class="gen">AI Drama</span><span class="gzh">短剧剧集</span><span class="gcount">13 videos</span></div>
-      <div class="masonry">
-        <figure><video controls preload="none" poster="assets/img/v/drama-cd8.jpg" src="assets/videos/drama-cd8.mp4" style="aspect-ratio:720/1280"></video><figcaption>迟来的爱也很甜 · EP8</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-cd9.jpg" src="assets/videos/drama-cd9.mp4" style="aspect-ratio:720/1280"></video><figcaption>迟来的爱也很甜 · EP9</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-fn3.jpg" src="assets/videos/drama-fn3.mp4" style="aspect-ratio:1080/1920"></video><figcaption>Forbidden Night · EP3</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-fn4.jpg" src="assets/videos/drama-fn4.mp4" style="aspect-ratio:1080/1920"></video><figcaption>Forbidden Night · EP4</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-hs10.jpg" src="assets/videos/drama-hs10.mp4" style="aspect-ratio:720/1280"></video><figcaption>My Hot Stepbrother · EP10</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-hs11.jpg" src="assets/videos/drama-hs11.mp4" style="aspect-ratio:720/1280"></video><figcaption>My Hot Stepbrother · EP11</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-js4.jpg" src="assets/videos/drama-js4.mp4" style="aspect-ratio:1920/1080"></video><figcaption>近视眼误入怪物收容所 · EP4</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-lr6.jpg" src="assets/videos/drama-lr6.mp4" style="aspect-ratio:3760/2160"></video><figcaption>Little Red Riding Hood · EP6</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-lr7.jpg" src="assets/videos/drama-lr7.mp4" style="aspect-ratio:3760/2160"></video><figcaption>Little Red Riding Hood · EP7</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-office1.jpg" src="assets/videos/drama-office1.mp4" style="aspect-ratio:1920/1080"></video><figcaption>Office Nobody · EP1</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-office2.jpg" src="assets/videos/drama-office2.mp4" style="aspect-ratio:1920/1080"></video><figcaption>Office Nobody · EP2</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-zq1.jpg" src="assets/videos/drama-zq1.mp4" style="aspect-ratio:1024/576"></video><figcaption>真前进归来，我拿着百万退场 · EP1</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/drama-zq2.jpg" src="assets/videos/drama-zq2.mp4" style="aspect-ratio:1024/576"></video><figcaption>真前进归来，我拿着百万退场 · EP2</figcaption></figure>
+<section class="phead">
+  <div class="wrap">
+    <div class="g12">
+      <div class="c1-8">
+        <p class="aux rv" style="margin-bottom:1.4rem">Work / 02 · AI 剧集</p>
+        <h1 class="d1 rv-line">AI Series</h1>
+      </div>
+      <div class="c9-13">
+        <p class="body rv" style="margin-top:auto">Twenty-seven films — vertical short drama, widescreen short film and commercial spots. Written, generated, cut and graded end to end.</p>
+        <div class="phead__meta"><span class="aux rv">27 Films</span><span class="aux rv">Drama · Short Film · TVC</span><span class="aux rv">2026</span></div>
       </div>
     </div>
+    <div class="phead__rule"></div>
+  </div>
+</section>
 
-    <!-- b. AI Short Film -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">b.</span><span class="gen">AI Short Film</span><span class="gzh">AI 短片</span><span class="gcount">7 videos</span></div>
-      <div class="masonry">
-        <figure><video controls preload="none" poster="assets/img/v/short-112233.jpg" src="assets/videos/short-112233.mp4" style="aspect-ratio:1920/1080"></video><figcaption>AI Short · 短片习作</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/short-cat.jpg" src="assets/videos/short-cat.mp4" style="aspect-ratio:720/1280"></video><figcaption>猫咪打工的一天</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/short-echoes.jpg" src="assets/videos/short-echoes.mp4" style="aspect-ratio:3840/2160"></video><figcaption>Echoes of the Silent Planet</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/short-island.jpg" src="assets/videos/short-island.mp4" style="aspect-ratio:1920/1080"></video><figcaption>Not A Normal Island</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/short-lastday.jpg" src="assets/videos/short-lastday.mp4" style="aspect-ratio:2560/1440"></video><figcaption>The Last Day Before AI Took Over the World</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/short-nexus.jpg" src="assets/videos/short-nexus.mp4" style="aspect-ratio:2560/1080"></video><figcaption>Nexus · Feature Film Teaser</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/short-slept.jpg" src="assets/videos/short-slept.mp4" style="aspect-ratio:3840/2160"></video><figcaption>They Slept For A Thousand Years</figcaption></figure>
-      </div>
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">01</span>
+      <span class="t">AI Drama</span>
+      <span class="zh">AI 短剧 · 13 部</span>
     </div>
-
-    <!-- c. TVC Ads -->
-    <div class="group reveal">
-      <div class="group__head"><span class="gno">c.</span><span class="gen">TVC Ads</span><span class="gzh">TVC 广告</span><span class="gcount">7 videos</span></div>
-      <div class="masonry">
-        <figure><video controls preload="none" poster="assets/img/v/tvc-change1.jpg" src="assets/videos/tvc-change1.mp4" style="aspect-ratio:720/1280"></video><figcaption>电商换装 I · Outfit</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/tvc-change2.jpg" src="assets/videos/tvc-change2.mp4" style="aspect-ratio:720/1280"></video><figcaption>电商换装 II · Outfit</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/tvc-ecom.jpg" src="assets/videos/tvc-ecom.mp4" style="aspect-ratio:720/1280"></video><figcaption>电商广告 · E-commerce</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/tvc-fragrance.jpg" src="assets/videos/tvc-fragrance.mp4" style="aspect-ratio:1280/720"></video><figcaption>留白香氛 · Fragrance</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/tvc-ice.jpg" src="assets/videos/tvc-ice.mp4" style="aspect-ratio:480/854"></video><figcaption>冰河时代 · Ice Age</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/tvc-perfume.jpg" src="assets/videos/tvc-perfume.mp4" style="aspect-ratio:720/1280"></video><figcaption>香水广告 · Perfume</figcaption></figure>
-        <figure><video controls preload="none" poster="assets/img/v/tvc-water.jpg" src="assets/videos/tvc-water.mp4" style="aspect-ratio:720/1280"></video><figcaption>疯狂水世界 · Water World</figcaption></figure>
-      </div>
+    <p class="body rv" style="margin-bottom:clamp(2rem,6vh,3rem)">竖屏与横屏短剧，以集为单位推进。角色一致性、分镜连续性与成片节奏是这一组的主要工作。</p>
+    <div class="vgal">
+      <figure class="vg vg--n rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-cd8.jpg">
+          <source src="assets/videos/drama-cd8.mp4" type="video/mp4">
+        </video>
+        <figcaption>迟来的爱也很甜 · EP8 · 01:16</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-cd9.jpg">
+          <source src="assets/videos/drama-cd9.mp4" type="video/mp4">
+        </video>
+        <figcaption>迟来的爱也很甜 · EP9 · 01:12</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1080/1920">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-fn3.jpg">
+          <source src="assets/videos/drama-fn3.mp4" type="video/mp4">
+        </video>
+        <figcaption>Forbidden Night · EP3 · 04:46</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1080/1920">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-fn4.jpg">
+          <source src="assets/videos/drama-fn4.mp4" type="video/mp4">
+        </video>
+        <figcaption>Forbidden Night · EP4 · 05:03</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-hs10.jpg">
+          <source src="assets/videos/drama-hs10.mp4" type="video/mp4">
+        </video>
+        <figcaption>My Hot Stepbrother · EP10 · 00:59</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-hs11.jpg">
+          <source src="assets/videos/drama-hs11.mp4" type="video/mp4">
+        </video>
+        <figcaption>My Hot Stepbrother · EP11 · 01:04</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1920/1080">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-js4.jpg">
+          <source src="assets/videos/drama-js4.mp4" type="video/mp4">
+        </video>
+        <figcaption>近视眼误入怪物收容所 · EP4 · 01:56</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:3760/2160">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-lr6.jpg">
+          <source src="assets/videos/drama-lr6.mp4" type="video/mp4">
+        </video>
+        <figcaption>Little Red Riding Hood · EP6 · 01:10</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:3760/2160">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-lr7.jpg">
+          <source src="assets/videos/drama-lr7.mp4" type="video/mp4">
+        </video>
+        <figcaption>Little Red Riding Hood · EP7 · 01:03</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1920/1080">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-office1.jpg">
+          <source src="assets/videos/drama-office1.mp4" type="video/mp4">
+        </video>
+        <figcaption>Office Nobody · EP1 · 04:20</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1920/1080">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-office2.jpg">
+          <source src="assets/videos/drama-office2.mp4" type="video/mp4">
+        </video>
+        <figcaption>Office Nobody · EP2 · 04:12</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1024/576">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-zq1.jpg">
+          <source src="assets/videos/drama-zq1.mp4" type="video/mp4">
+        </video>
+        <figcaption>真前进归来，我拿着百万退场 · EP1 · 04:41</figcaption>
+      </figure>
+      <figure class="vg vg--n rv-media" style="aspect-ratio:1024/576">
+        <video controls preload="none" playsinline poster="assets/img/v/drama-zq2.jpg">
+          <source src="assets/videos/drama-zq2.mp4" type="video/mp4">
+        </video>
+        <figcaption>真前进归来，我拿着百万退场 · EP2 · 03:22</figcaption>
+      </figure>
     </div>
+  </div>
+</section>
+
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">02</span>
+      <span class="t">AI Short Film</span>
+      <span class="zh">AI 短片 · 7 部</span>
     </div>
-  </section>
-</main>
+    <p class="body rv" style="margin-bottom:clamp(2rem,6vh,3rem)">宽银幕短片与概念预告。更长的时长意味着更完整的叙事结构和更严格的镜头管理。</p>
+    <div class="vgal">
+      <figure class="vg vg rv-media" style="aspect-ratio:1920/1080">
+        <video controls preload="none" playsinline poster="assets/img/v/short-112233.jpg">
+          <source src="assets/videos/short-112233.mp4" type="video/mp4">
+        </video>
+        <figcaption>AI Short · 短片习作 · 03:57</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/short-cat.jpg">
+          <source src="assets/videos/short-cat.mp4" type="video/mp4">
+        </video>
+        <figcaption>猫咪打工的一天 · 01:27</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:3840/2160">
+        <video controls preload="none" playsinline poster="assets/img/v/short-echoes.jpg">
+          <source src="assets/videos/short-echoes.mp4" type="video/mp4">
+        </video>
+        <figcaption>Echoes of the Silent Planet · 13:02</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:1920/1080">
+        <video controls preload="none" playsinline poster="assets/img/v/short-island.jpg">
+          <source src="assets/videos/short-island.mp4" type="video/mp4">
+        </video>
+        <figcaption>Not A Normal Island · 04:59</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:2560/1440">
+        <video controls preload="none" playsinline poster="assets/img/v/short-lastday.jpg">
+          <source src="assets/videos/short-lastday.mp4" type="video/mp4">
+        </video>
+        <figcaption>The Last Day Before AI Took Over the World · 03:29</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:16/9">
+        <video controls preload="none" playsinline poster="assets/img/v/short-nexus.jpg">
+          <source src="assets/videos/short-nexus.mp4" type="video/mp4">
+        </video>
+        <figcaption>Nexus · Feature Film Teaser · 06:33</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:3840/2160">
+        <video controls preload="none" playsinline poster="assets/img/v/short-slept.jpg">
+          <source src="assets/videos/short-slept.mp4" type="video/mp4">
+        </video>
+        <figcaption>They Slept For A Thousand Years · 06:10</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-<nav class="pager" aria-label="Chapter navigation">
-  <a class="pager__item" href="visual.html"><span class="pager__k">← Prev</span><span class="pager__t">Visual Design · 视觉设计</span></a>
-  <a class="pager__item pager__item--next" href="app.html"><span class="pager__k">Next →</span><span class="pager__t">App Design · APP 设计</span></a>
-</nav>
+<section class="band band--night">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">03</span>
+      <span class="t">TVC Ads</span>
+      <span class="zh">商业广告 · 7 支</span>
+    </div>
+    <p class="lead rv" style="margin-bottom:clamp(2rem,6vh,3rem);color:var(--night-2)">商业广告与电商内容，以最快节奏交付：产品质感、镜头语言与品牌调性必须同时成立。</p>
+    <div class="vgal">
+      <figure class="vg vg rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/tvc-change1.jpg">
+          <source src="assets/videos/tvc-change1.mp4" type="video/mp4">
+        </video>
+        <figcaption>电商换装 I · Outfit · 00:24</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/tvc-change2.jpg">
+          <source src="assets/videos/tvc-change2.mp4" type="video/mp4">
+        </video>
+        <figcaption>电商换装 II · Outfit · 00:15</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/tvc-ecom.jpg">
+          <source src="assets/videos/tvc-ecom.mp4" type="video/mp4">
+        </video>
+        <figcaption>电商广告 · E-commerce · 00:17</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:1280/720">
+        <video controls preload="none" playsinline poster="assets/img/v/tvc-fragrance.jpg">
+          <source src="assets/videos/tvc-fragrance.mp4" type="video/mp4">
+        </video>
+        <figcaption>留白香氛 · Fragrance · 01:07</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:480/854">
+        <video controls preload="none" playsinline poster="assets/img/v/tvc-ice.jpg">
+          <source src="assets/videos/tvc-ice.mp4" type="video/mp4">
+        </video>
+        <figcaption>冰河时代 · Ice Age · 00:37</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/tvc-perfume.jpg">
+          <source src="assets/videos/tvc-perfume.mp4" type="video/mp4">
+        </video>
+        <figcaption>香水广告 · Perfume · 00:20</figcaption>
+      </figure>
+      <figure class="vg vg rv-media" style="aspect-ratio:720/1280">
+        <video controls preload="none" playsinline poster="assets/img/v/tvc-water.jpg">
+          <source src="assets/videos/tvc-water.mp4" type="video/mp4">
+        </video>
+        <figcaption>疯狂水世界 · Water World · 00:16</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-<footer>
-  <div class="foot-row">
-    <span>© 2026 Ma Zhongyu · 马仲钰</span>
-    <span>03 / AI Series</span>
-    <span class="right">Open to collaboration · 欢迎联系</span>
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="ppager">
+      <a href="visual.html" data-cursor="link"><span class="k">Previous</span><span class="t">Visual Design Archive</span></a>
+      <a href="work.html" data-cursor="link"><span class="k">Index</span><span class="t">All Projects</span></a>
+      <a href="app.html" data-cursor="view"><span class="k">Next</span><span class="t">App Design</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <span>© 2026 Ma Zhongyu · 马仲钰</span>
+      <span>Work 02 · AI Series</span>
+      <span>Open to collaboration</span>
+    </div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/editorial.js"></script>
 </body>
 </html>

@@ -3,97 +3,290 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ma Zhongyu — AIGC Visual Designer · Personal Portfolio</title>
-<meta name="description" content="马仲钰 — AIGC 视觉设计师个人作品集。海报 / Banner / IP 形象 / 字体 / 插画 / AI 剧集设定 / APP 界面。">
+<title>Ma Zhongyu — Visual Designer &amp; AIGC Creator</title>
+<meta name="description" content="马仲钰 Ma Zhongyu — Visual Designer &amp; AIGC Creator. Visual systems, moving images, and AI-generated worlds. 海报 / 品牌 / AI 影像 / APP 界面。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=UnifrakturCook:wght@700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<noscript><style>.reveal{opacity:1!important;transform:none!important}.rise{opacity:1!important;transform:none!important}</style></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/editorial.css">
 </head>
 <body>
-<!-- ══════════════════════ HERO ══════════════════════ -->
-<section class="hero" id="top">
+
+<div class="trans" id="trans"></div>
+<div class="cur" id="cur"><div class="cur__dot"></div><span class="cur__label"></span></div>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html">Ma Zhongyu</a>
+  <nav class="nav__menu" aria-label="Primary">
+    <a href="work.html" data-nav>Work</a>
+    <a href="about.html" data-nav>About</a>
+    <a href="contact.html" data-nav>Contact</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
+</header>
+
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="index.html">Index</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="drawer__foot">Based in China · Available for selected projects · 2026</p>
+</div>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero">
   <div class="hero__media">
-    <img src="https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260908_122011_59c97465-4d23-4fdc-ac40-f6832f573e28.png&amp;w=1920&amp;q=85"
-         alt="A vintage turntable resting on a mossy rock in an alpine meadow at golden hour">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto"
-           poster="https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260908_122011_59c97465-4d23-4fdc-ac40-f6832f573e28.png&amp;w=1920&amp;q=85"
-           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260908_125738_eb584080-9f98-489e-adb2-014760aa34da.mp4" aria-hidden="true"></video>
+    <img src="assets/img/v/tvc-fragrance.jpg" alt="Cinematic still from a fragrance commercial">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/v/tvc-fragrance.jpg" aria-hidden="true">
+      <source src="assets/videos/tvc-fragrance.mp4" type="video/mp4">
+    </video>
   </div>
 
-  <header class="nav">
-    <a class="logo rise d1" href="index.html" aria-label="Ma — home">Ma.</a>
-    <nav aria-label="Primary">
-      <ul class="nav__links">
-        <li class="rise d2"><a href="about.html">About</a></li>
-        <li class="rise d3"><a href="visual.html">Work</a></li>
-        <li class="rise d4"><a href="series.html">Series</a></li>
-        <li class="rise d5"><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav__right">
-      <a class="btn-play rise d6" href="contact.html">Let's Talk</a>
-      <button class="burger rise d6" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
   <div class="hero__inner">
-    <p class="hero__eyebrow">AIGC Personal Portfolio · 2026</p>
-    <h1 class="headline">
-      <span class="line"><span>AIGC 个人作品集</span></span>
+    <div class="hero__top"></div>
+
+    <h1 class="hero__title d1" data-hero-out>
+      <span><span>Visual Designer</span></span>
+      <span><span>&amp; AIGC Creator</span></span>
     </h1>
-    <p class="hero__name rise d2"><span>/ MA ZHONGYU · AIGC VISUAL DESIGNER</span></p>
-    <nav class="portal" aria-label="Site sections">
-      <a class="portal__card rise d3" href="about.html">
-        <span class="p-en">About Me</span>
-        <span class="p-zh">个人简介</span>
-        <span class="p-sub">Profile · Experience · Skills</span>
-      </a>
-      <a class="portal__card rise d4" href="visual.html">
-        <span class="p-en">Visual Design</span>
-        <span class="p-zh">视觉设计</span>
-        <span class="p-sub">Poster · Banner · IP · Type</span>
-      </a>
-      <a class="portal__card rise d5" href="series.html">
-        <span class="p-en">AI Series</span>
-        <span class="p-zh">AI 剧集</span>
-        <span class="p-sub">Character · Scene · Story</span>
-      </a>
-      <a class="portal__card rise d6" href="https://yibi-life-ledger.fey-star-4750.chatgpt.site/" target="_blank" rel="noopener">
-        <span class="p-en">App Design</span>
-        <span class="p-zh">APP 设计</span>
-        <span class="p-sub">Splash · Interface · Experience</span>
-      </a>
-    </nav>
+
+    <div class="hero__foot">
+      <p class="hero__sub">Visual systems, moving images, and AI-generated worlds.</p>
+      <div class="hero__aux">
+        <span class="aux">Based in China</span>
+        <span class="aux">Available for selected projects</span>
+        <span class="aux">2026</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="hero__rub">Ma Zhongyu · 马仲钰 — Portfolio 2026</span>
+  <a class="scroll-hint" href="#works"><span>Scroll</span><i></i></a>
+</section>
+
+<!-- ══════════════════ 01 SELECTED WORKS ══════════════════ -->
+<section class="band" id="works">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">01</span>
+      <span class="t">Selected Works</span>
+      <span class="zh">精选作品</span>
+    </div>
+  </div>
+
+  <!-- 01 -->
+  <a class="prow prow--full" href="project-01.html" data-cursor="view">
+    <div class="wrap">
+      <div class="prow__inner">
+        <div class="c1-8">
+          <span class="prow__no">01</span>
+          <h2 class="prow__name rv-line">Don't Delete Me</h2>
+        </div>
+        <div class="c9-13 prow__meta">
+          <span class="aux">AI Short Film</span>
+          <span class="aux">2026</span>
+        </div>
+      </div>
+      <div class="prow__media rv-media">
+        <img src="assets/img/drama2-01.webp" alt="Don't Delete Me — key visual" loading="lazy">
+      </div>
+    </div>
+  </a>
+
+  <!-- 02 -->
+  <a class="prow prow--cine prow--offset" href="project-02.html" data-cursor="view">
+    <div class="wrap">
+      <div class="prow__inner">
+        <div class="c1-8">
+          <span class="prow__no">02</span>
+          <h2 class="prow__name rv-line">Yuefeng</h2>
+        </div>
+        <div class="c9-13 prow__meta">
+          <span class="aux">Brand Identity · Outdoor</span>
+          <span class="aux">2026</span>
+        </div>
+      </div>
+      <div class="prow__media rv-media">
+        <img src="assets/img/banner-03.webp" alt="Yuefeng brand identity system" loading="lazy">
+      </div>
+    </div>
+  </a>
+
+  <!-- 03 -->
+  <a class="prow prow--cine" href="project-03.html" data-cursor="view">
+    <div class="wrap">
+      <div class="prow__inner">
+        <div class="c1-8">
+          <span class="prow__no">03</span>
+          <h2 class="prow__name rv-line">Liubai</h2>
+        </div>
+        <div class="c9-13 prow__meta">
+          <span class="aux">Fragrance Visual Identity</span>
+          <span class="aux">2026</span>
+        </div>
+      </div>
+      <div class="prow__media rv-media">
+        <img src="assets/img/v/tvc-fragrance.jpg" alt="Liubai fragrance — film still" loading="lazy">
+      </div>
+    </div>
+  </a>
+
+  <!-- 04 -->
+  <a class="prow prow--full" href="project-01.html#stills" data-cursor="view">
+    <div class="wrap">
+      <div class="prow__inner">
+        <div class="c1-8">
+          <span class="prow__no">04</span>
+          <h2 class="prow__name rv-line">World Building</h2>
+        </div>
+        <div class="c9-13 prow__meta">
+          <span class="aux">Character &amp; Scene Design</span>
+          <span class="aux">2026</span>
+        </div>
+      </div>
+      <div class="prow__media rv-media">
+        <div class="duo">
+          <img src="assets/img/drama1-01.webp" alt="Character sheet" loading="lazy">
+          <img src="assets/img/drama2-06.webp" alt="Scene design" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 05 -->
+  <a class="prow prow--full" href="visual.html" data-cursor="view">
+    <div class="wrap">
+      <div class="prow__inner">
+        <div class="c1-8">
+          <span class="prow__no">05</span>
+          <h2 class="prow__name rv-line">Visual Archive</h2>
+        </div>
+        <div class="c9-13 prow__meta">
+          <span class="aux">Poster · Banner · Type · IP · Illustration</span>
+          <span class="aux">2024—2026</span>
+        </div>
+      </div>
+      <div class="prow__media rv-media">
+        <img src="assets/img/banner-08.webp" alt="Visual design archive" loading="lazy">
+      </div>
+    </div>
+  </a>
+
+  <!-- 06 -->
+  <a class="prow prow--p prow--offset prow--right" href="https://yibi-life-ledger.fey-star-4750.chatgpt.site/" target="_blank" rel="noopener" data-cursor="open">
+    <div class="wrap">
+      <div class="prow__inner">
+        <div class="c1-8">
+          <span class="prow__no">06</span>
+          <h2 class="prow__name rv-line">Yi Bi</h2>
+        </div>
+        <div class="c9-13 prow__meta">
+          <span class="aux">App Design · Life Ledger</span>
+          <span class="aux">2026</span>
+        </div>
+      </div>
+      <div class="prow__media rv-media">
+        <img src="assets/img/app-02.webp" alt="Yi Bi life ledger app screens" loading="lazy">
+      </div>
+    </div>
+  </a>
+</section>
+
+<!-- ══════════════════ 02 FILM ══════════════════ -->
+<section class="band band--night">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">02</span>
+      <span class="t">Film</span>
+      <span class="zh">影像</span>
+    </div>
+
+    <div class="film rv-mask">
+      <video controls preload="none" playsinline poster="assets/img/v/short-lastday.jpg">
+        <source src="assets/videos/short-lastday.mp4" type="video/mp4">
+      </video>
+      <div class="film-play"><span>Play Film</span></div>
+      <div class="film__bar">
+        <div class="film__meta">
+          <span class="aux-2">Film 03:29</span>
+          <span class="aux-2">The Last Day Before AI Took Over the World</span>
+        </div>
+        <span class="aux-2">Directed / Created by Ma Zhongyu</span>
+      </div>
+    </div>
+
+    <div class="g12 vspace--sm">
+      <div class="c1-5">
+        <p class="body rv">AI-native moving image work — from vertical short drama to widescreen teaser. Everything below is directed, generated and cut end to end.</p>
+      </div>
+      <div class="c9-13">
+        <div class="ppager" style="border-top:0">
+          <a href="project-01.html" data-cursor="view"><span class="k">Watch</span><span class="t">AI Short Film</span></a>
+          <a href="series.html" data-cursor="view"><span class="k">Browse</span><span class="t">Series Index</span></a>
+          <a href="contact.html" data-cursor="link"><span class="k">Commission</span><span class="t">Get in Touch</span></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<div class="menu" id="menu">
-  <ul class="menu__list">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="visual.html">Work</a></li>
-    <li><a href="series.html">Series</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="app.html">App</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="menu__rule"></div>
-  <div class="menu__foot">
-    <a class="btn-play" href="contact.html">Let's Talk</a>
-  </div>
-</div>
+<!-- ══════════════════ 03 INDEX ══════════════════ -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="no">03</span>
+      <span class="t">Index</span>
+      <span class="zh">全部内容</span>
+    </div>
 
-<footer>
-  <div class="foot-row">
-    <span>© 2026 Ma Zhongyu · 马仲钰</span>
-    <span>AIGC Personal Portfolio</span>
-    <span class="right">Open to collaboration · 欢迎联系</span>
+    <div class="ilist rv">
+      <a class="ilist__row" href="visual.html" data-cursor="view">
+        <span class="ilist__no">01</span>
+        <h3 class="ilist__t">Visual Design</h3>
+        <span class="ilist__m">Poster · Banner · IP · Type · Illustration</span>
+        <span class="ilist__y">2024—2026</span>
+      </a>
+      <a class="ilist__row" href="series.html" data-cursor="view">
+        <span class="ilist__no">02</span>
+        <h3 class="ilist__t">AI Series</h3>
+        <span class="ilist__m">27 Films · Drama · Short Film · TVC</span>
+        <span class="ilist__y">2026</span>
+      </a>
+      <a class="ilist__row" href="app.html" data-cursor="view">
+        <span class="ilist__no">03</span>
+        <h3 class="ilist__t">App Design</h3>
+        <span class="ilist__m">Splash · Interface · Experience</span>
+        <span class="ilist__y">2026</span>
+      </a>
+      <a class="ilist__row" href="about.html" data-cursor="link">
+        <span class="ilist__no">04</span>
+        <h3 class="ilist__t">About</h3>
+        <span class="ilist__m">Profile · Experience · Capabilities</span>
+        <span class="ilist__y">2026</span>
+      </a>
+      <a class="ilist__row" href="contact.html" data-cursor="link">
+        <span class="ilist__no">05</span>
+        <h3 class="ilist__t">Contact</h3>
+        <span class="ilist__m">Email · WeChat · Social</span>
+        <span class="ilist__y">Open</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <span>© 2026 Ma Zhongyu · 马仲钰</span>
+      <span>Visual Designer &amp; AIGC Creator</span>
+      <span>Open to collaboration</span>
+    </div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/editorial.js"></script>
 </body>
 </html>
