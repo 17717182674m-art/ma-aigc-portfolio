@@ -1,7 +1,11 @@
-_v.html
-_m.html
-_chk.html
-_shot.html
-_shots/
-*.py
-_vids*
+# 项目数据 / 构建脚本 / 临时文件
+.workbuddy/
+
+# 视频原片（2.73GB，超过 GitHub 100MB/文件上限）
+# 线上播放请把 index.html 里的 VIDEO_BASE 指向 R2 / 对象存储外链
+assets/videos/
+
+# 系统杂项
+.DS_Store
+Thumbs.db
+desktop.ini
