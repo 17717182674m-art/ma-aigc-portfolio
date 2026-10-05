@@ -1,11 +1,13 @@
 # 项目数据 / 构建脚本 / 临时文件
 .workbuddy/
 
-# 6 支超过 GitHub 100MB/文件上限的视频不入库；
-# 线上播放请在 index.html 的 LARGE_VIDEOS 里填入外链
-assets/videos/**/*.webm
-assets/videos/tvc/ecommerce-tryon-cut.mp4
-assets/videos/film/alien-invasion.mp4
+# 视频原片一律不入库：15 支合计 2.7GB，且 6 支超过 GitHub 100MB/文件硬限。
+# 站内统一使用 assets/videos/w/ 下的 720p 网页版（合计约 304MB，已入库）。
+# 原片保留在本地与 C:\Users\PC\Desktop\作品总；如需上线无损版，
+# 把对象存储外链填进 index.html 的 ORIGINAL_LINKS 对应条目即可。
+assets/videos/tvc/
+assets/videos/drama/
+assets/videos/film/
 
 # 系统杂项
 .DS_Store

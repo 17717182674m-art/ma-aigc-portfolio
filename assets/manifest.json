@@ -515,7 +515,7 @@
       "title": "TVC 广告",
       "items": [
         {
-          "src": "assets/videos/tvc/ice-age.mp4",
+          "src": "assets/videos/w/tvc-ice-age.mp4",
           "poster": "assets/img/videos/ice-age.jpg",
           "title": "《冰河时代》",
           "w": 480,
@@ -523,7 +523,7 @@
           "dur": 37.1
         },
         {
-          "src": "assets/videos/tvc/ecommerce-ad.mp4",
+          "src": "assets/videos/w/tvc-ecommerce-ad.mp4",
           "poster": "assets/img/videos/ecommerce-ad.jpg",
           "title": "电商广告",
           "w": 720,
@@ -539,7 +539,7 @@
           "dur": 110.5
         },
         {
-          "src": "assets/videos/tvc/ecommerce-tryon.mp4",
+          "src": "assets/videos/w/tvc-ecommerce-tryon.mp4",
           "poster": "assets/img/videos/ecommerce-tryon.jpg",
           "title": "电商换装",
           "w": 720,
@@ -547,7 +547,7 @@
           "dur": 23.8
         },
         {
-          "src": "assets/videos/tvc/liubai-parfum.mp4",
+          "src": "assets/videos/w/tvc-liubai-parfum.mp4",
           "poster": "assets/img/videos/liubai-parfum.jpg",
           "title": "《留白香氛》",
           "w": 1280,
@@ -555,7 +555,7 @@
           "dur": 66.5
         },
         {
-          "src": "assets/videos/tvc/crazy-water-world.mp4",
+          "src": "assets/videos/w/tvc-crazy-water-world.mp4",
           "poster": "assets/img/videos/crazy-water-world.jpg",
           "title": "《疯狂水世界》游戏 PV",
           "w": 720,
@@ -563,7 +563,7 @@
           "dur": 16.1
         },
         {
-          "src": "assets/videos/tvc/parfum-ad.mp4",
+          "src": "assets/videos/w/tvc-parfum-ad.mp4",
           "poster": "assets/img/videos/parfum-ad.jpg",
           "title": "香水广告",
           "w": 720,
@@ -577,7 +577,7 @@
       "title": "短剧",
       "items": [
         {
-          "src": "assets/videos/drama/sweet-love-ep9.mp4",
+          "src": "assets/videos/w/drama-sweet-love-ep9.mp4",
           "poster": "assets/img/videos/sweet-love-ep9.jpg",
           "title": "《迟来的爱也很甜》第 9 集",
           "w": 720,
@@ -599,11 +599,11 @@
           "dur": 392.9
         },
         {
-          "src": "assets/videos/film/not-a-normal-island.mp4",
+          "src": "assets/videos/w/film-not-a-normal-island.mp4",
           "poster": "assets/img/videos/not-a-normal-island.jpg",
           "title": "Not A Normal Island",
-          "w": 1920,
-          "h": 1080,
+          "w": 1280,
+          "h": 720,
           "dur": 299.2
         },
         {
@@ -639,7 +639,7 @@
           "dur": 781.8
         },
         {
-          "src": "assets/videos/film/cat-workday.mp4",
+          "src": "assets/videos/w/film-cat-workday.mp4",
           "poster": "assets/img/videos/cat-workday.jpg",
           "title": "《猫咪打工的一天》",
           "w": 720,
