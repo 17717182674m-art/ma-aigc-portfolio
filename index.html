@@ -660,6 +660,7 @@ DATA.galleries.forEach(function(g, gi){
   tab.setAttribute("role","tab");
   tab.setAttribute("aria-selected", gi===0 ? "true" : "false");
   tab.setAttribute("aria-controls","panel-" + g.id);
+  tab.tabIndex = gi===0 ? 0 : -1;      /* roving tabindex 初始态 */
   tab.innerHTML = g.title + '<span class="n">' + g.items.length + "</span>";
   tab.addEventListener("click", function(){ selectTab(gi); });
   tabrail.appendChild(tab);
@@ -685,12 +686,28 @@ DATA.galleries.forEach(function(g, gi){
 });
 function selectTab(gi){
   currentTab = gi;
-  $$(".tab", tabrail).forEach(function(t,i){ t.setAttribute("aria-selected", i===gi ? "true":"false"); });
+  $$(".tab", tabrail).forEach(function(t,i){
+    var on = i===gi;
+    t.setAttribute("aria-selected", on ? "true":"false");
+    t.tabIndex = on ? 0 : -1;          /* roving tabindex：Tab 序里只留当前标签 */
+  });
   $$("#panels > .masonry").forEach(function(p,i){ p.hidden = i!==gi; });
   var t=$$(".tab", tabrail)[gi];
   if(t&&t.scrollIntoView){ try{ t.scrollIntoView({behavior:"smooth", block:"nearest", inline:"nearest"}); }catch(e){ t.scrollIntoView(); } }
   announce(DATA.galleries[gi].title + "，共 " + DATA.galleries[gi].items.length + " 张");
 }
+/* ARIA tabs 规范：Tab 组内用左右方向键 / Home / End 切换，Tab 键直接跳出整组 */
+tabrail.addEventListener("keydown", function(e){
+  var tabs = $$(".tab", tabrail), n = tabs.length, next = null;
+  if(e.key==="ArrowRight") next = (currentTab + 1) % n;
+  else if(e.key==="ArrowLeft") next = (currentTab - 1 + n) % n;
+  else if(e.key==="Home") next = 0;
+  else if(e.key==="End") next = n - 1;
+  if(next === null) return;
+  e.preventDefault();
+  selectTab(next);
+  tabs[next].focus({preventScroll:true});
+});
 
 /* ===================== build videos ===================== */
 var vg = $("#videoGroups");
@@ -734,7 +751,8 @@ function openLightbox(gi, ii){
   lbG=gi; lbI=ii; lbOpen=true;
   renderLightbox();
   lightbox.hidden=false;
-  requestAnimationFrame(function(){ lightbox.classList.add("is-open"); });
+  getComputedStyle(lightbox).visibility;   /* 提交 hidden 态：同步加 class 才有过渡、焦点才落得进去 */
+  lightbox.classList.add("is-open");
   $("#lbClose").focus({preventScroll:true});
   announce(DATA.galleries[lbG].title + " 第 " + (lbI+1) + " 张，共 " + DATA.galleries[lbG].items.length + " 张");
 }
@@ -771,7 +789,8 @@ function openVideo(v, opener){
   vmodalTitle.textContent=v.title;
   vmodalError.classList.remove("is-visible");
   vmodal.hidden=false;
-  requestAnimationFrame(function(){ vmodal.classList.add("is-open"); });
+  getComputedStyle(vmodal).visibility;   /* 提交 hidden 态：同步加 class 才有过渡、焦点才落得进去 */
+  vmodal.classList.add("is-open");
   $("#vmodalClose").focus({preventScroll:true});
   announce("正在打开视频：" + v.title);
   modalVideo.src=vurl(v.src);
@@ -801,7 +820,7 @@ $("#vmodalRetry").addEventListener("click",function(){
 var stage=$("#stage"), ctrl=$("#controller"), track=$("#track");
 var btnCells=$$(".cell--btn",ctrl);
 var POS=[["-5px","calc(20% + 5px)"],["20%","20%"],["40%","20%"],["60%","20%"],["80%","calc(20% + 5px)"]];
-var token=0, busy=false, scene="base", lastFocus=null, activeOverlay=null;
+var token=0, busy=false, scene="base", lastFocus=null, lastCell=null, activeOverlay=null;
 
 function setCapsule(i){
   ctrl.style.setProperty("--cap-left",POS[i][0]);
@@ -896,13 +915,20 @@ function openSection(action,cell){
   if(!ov){ busy=false; return; }
   activeOverlay=ov; scene=action;
   ov.hidden=false;
-  requestAnimationFrame(function(){ ov.classList.add("is-open"); });
+  lastCell=cell||null;
+  /* 先强制样式刷新把 visibility:hidden 态提交为当前样式，再同步加 is-open：
+     过渡照常播（起始态已提交），且焦点能立刻落进去——
+     visibility:hidden 的元素不可聚焦，原实现把 focus 放在 rAF 里、
+      class 还没加上时调用会静默失败，焦点留在 body */
+  getComputedStyle(ov).visibility;
+  ov.classList.add("is-open");
   document.body.classList.add("has-overlay");
   cell.textContent="返回";
   cell.classList.add("is-reset");
   busy=false;
   var closeBtn=$("[data-close]",ov);
   if(closeBtn) closeBtn.focus({preventScroll:true});
+  if(document.activeElement!==closeBtn){ ov.tabIndex=-1; ov.focus({preventScroll:true}); }
   if(action==="resume") announce("个人简历已打开");
   if(action==="visual") announce("AI 视觉作品已打开，共 "+DATA.galleries.length+" 个分类");
   if(action==="video") announce("视频作品已打开");
@@ -932,7 +958,8 @@ function closeSection(){
     setControls(true);
     scene="base"; busy=false;
     stage.classList.remove("title-hidden");
-    if(lastFocus&&lastFocus.focus){ lastFocus.focus({preventScroll:true}); }
+    if(lastFocus&&lastFocus.focus&&lastFocus!==document.body){ lastFocus.focus({preventScroll:true}); }
+    else if(lastCell&&lastCell.focus){ lastCell.focus({preventScroll:true}); }   /* 鼠标点击时 activeElement 可能是 body */
     announce("已返回首页");
   },1060);
 }
