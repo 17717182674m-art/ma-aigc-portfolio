@@ -1,9 +1,11 @@
 # 项目数据 / 构建脚本 / 临时文件
 .workbuddy/
 
-# 视频原片（2.73GB，超过 GitHub 100MB/文件上限）
-# 线上播放请把 index.html 里的 VIDEO_BASE 指向 R2 / 对象存储外链
-assets/videos/
+# 6 支超过 GitHub 100MB/文件上限的视频不入库；
+# 线上播放请在 index.html 的 LARGE_VIDEOS 里填入外链
+assets/videos/**/*.webm
+assets/videos/tvc/ecommerce-tryon-cut.mp4
+assets/videos/film/alien-invasion.mp4
 
 # 系统杂项
 .DS_Store

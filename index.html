@@ -306,6 +306,13 @@ body.has-overlay .controller{ pointer-events:none; }
 .vmeta{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:13px 16px; }
 .vmeta .t{ font-size:14.5px; font-weight:500; line-height:1.35; }
 .vmeta .d{ flex:none; font-size:12px; color:rgb(255 255 255 / 0.6); font-variant-numeric:tabular-nums; }
+.vtag{
+  position:absolute; left:10px; bottom:10px; z-index:2;
+  height:22px; padding:0 10px; border-radius:999px;
+  background:rgb(5 8 13 / 0.68); border:1px solid rgb(255 255 255 / 0.32);
+  font-size:11px; letter-spacing:0.06em; color:rgb(255 255 255 / 0.88);
+  display:flex; align-items:center; pointer-events:none;
+}
 
 /* ============ lightbox / video modal ============ */
 .lightbox{
@@ -583,7 +590,7 @@ body.has-overlay .controller{ pointer-events:none; }
       <button class="close-btn" type="button" id="vmodalClose">✕&nbsp; 关闭</button>
     </div>
     <div class="vmodal-error" id="vmodalError">
-      <span>视频加载失败，请重试。</span>
+      <span id="vmodalErrMsg">视频加载失败，请重试。</span>
       <button class="retry-btn" type="button" id="vmodalRetry">重试</button>
     </div>
   </div>
@@ -609,11 +616,23 @@ function fmtDur(s){
   var m = Math.floor(s/60), r = Math.round(s%60);
   return m + ":" + (r<10?"0":"") + r;
 }
-/* 视频源基址：本地用 assets/videos/（原片不入库）。
-   把 6 支大视频上传到 R2 / 网盘 / 对象存储后，只需把下面这一行改成远端地址，
-   全站视频即刻可在线播放，例如 "https://pub-xxxx.r2.dev/portfolio/videos/" */
-var VIDEO_BASE = "assets/videos/";
-function vurl(src){ return src.replace(/^assets\/videos\//, VIDEO_BASE); }
+/* 视频源策略：9 支 ≤100MB 的视频已随仓库部署（assets/videos/ 相对路径直接可播）；
+   6 支 >100MB 的原片超出 GitHub 单文件上限、未入库——拿到 R2 / 对象存储外链后，
+   把对应条目的空串填上即可在线播放。本地（file:// 或 localhost）原片都在，不受影响。 */
+var LARGE_VIDEOS = {
+  "tvc/ecommerce-tryon-cut.mp4": "",   /* 129MB */
+  "film/nexus-teaser.webm": "",        /* 170MB */
+  "film/last-day-before-ai.webm": "",  /* 127MB */
+  "film/slept-thousand-years.webm": "",/* 426MB */
+  "film/alien-invasion.mp4": "",       /* 278MB */
+  "film/echoes-silent-planet.webm": "" /* 1324MB */
+};
+function vurl(src){
+  var rel = src.replace(/^assets\/videos\//, "");
+  return (LARGE_VIDEOS[rel]) ? LARGE_VIDEOS[rel] : ("assets/videos/" + rel);
+}
+var LOCAL_ENV = /^(file:|https?:\/\/(localhost|127\.0\.0\.1|\[::1\]))/i.test(location.href);
+function videoOnline(rel){ return !LARGE_VIDEOS.hasOwnProperty(rel) || !!LARGE_VIDEOS[rel] || LOCAL_ENV; }
 
 /* ===================== build galleries ===================== */
 var tabrail = $("#tabrail"), panels = $("#panels");
@@ -666,9 +685,11 @@ DATA.videos.forEach(function(grp){
   sec.appendChild(h);
   var grid = document.createElement("div"); grid.className = "vgrid";
   grp.items.forEach(function(v){
+    var rel = v.src.replace(/^assets\/videos\//, "");
+    var online = videoOnline(rel);
     var b = document.createElement("button");
     b.type="button"; b.className="vcard";
-    b.setAttribute("aria-label","播放视频：" + v.title);
+    b.setAttribute("aria-label","播放视频：" + v.title + (online ? "" : "（线上需配置外链）"));
     var th = document.createElement("div"); th.className="vthumb";
     var im = document.createElement("img");
     im.src = v.poster; im.alt=""; im.loading="lazy"; im.decoding="async";
@@ -677,6 +698,11 @@ DATA.videos.forEach(function(grp){
     var play = document.createElement("span"); play.className="play";
     play.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L13.6 8 3 1.8z"/></svg>';
     th.appendChild(play);
+    if(!online){
+      var tag = document.createElement("span");
+      tag.className="vtag"; tag.textContent="外链待配置";
+      th.appendChild(tag);
+    }
     b.appendChild(th);
     var mt = document.createElement("div"); mt.className="vmeta";
     mt.innerHTML = '<span class="t">'+ v.title +'</span>' + (v.dur ? '<span class="d">'+fmtDur(v.dur)+'</span>' : "");
@@ -738,6 +764,10 @@ function openVideo(v, opener){
   requestAnimationFrame(function(){ vmodal.classList.add("is-open"); });
   $("#vmodalClose").focus({preventScroll:true});
   announce("正在打开视频：" + v.title);
+  var rel = v.src.replace(/^assets\/videos\//, "");
+  $("#vmodalErrMsg").textContent = videoOnline(rel)
+    ? "视频加载失败，请重试。"
+    : "该视频原片较大（超过 GitHub 托管上限），线上外链尚未配置；本地打开本页可正常播放。";
   modalVideo.src=vurl(v.src);
   var p=modalVideo.play();
   if(p && p.catch){ p.catch(function(){ /* autoplay blocked; user can press play */ }); }
