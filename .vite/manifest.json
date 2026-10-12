@@ -1,6 +1,6 @@
 {
-  "_AnimatePresence-B5ie6t2F.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AnimatePresence-B5ie6t2F.js",
+  "_AnimatePresence-A0rdDE7N.js": {
+    "file": "ma-aigc-portfolio/_next/static/chunks/AnimatePresence-A0rdDE7N.js",
     "name": "AnimatePresence",
     "imports": [
       "_rolldown-runtime-DafsISOH.js",
@@ -16,8 +16,8 @@
       "_framework-Dw2rIRhm.js"
     ]
   },
-  "_aiSeriesAssetCatalog-GdmZH8oG.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/aiSeriesAssetCatalog-GdmZH8oG.js",
+  "_aiSeriesAssetCatalog-voq4CWM-.js": {
+    "file": "ma-aigc-portfolio/_next/static/chunks/aiSeriesAssetCatalog-voq4CWM-.js",
     "name": "aiSeriesAssetCatalog",
     "imports": [
       "_sparkles-B952GCkL.js"
@@ -33,8 +33,8 @@
       "_record-DAl5a1ZI.js"
     ]
   },
-  "_app-rsc-cache-busting-Dw7u_1c0.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/app-rsc-cache-busting-Dw7u_1c0.js",
+  "_app-rsc-cache-busting-BLgW2xK9.js": {
+    "file": "ma-aigc-portfolio/_next/static/chunks/app-rsc-cache-busting-BLgW2xK9.js",
     "name": "app-rsc-cache-busting",
     "imports": [
       "_rolldown-runtime-DafsISOH.js",
@@ -122,14 +122,14 @@
     ]
   },
   "app/AiSeriesArchivePages.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AiSeriesArchivePages-Cj_hmaoA.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AiSeriesArchivePages-ByTKyEDC.js",
     "name": "AiSeriesArchivePages",
     "src": "app/AiSeriesArchivePages.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-DafsISOH.js",
       "app/WorkPage.tsx",
-      "_aiSeriesAssetCatalog-GdmZH8oG.js",
+      "_aiSeriesAssetCatalog-voq4CWM-.js",
       "app/components/MotionSystem.tsx",
       "_sparkles-B952GCkL.js",
       "_x-qKn5bdA_.js",
@@ -137,14 +137,14 @@
     ]
   },
   "app/AiSeriesPage.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AiSeriesPage-BBfLujw1.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AiSeriesPage-BXD3fzYo.js",
     "name": "AiSeriesPage",
     "src": "app/AiSeriesPage.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-DafsISOH.js",
       "app/WorkPage.tsx",
-      "_aiSeriesAssetCatalog-GdmZH8oG.js",
+      "_aiSeriesAssetCatalog-voq4CWM-.js",
       "app/components/MotionSystem.tsx",
       "_sparkles-B952GCkL.js",
       "_chevron-down-Bb2Dmf9Q.js",
@@ -153,7 +153,7 @@
     ]
   },
   "app/AiVisualDesignPage.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AiVisualDesignPage-D5VIOfr2.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AiVisualDesignPage-jbVP_d26.js",
     "name": "AiVisualDesignPage",
     "src": "app/AiVisualDesignPage.tsx",
     "isDynamicEntry": true,
@@ -162,7 +162,7 @@
       "virtual:vinext-app-browser-entry",
       "app/WorkPage.tsx",
       "app/components/MotionSystem.tsx",
-      "_AnimatePresence-B5ie6t2F.js",
+      "_AnimatePresence-A0rdDE7N.js",
       "_sparkles-B952GCkL.js",
       "_framework-Dw2rIRhm.js"
     ],
@@ -171,7 +171,7 @@
     ]
   },
   "app/AiVisualThemePage.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AiVisualThemePage-KHQ2jFzq.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AiVisualThemePage-BN04vC7p.js",
     "name": "AiVisualThemePage",
     "src": "app/AiVisualThemePage.tsx",
     "isDynamicEntry": true,
@@ -179,14 +179,14 @@
       "_rolldown-runtime-DafsISOH.js",
       "app/WorkPage.tsx",
       "app/components/MotionSystem.tsx",
-      "_AnimatePresence-B5ie6t2F.js",
+      "_AnimatePresence-A0rdDE7N.js",
       "_sparkles-B952GCkL.js",
       "_x-qKn5bdA_.js",
       "_framework-Dw2rIRhm.js"
     ]
   },
   "app/AigcPortfolio.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AigcPortfolio-FXLbpACa.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AigcPortfolio-DsL8X2zb.js",
     "name": "AigcPortfolio",
     "src": "app/AigcPortfolio.tsx",
     "isDynamicEntry": true,
@@ -200,7 +200,7 @@
     ]
   },
   "app/WorkPage.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/WorkPage-BkK9zynv.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/WorkPage-B63PLYVZ.js",
     "name": "WorkPage",
     "src": "app/WorkPage.tsx",
     "isDynamicEntry": true,
@@ -212,7 +212,7 @@
     ]
   },
   "app/components/MotionSystem.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/MotionSystem-DXUALXxF.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/MotionSystem-CJgvFc-u.js",
     "name": "MotionSystem",
     "src": "app/components/MotionSystem.tsx",
     "isDynamicEntry": true,
@@ -223,7 +223,7 @@
     ]
   },
   "app/components/PortfolioBackdrop.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/PortfolioBackdrop-nApjCT1C.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/PortfolioBackdrop-CKh07xUl.js",
     "name": "PortfolioBackdrop",
     "src": "app/components/PortfolioBackdrop.tsx",
     "isDynamicEntry": true,
@@ -233,7 +233,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/hybrid-client-route-owner-kTe872Xv.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/hybrid-client-route-owner-CW6Nholw.js",
     "name": "hybrid-client-route-owner",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js",
     "isDynamicEntry": true,
@@ -244,7 +244,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/layout-segment-context-C3ZNMemw.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/layout-segment-context-BCaT6HPK.js",
     "name": "layout-segment-context",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -256,7 +256,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/link.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/link-DmQGE8qR.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/link-CiOs2ui1.js",
     "name": "link",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/link.js",
     "isDynamicEntry": true,
@@ -273,13 +273,13 @@
       "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js",
       "virtual:vinext-app-browser-entry",
       "_app-elements-AYRH1pMP.js",
-      "_app-rsc-cache-busting-Dw7u_1c0.js",
+      "_app-rsc-cache-busting-BLgW2xK9.js",
       "_app-rsc-render-mode-CfzUUb2Q.js",
       "_headers-CL_c71EY.js"
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/index-CpLIlrzS.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/index-Bk-04plP.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -287,7 +287,7 @@
       "_rolldown-runtime-DafsISOH.js",
       "_framework-Dw2rIRhm.js",
       "_app-elements-AYRH1pMP.js",
-      "_app-rsc-cache-busting-Dw7u_1c0.js",
+      "_app-rsc-cache-busting-BLgW2xK9.js",
       "_headers-CL_c71EY.js",
       "_navigation-errors-BnOoY-Od.js",
       "_hash-QbldWj02.js",
