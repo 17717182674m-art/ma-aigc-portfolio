@@ -1,0 +1,1328 @@
+{
+  "short-drama/late-love": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/short-drama/late-love/characters-01.webp",
+        "label": "季翰诚"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/late-love/characters-02.webp",
+        "label": "唐君瑶"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/late-love/characters-03.webp",
+        "label": "唐爷爷"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/late-love/characters-04.webp",
+        "label": "徐明凯"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/late-love/characters-05.webp",
+        "label": "《迟来的爱也很甜》主视觉"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/short-drama/late-love/scenes-01.webp",
+        "label": "古镇"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/late-love/scenes-02.webp",
+        "label": "唐家"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/short-drama/late-love/props-01.webp",
+        "label": "车"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/late-love/props-02.webp",
+        "label": "摩托车"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/late-love/props-03.webp",
+        "label": "头盔"
+      }
+    ]
+  },
+  "short-drama/fake-love": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/short-drama/fake-love/characters-01.webp",
+        "label": "白色背景三视角黑白礼服造型"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/fake-love/characters-02.webp",
+        "label": "深色西装男士三视图"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/short-drama/fake-love/scenes-01.webp",
+        "label": "暖阳下的咖啡馆 booth 四视图"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/short-drama/fake-love/props-01.webp",
+        "label": "白瓷咖啡杯三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/fake-love/props-02.webp",
+        "label": "黑色智能手机三视图展示"
+      }
+    ]
+  },
+  "short-drama/heiress-return": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-01.webp",
+        "label": "粉色系少女三视图设定稿"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-02.webp",
+        "label": "黑白贵族风男性角色三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-03.webp",
+        "label": "黑白蕾丝少女三视图展台"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-04.webp",
+        "label": "皇家蓝礼服模特三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-05.webp",
+        "label": "可爱男孩工装背带裤三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-06.webp",
+        "label": "冷峻少年三视图设定稿"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-07.webp",
+        "label": "冷峻优雅男士角色三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-08.webp",
+        "label": "男性角色三视图西装造型展示"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-09.webp",
+        "label": "三视图轻简风少年角色设定"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-10.webp",
+        "label": "西装男士三视图角色设定"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-11.webp",
+        "label": "中年男士黑色晚礼服三视图展板"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-12.webp",
+        "label": "《真千金归来》主视觉 A"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/characters-13.webp",
+        "label": "《真千金归来》主视觉 B"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/scenes-01.webp",
+        "label": "法式新古典奢华客厅全景四视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/scenes-02.webp",
+        "label": "法式新古典庄园四景建筑集锦"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/scenes-03.webp",
+        "label": "复古木质客厅四视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/scenes-04.webp",
+        "label": "复古卧室多视角设计图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/scenes-05.webp",
+        "label": "奢华庄园金饰大门四景"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/scenes-06.webp",
+        "label": "阳光下的玫瑰街角四景"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/scenes-07.webp",
+        "label": "场景资产 07"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/short-drama/heiress-return/props-01.webp",
+        "label": "银灰色商务行李箱四视图展陈"
+      }
+    ]
+  },
+  "short-drama/forbidden-night": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/characters-01.webp",
+        "label": "黑色礼服男主角"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/characters-02.webp",
+        "label": "红色礼服女主角"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/characters-03.webp",
+        "label": "白衬衫女主角"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/characters-04.webp",
+        "label": "香槟色礼服女主角"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/characters-05.webp",
+        "label": "酒红西装男主角"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/scenes-01.webp",
+        "label": "现代办公空间"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/scenes-02.webp",
+        "label": "奢华餐厅"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/scenes-03.webp",
+        "label": "夜间游艇甲板"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/short-drama/forbidden-night/props-01.webp",
+        "label": "私人游艇"
+      }
+    ]
+  },
+  "short-drama/little-red-riding-hood": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/characters-01.webp",
+        "label": "森林狼"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/characters-02.webp",
+        "label": "猎人"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/characters-03.webp",
+        "label": "小红帽"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/characters-04.webp",
+        "label": "外婆"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/scenes-01.webp",
+        "label": "幽暗森林"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/scenes-02.webp",
+        "label": "林间村落"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/scenes-03.webp",
+        "label": "乡间小路"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/scenes-04.webp",
+        "label": "外婆的小屋"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/props-01.webp",
+        "label": "野餐篮与茶具"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/little-red-riding-hood/props-02.webp",
+        "label": "马车"
+      }
+    ]
+  },
+  "short-drama/hot-stepbrother": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/short-drama/hot-stepbrother/characters-01.webp",
+        "label": "象牙缎面连衣裙四视图模特图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/hot-stepbrother/characters-02.webp",
+        "label": "学生制服少女四视图参考表"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/hot-stepbrother/characters-03.webp",
+        "label": "学院制服男生四视图模特参考表"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/short-drama/hot-stepbrother/scenes-01.webp",
+        "label": "对称的蓝色储物柜与红色涂鸦"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/hot-stepbrother/scenes-02.webp",
+        "label": "奢华古典风对称宫廷卧室"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/hot-stepbrother/scenes-03.webp",
+        "label": "现代校园走廊四视图参考图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/hot-stepbrother/scenes-04.webp",
+        "label": "阳光下的校园屋顶全景"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/short-drama/hot-stepbrother/props-01.webp",
+        "label": "现代深空灰手机六视图展示"
+      }
+    ]
+  },
+  "short-drama/office-nobody": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/characters-01.webp",
+        "label": "白背景三视图职业女性参考图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/characters-02.webp",
+        "label": "白衬衫男士三视图参考"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/characters-03.webp",
+        "label": "黑色双排扣西装三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/characters-04.webp",
+        "label": "灰色西装男士三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/characters-05.webp",
+        "label": "年轻女性三视图角色设定稿"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/characters-06.webp",
+        "label": "女性工装连体服三视图参考#+#+#+#+"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/characters-07.webp",
+        "label": "医生白大褂三视图转身像"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/scenes-01.webp",
+        "label": "白衬衫卡其裤三视图参考"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/scenes-02.webp",
+        "label": "极简现代办公室三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/scenes-03.webp",
+        "label": "现代办公室四视角参考图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/scenes-04.webp",
+        "label": "现代办公室走廊四视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/scenes-05.webp",
+        "label": "夜幕下的典雅晚宴四视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/scenes-06.webp",
+        "label": "夜色暖光下的现代公寓四景"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/scenes-07.webp",
+        "label": "场景资产 07"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/props-01.webp",
+        "label": "白瓷咖啡杯三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/props-02.webp",
+        "label": "粉色拘束配件与黑色项圈三视图合集"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/office-nobody/props-03.webp",
+        "label": "蓝色皮筋捆扎百元钞票四视图"
+      }
+    ]
+  },
+  "short-drama/time-out-apocalypse": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-01.webp",
+        "label": "《Time Out: The Apocalypse》主视觉"
+      }
+    ],
+    "scenes": [],
+    "props": []
+  },
+  "tvc/ice-age": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/tvc/ice-age/characters-01.webp",
+        "label": "白色海豹"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/characters-02.webp",
+        "label": "冰原猛犸"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/tvc/ice-age/scenes-01.webp",
+        "label": "雪地村落"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/scenes-02.webp",
+        "label": "冰封峡谷"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/scenes-03.webp",
+        "label": "极地湖面"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/scenes-04.webp",
+        "label": "冰晶建筑"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/tvc/ice-age/props-01.webp",
+        "label": "木屋素材"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/props-02.webp",
+        "label": "蓝色能量舱"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/props-03.webp",
+        "label": "木质宝箱"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/props-04.webp",
+        "label": "蓝色冰晶"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/props-05.webp",
+        "label": "木材"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/props-06.webp",
+        "label": "金币"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/props-07.webp",
+        "label": "冰块"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ice-age/props-08.webp",
+        "label": "冰晶宝箱"
+      }
+    ]
+  },
+  "tvc/ecommerce": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/tvc/ecommerce/characters-01.webp",
+        "label": "黑色西装造型人物三视图"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ecommerce/characters-02.webp",
+        "label": "酒红礼服造型人物三视图"
+      },
+      {
+        "src": "/ai-series/assets/tvc/ecommerce/characters-03.webp",
+        "label": "黑色西装人物动作参考"
+      }
+    ],
+    "scenes": [],
+    "props": [
+      {
+        "src": "/ai-series/assets/tvc/ecommerce/props-01.webp",
+        "label": "黑色高跟鞋产品多视图"
+      }
+    ]
+  },
+  "tvc/fashion-b": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/tvc/fashion-b/characters-01.webp",
+        "label": "人物资产 01"
+      },
+      {
+        "src": "/ai-series/assets/tvc/fashion-b/characters-02.webp",
+        "label": "人物资产 02"
+      },
+      {
+        "src": "/ai-series/assets/tvc/fashion-b/characters-03.webp",
+        "label": "人物资产 03"
+      },
+      {
+        "src": "/ai-series/assets/tvc/fashion-b/characters-04.webp",
+        "label": "人物资产 04"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/tvc/fashion-b/scenes-01.webp",
+        "label": "场景资产 01"
+      },
+      {
+        "src": "/ai-series/assets/tvc/fashion-b/scenes-02.webp",
+        "label": "场景资产 02"
+      }
+    ],
+    "props": []
+  },
+  "tvc/fashion-a": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/tvc/fashion-a/characters-01.webp",
+        "label": "女性模特造型设定"
+      }
+    ],
+    "scenes": [],
+    "props": [
+      {
+        "src": "/ai-series/assets/tvc/fashion-a/props-01.webp",
+        "label": "象牙白套装"
+      },
+      {
+        "src": "/ai-series/assets/tvc/fashion-a/props-02.webp",
+        "label": "奶油色套装"
+      },
+      {
+        "src": "/ai-series/assets/tvc/fashion-a/props-03.webp",
+        "label": "棕色通勤套装"
+      },
+      {
+        "src": "/ai-series/assets/tvc/fashion-a/props-04.webp",
+        "label": "蓝色造型套装"
+      }
+    ]
+  },
+  "tvc/crazy-water-world": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/characters-01.webp",
+        "label": "人物资产 01"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/characters-02.webp",
+        "label": "人物资产 02"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/characters-03.webp",
+        "label": "人物资产 03"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/characters-04.webp",
+        "label": "人物资产 04"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/characters-05.webp",
+        "label": "人物资产 05"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/characters-06.webp",
+        "label": "人物资产 06"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/characters-07.webp",
+        "label": "人物资产 07"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/scenes-01.webp",
+        "label": "场景资产 01"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/scenes-02.webp",
+        "label": "场景资产 02"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/scenes-03.webp",
+        "label": "场景资产 03"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/scenes-04.webp",
+        "label": "场景资产 04"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/scenes-05.webp",
+        "label": "场景资产 05"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-01.webp",
+        "label": "物品资产 01"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-02.webp",
+        "label": "物品资产 02"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-03.webp",
+        "label": "物品资产 03"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-04.webp",
+        "label": "物品资产 04"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-05.webp",
+        "label": "物品资产 05"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-06.webp",
+        "label": "物品资产 06"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-07.webp",
+        "label": "物品资产 07"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-08.webp",
+        "label": "物品资产 08"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-09.webp",
+        "label": "物品资产 09"
+      },
+      {
+        "src": "/ai-series/assets/tvc/crazy-water-world/props-10.webp",
+        "label": "物品资产 10"
+      }
+    ]
+  },
+  "tvc/blank-fragrance": {
+    "characters": [],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/tvc/blank-fragrance/scenes-01.webp",
+        "label": "场景资产 01"
+      },
+      {
+        "src": "/ai-series/assets/tvc/blank-fragrance/scenes-02.webp",
+        "label": "场景资产 02"
+      },
+      {
+        "src": "/ai-series/assets/tvc/blank-fragrance/scenes-03.webp",
+        "label": "SC 高山晨雾 场景参考图"
+      },
+      {
+        "src": "/ai-series/assets/tvc/blank-fragrance/scenes-04.webp",
+        "label": "SC 山间小路 场景参考图"
+      },
+      {
+        "src": "/ai-series/assets/tvc/blank-fragrance/scenes-05.webp",
+        "label": "SC 山崖平台 场景参考图"
+      },
+      {
+        "src": "/ai-series/assets/tvc/blank-fragrance/scenes-06.webp",
+        "label": "SC 山中极简亭台 场景参考图"
+      },
+      {
+        "src": "/ai-series/assets/tvc/blank-fragrance/scenes-07.webp",
+        "label": "SC 松林 场景参考图"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/tvc/blank-fragrance/props-01.webp",
+        "label": "P 腕表 道具参考图"
+      }
+    ]
+  },
+  "tvc/perfume": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/tvc/perfume/characters-01.webp",
+        "label": "人物资产 01"
+      },
+      {
+        "src": "/ai-series/assets/tvc/perfume/characters-02.webp",
+        "label": "人物资产 02"
+      },
+      {
+        "src": "/ai-series/assets/tvc/perfume/characters-03.webp",
+        "label": "人物资产 03"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/tvc/perfume/scenes-01.webp",
+        "label": "场景资产 01"
+      },
+      {
+        "src": "/ai-series/assets/tvc/perfume/scenes-02.webp",
+        "label": "场景资产 02"
+      },
+      {
+        "src": "/ai-series/assets/tvc/perfume/scenes-03.webp",
+        "label": "场景资产 03"
+      }
+    ],
+    "props": []
+  },
+  "ai-short-video/working-cat": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-01.webp",
+        "label": "人物资产 01"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-02.webp",
+        "label": "人物资产 02"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-03.webp",
+        "label": "人物资产 03"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-04.webp",
+        "label": "人物资产 04"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-05.webp",
+        "label": "人物资产 05"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-06.webp",
+        "label": "人物资产 06"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-07.webp",
+        "label": "人物资产 07"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-08.webp",
+        "label": "人物资产 08"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-09.webp",
+        "label": "人物资产 09"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-10.webp",
+        "label": "人物资产 10"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/characters-11.webp",
+        "label": "人物资产 11"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/ai-short-video/working-cat/scenes-01.webp",
+        "label": "场景资产 01"
+      }
+    ],
+    "props": []
+  },
+  "ai-short-video/visual-experiment": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/characters-01.webp",
+        "label": "红裙女主角"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/characters-02.webp",
+        "label": "银色礼服女主角"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/characters-03.webp",
+        "label": "红色围裙店员"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/characters-04.webp",
+        "label": "智能机器人"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/characters-05.webp",
+        "label": "成年男主角"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-01.webp",
+        "label": "花园卧室"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-02.webp",
+        "label": "废墟街道"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-03.webp",
+        "label": "未来超市"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-04.webp",
+        "label": "雨夜超市"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-05.webp",
+        "label": "车库空间"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-06.webp",
+        "label": "住宅厨房"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-07.webp",
+        "label": "超市停车场"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-08.webp",
+        "label": "家庭厨房"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/scenes-09.webp",
+        "label": "郊区街区"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/props-01.webp",
+        "label": "清洁机器人"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/props-02.webp",
+        "label": "黑色越野车"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/props-03.webp",
+        "label": "纸质购物袋"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/props-04.webp",
+        "label": "智能手机"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/visual-experiment/props-05.webp",
+        "label": "购物篮"
+      }
+    ]
+  },
+  "ai-short-video/forgotten-bureau": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/characters-01.webp",
+        "label": "白色背景三视图男士造型参考"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/characters-02.webp",
+        "label": "奶油色长裙三视图造型参考"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-01.webp",
+        "label": "场景资产 01"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-02.webp",
+        "label": "场景资产 02"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-03.webp",
+        "label": "场景资产 03"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-04.webp",
+        "label": "场景资产 04"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-05.webp",
+        "label": "场景资产 05"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-06.webp",
+        "label": "场景资产 06"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-07.webp",
+        "label": "场景资产 07"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-08.webp",
+        "label": "场景资产 08"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-09.webp",
+        "label": "场景资产 09"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-10.webp",
+        "label": "场景资产 10"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-11.webp",
+        "label": "场景资产 11"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-12.webp",
+        "label": "场景资产 12"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-13.webp",
+        "label": "场景资产 13"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-14.webp",
+        "label": "场景资产 14"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-15.webp",
+        "label": "场景资产 15"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/forgotten-bureau/scenes-16.webp",
+        "label": "场景资产 16"
+      }
+    ],
+    "props": []
+  },
+  "ai-short-video/echoes-silent-planet": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/characters-01.webp",
+        "label": "太空探索者"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/characters-02.webp",
+        "label": "智能宇航员"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/characters-03.webp",
+        "label": "长肢异星生物"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/characters-04.webp",
+        "label": "蓝色异星生物"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/characters-05.webp",
+        "label": "灰色异星生物"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/characters-06.webp",
+        "label": "翼族生物"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/characters-07.webp",
+        "label": "胡须宇航员"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/characters-08.webp",
+        "label": "女性异星角色"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-01.webp",
+        "label": "异星洞穴入口"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-02.webp",
+        "label": "地下岩洞"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-03.webp",
+        "label": "发光洞穴"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-04.webp",
+        "label": "荒芜异星地貌"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-05.webp",
+        "label": "红色异星地貌"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-06.webp",
+        "label": "异星建筑群"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-07.webp",
+        "label": "红色飞船内舱"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-08.webp",
+        "label": "飞船控制室"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-09.webp",
+        "label": "深层洞穴"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-10.webp",
+        "label": "洞穴遗迹"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/scenes-11.webp",
+        "label": "故事主视觉"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/props-01.webp",
+        "label": "探索飞船"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/echoes-silent-planet/props-02.webp",
+        "label": "科幻武器"
+      }
+    ]
+  },
+  "ai-short-video/nexus": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/characters-01.webp",
+        "label": "深海生物"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/characters-02.webp",
+        "label": "男性冒险家"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/characters-03.webp",
+        "label": "老船长"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/characters-04.webp",
+        "label": "巨型海怪"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/characters-05.webp",
+        "label": "蒙面女战士"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/characters-06.webp",
+        "label": "年长女性角色"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/scenes-01.webp",
+        "label": "列车内舱"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/scenes-02.webp",
+        "label": "漂浮城市"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/scenes-03.webp",
+        "label": "故事主视觉"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/props-01.webp",
+        "label": "古董手枪"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/props-02.webp",
+        "label": "飞行帆船"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/props-03.webp",
+        "label": "纹饰长剑"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/nexus/props-04.webp",
+        "label": "高速帆船"
+      }
+    ]
+  },
+  "ai-short-video/not-normal-island": {
+    "characters": [],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-01.webp",
+        "label": "红白双体作业船四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-02.webp",
+        "label": "科研作业船三视图技术渲染"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-03.webp",
+        "label": "岩石守护者三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-04.webp",
+        "label": "场景资产 04"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-05.webp",
+        "label": "场景资产 05"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-06.webp",
+        "label": "场景资产 06"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-07.webp",
+        "label": "场景资产 07"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-08.webp",
+        "label": "场景资产 08"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-09.webp",
+        "label": "场景资产 09"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-10.webp",
+        "label": "场景资产 10"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/scenes-11.webp",
+        "label": "Not A Normal Island   Short Sci Fi Movie"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/ai-short-video/not-normal-island/props-01.webp",
+        "label": "暗影蓝晶战斧四视图展现"
+      }
+    ]
+  },
+  "ai-short-video/last-day-before-ai": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/characters-01.webp",
+        "label": "人物资产 01"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/characters-02.webp",
+        "label": "白色装甲士兵 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/characters-03.webp",
+        "label": "男主搭档Daniel 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/characters-04.webp",
+        "label": "女主Mira 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/characters-05.webp",
+        "label": "亚裔科学家 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/characters-06.webp",
+        "label": "EVA 27 仿生人 三视图"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-01.webp",
+        "label": "场景资产 01"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-02.webp",
+        "label": "场景资产 02"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-03.webp",
+        "label": "场景资产 03"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-04.webp",
+        "label": "场景资产 04"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-05.webp",
+        "label": "场景资产 05"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-06.webp",
+        "label": "场景资产 06"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-07.webp",
+        "label": "场景资产 07"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-08.webp",
+        "label": "场景资产 08"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-09.webp",
+        "label": "场景资产 09"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-10.webp",
+        "label": "场景资产 10"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-11.webp",
+        "label": "场景资产 11"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-12.webp",
+        "label": "场景资产 12"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-13.webp",
+        "label": "场景资产 13"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/scenes-14.webp",
+        "label": "The Last Day Before AI Took Over the World EVA 27 KI Kurzfilm"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/props-01.webp",
+        "label": "断电控制台 四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/props-02.webp",
+        "label": "红色千纸鹤 四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/props-03.webp",
+        "label": "全息广告投影屏 四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/props-04.webp",
+        "label": "双人合影照片 四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/last-day-before-ai/props-05.webp",
+        "label": "消防斧 四视图"
+      }
+    ]
+  },
+  "ai-short-video/slept-thousand-years": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/characters-01.webp",
+        "label": "白色人形机器人 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/characters-02.webp",
+        "label": "机器人酒保 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/characters-03.webp",
+        "label": "盲眼长老 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/characters-04.webp",
+        "label": "蒙面装甲反派 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/characters-05.webp",
+        "label": "男主 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/characters-06.webp",
+        "label": "女主 三视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/characters-07.webp",
+        "label": "三角龙驮兽 三视图"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-01.webp",
+        "label": "场景资产 01"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-02.webp",
+        "label": "场景资产 02"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-03.webp",
+        "label": "场景资产 03"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-04.webp",
+        "label": "场景资产 04"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-05.webp",
+        "label": "场景资产 05"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-06.webp",
+        "label": "场景资产 06"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-07.webp",
+        "label": "场景资产 07"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-08.webp",
+        "label": "场景资产 08"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-09.webp",
+        "label": "场景资产 09"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/scenes-10.webp",
+        "label": "场景资产 10"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/props-01.webp",
+        "label": "巨型油罐战车 四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/props-02.webp",
+        "label": "手铐 四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/props-03.webp",
+        "label": "铜护目镜 四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/props-04.webp",
+        "label": "悬停摩托 四视图"
+      },
+      {
+        "src": "/ai-series/assets/ai-short-video/slept-thousand-years/props-05.webp",
+        "label": "转管能量炮 四视图"
+      }
+    ]
+  }
+}
