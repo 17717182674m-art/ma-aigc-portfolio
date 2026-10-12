@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import { SiteHeader } from "../WorkPage";
 
 export const metadata: Metadata = {
@@ -117,7 +118,7 @@ export default function ResumePage() {
       <section className="resume-contact">
         <span>CONTACT</span>
         <h2>一起完成下一个想法。</h2>
-        <a href="/contact">查看联系方式 <ArrowUpRight aria-hidden="true" /></a>
+        <Link href="/contact">查看联系方式 <ArrowUpRight aria-hidden="true" /></Link>
       </section>
     </main>
   );
