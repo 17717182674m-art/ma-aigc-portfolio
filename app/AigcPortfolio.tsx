@@ -10,7 +10,7 @@ const navigation = [
   {label:"作品总览",href:"/works/ai-visual-design",dropdown:true},
   {label:"AI视觉",href:"/works/ai-visual-design"},
   {label:"AI剧集",href:"/works/ai-series"},
-  {label:"APP",href:"https://yibi-life-ledger.fey-star-4750.chatgpt.site",external:true},
+  {label:"APP",href:"https://17717182674m-art.github.io/yibi-official-site/",external:true},
   {label:"个人简历",href:"/resume"},
 ];
 
