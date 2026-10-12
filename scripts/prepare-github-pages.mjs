@@ -75,6 +75,13 @@ for (const file of files) {
 await mkdir(outputDirectory, { recursive: true });
 await writeFile(path.join(outputDirectory, ".nojekyll"), "", "utf8");
 
+const notFoundPath = path.join(outputDirectory, "404.html");
+const notFoundHtml = await readFile(notFoundPath, "utf8");
+const duplicateBasePathRecovery = `<script>(function(){var b="${basePath}";var d=b+b;if(location.pathname===d||location.pathname.startsWith(d+"/")){location.replace(b+location.pathname.slice(d.length)+location.search+location.hash)}})();</script>`;
+if (!notFoundHtml.includes(duplicateBasePathRecovery)) {
+  await writeFile(notFoundPath, notFoundHtml.replace("</head>", `${duplicateBasePathRecovery}</head>`), "utf8");
+}
+
 const remainingUnprefixed = [];
 for (const file of files) {
   if (!textExtensions.has(path.extname(file))) continue;
