@@ -1028,5 +1028,7 @@ body:has(.apogee-inner-backdrop) :is(.work-title-row>div>span,.tile-meta span,.b
 .series-bilibili-link{position:absolute;right:22px;bottom:88px;z-index:7;display:flex;align-items:center;gap:7px;min-height:40px;padding:0 14px;border-radius:10px;background:rgba(12,13,17,.82);color:rgba(255,255,255,.72);font-size:10px;font-weight:550;letter-spacing:.04em;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background .18s ease,color .18s ease,transform .18s ease}
 .series-bilibili-link b{color:#f2f3f5;font-size:11px;font-weight:700;letter-spacing:.07em}.series-bilibili-link svg{width:14px;height:14px;stroke-width:1.7}
 .series-bilibili-link:hover,.series-bilibili-link:focus-visible{background:#fb7299;color:#fff;transform:translateY(-2px)}.series-bilibili-link:hover b,.series-bilibili-link:focus-visible b{color:#fff}.series-bilibili-link:focus-visible{outline:2px solid rgba(255,255,255,.86);outline-offset:3px}
+.series-showcase-bilibili-link{bottom:18px}
 @media(max-width:760px){.series-bilibili-link{right:12px;bottom:68px;min-height:36px;padding:0 11px}.series-bilibili-link span{display:none}.series-bilibili-link b{font-size:9px}}
+@media(max-width:760px){.series-showcase-bilibili-link{bottom:12px}}
 
