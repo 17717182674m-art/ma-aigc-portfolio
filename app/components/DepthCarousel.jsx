@@ -9,7 +9,7 @@ const normalizeItem = (item) =>
   typeof item === "string" ? { image: item, alt: "" } : item;
 
 export default function DepthCarousel({
-  items = [],
+  items = /** @type {Array<{image: string, alt?: string}>} */ ([]),
   cardWidth = 300,
   cardHeight = 380,
   radius = 8,
@@ -31,7 +31,7 @@ export default function DepthCarousel({
   showIndicators = true,
   initialIndex = 0,
   storageKey,
-  onChange,
+  onChange = undefined,
   onItemClick,
   className = "",
 }) {
