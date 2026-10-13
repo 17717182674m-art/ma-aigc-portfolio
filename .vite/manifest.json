@@ -1,6 +1,6 @@
 {
-  "_AnimatePresence-CDC0j8y9.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AnimatePresence-CDC0j8y9.js",
+  "_AnimatePresence-DFPcHwc8.js": {
+    "file": "ma-aigc-portfolio/_next/static/chunks/AnimatePresence-DFPcHwc8.js",
     "name": "AnimatePresence",
     "imports": [
       "_rolldown-runtime-DafsISOH.js",
@@ -33,8 +33,8 @@
       "_record-DAl5a1ZI.js"
     ]
   },
-  "_app-rsc-cache-busting-CGLHWjNJ.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/app-rsc-cache-busting-CGLHWjNJ.js",
+  "_app-rsc-cache-busting-IA5GCGzt.js": {
+    "file": "ma-aigc-portfolio/_next/static/chunks/app-rsc-cache-busting-IA5GCGzt.js",
     "name": "app-rsc-cache-busting",
     "imports": [
       "_rolldown-runtime-DafsISOH.js",
@@ -122,7 +122,7 @@
     ]
   },
   "app/AiSeriesArchivePages.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AiSeriesArchivePages-B8opdtSg.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AiSeriesArchivePages-BSN200Q-.js",
     "name": "AiSeriesArchivePages",
     "src": "app/AiSeriesArchivePages.tsx",
     "isDynamicEntry": true,
@@ -137,7 +137,7 @@
     ]
   },
   "app/AiSeriesPage.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AiSeriesPage-oQOOQXRK.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AiSeriesPage-4iwm-qO2.js",
     "name": "AiSeriesPage",
     "src": "app/AiSeriesPage.tsx",
     "isDynamicEntry": true,
@@ -153,7 +153,7 @@
     ]
   },
   "app/AiVisualDesignPage.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AiVisualDesignPage-4_yKmGBh.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AiVisualDesignPage-awhNTcWD.js",
     "name": "AiVisualDesignPage",
     "src": "app/AiVisualDesignPage.tsx",
     "isDynamicEntry": true,
@@ -162,7 +162,7 @@
       "virtual:vinext-app-browser-entry",
       "app/WorkPage.tsx",
       "app/components/MotionSystem.tsx",
-      "_AnimatePresence-CDC0j8y9.js",
+      "_AnimatePresence-DFPcHwc8.js",
       "_sparkles-B952GCkL.js",
       "_framework-Dw2rIRhm.js"
     ],
@@ -171,7 +171,7 @@
     ]
   },
   "app/AiVisualThemePage.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AiVisualThemePage-DUJsOiQx.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AiVisualThemePage-B5r0wYZd.js",
     "name": "AiVisualThemePage",
     "src": "app/AiVisualThemePage.tsx",
     "isDynamicEntry": true,
@@ -179,14 +179,14 @@
       "_rolldown-runtime-DafsISOH.js",
       "app/WorkPage.tsx",
       "app/components/MotionSystem.tsx",
-      "_AnimatePresence-CDC0j8y9.js",
+      "_AnimatePresence-DFPcHwc8.js",
       "_sparkles-B952GCkL.js",
       "_x-qKn5bdA_.js",
       "_framework-Dw2rIRhm.js"
     ]
   },
   "app/AigcPortfolio.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/AigcPortfolio-cOVuTQsn.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/AigcPortfolio-DFMhsSWb.js",
     "name": "AigcPortfolio",
     "src": "app/AigcPortfolio.tsx",
     "isDynamicEntry": true,
@@ -200,7 +200,7 @@
     ]
   },
   "app/WorkPage.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/WorkPage-DhfE3Z7k.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/WorkPage-CXRIzmFP.js",
     "name": "WorkPage",
     "src": "app/WorkPage.tsx",
     "isDynamicEntry": true,
@@ -212,7 +212,7 @@
     ]
   },
   "app/components/MotionSystem.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/MotionSystem-DpKTxZSy.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/MotionSystem-hDO7cdv0.js",
     "name": "MotionSystem",
     "src": "app/components/MotionSystem.tsx",
     "isDynamicEntry": true,
@@ -223,7 +223,7 @@
     ]
   },
   "app/components/PortfolioBackdrop.tsx": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/PortfolioBackdrop-YdQr5xoZ.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/PortfolioBackdrop-6YUwgBzY.js",
     "name": "PortfolioBackdrop",
     "src": "app/components/PortfolioBackdrop.tsx",
     "isDynamicEntry": true,
@@ -233,7 +233,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/hybrid-client-route-owner-C42OMjR2.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/hybrid-client-route-owner-Caoj5gMK.js",
     "name": "hybrid-client-route-owner",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js",
     "isDynamicEntry": true,
@@ -244,7 +244,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/layout-segment-context-OMK3zCJY.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/layout-segment-context-CZhet-62.js",
     "name": "layout-segment-context",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -256,7 +256,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/link.js": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/link-COUtZ0r-.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/link-BQ_ZSQkH.js",
     "name": "link",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/link.js",
     "isDynamicEntry": true,
@@ -273,13 +273,13 @@
       "node_modules/.pnpm/vinext@1.0.0-beta.2_@vitejs_46827034ea015a21abf9c268cda9eaa9/node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js",
       "virtual:vinext-app-browser-entry",
       "_app-elements-AYRH1pMP.js",
-      "_app-rsc-cache-busting-CGLHWjNJ.js",
+      "_app-rsc-cache-busting-IA5GCGzt.js",
       "_app-rsc-render-mode-CfzUUb2Q.js",
       "_headers-CL_c71EY.js"
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "ma-aigc-portfolio/_next/static/chunks/index-C5wdnNA4.js",
+    "file": "ma-aigc-portfolio/_next/static/chunks/index-BMELTAkp.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -287,7 +287,7 @@
       "_rolldown-runtime-DafsISOH.js",
       "_framework-Dw2rIRhm.js",
       "_app-elements-AYRH1pMP.js",
-      "_app-rsc-cache-busting-CGLHWjNJ.js",
+      "_app-rsc-cache-busting-IA5GCGzt.js",
       "_headers-CL_c71EY.js",
       "_navigation-errors-BnOoY-Od.js",
       "_hash-QbldWj02.js",
