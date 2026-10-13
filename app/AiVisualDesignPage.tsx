@@ -97,14 +97,16 @@ function BannerRail({
           id: event.pointerId,
           moved: false,
         };
-        rail.setPointerCapture(event.pointerId);
         rail.classList.add("is-dragging");
       }}
         onPointerMove={(event) => {
         const rail = railRef.current;
         const drag = dragRef.current;
         if (!rail || !drag) return;
-        if (Math.abs(event.clientX - drag.x) > 6) drag.moved = true;
+        if (!drag.moved && Math.abs(event.clientX - drag.x) > 6) {
+          drag.moved = true;
+          rail.setPointerCapture(event.pointerId);
+        }
         rail.scrollLeft = drag.scrollLeft - (event.clientX - drag.x);
       }}
         onPointerUp={endDrag}
