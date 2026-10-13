@@ -103,7 +103,7 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
                   {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
                   <video ref={(node) => { videoRefs.current[episodeIndex] = node; }} src={episodeSrc} poster={getAiSeriesPosterSrc(episode.poster)} controls={hasStarted} playsInline preload="metadata" />
                   {!hasStarted && <button type="button" className="series-showcase-play" onClick={() => playPreview(episodeIndex)} aria-label={`播放${project.title}${episode.label}`}><Play aria-hidden="true" /></button>}
-                  {episode.externalUrl && <a className="series-bilibili-link series-showcase-bilibili-link" href={episode.externalUrl} target="_blank" rel="noopener noreferrer" aria-label={`前往 Bilibili 查看${episode.title}完整版`}><span>点击查看</span><b>BILIBILI 完整版</b><ExternalLink aria-hidden="true" /></a>}
+                  {episode.externalUrl && <a className={`series-bilibili-link series-showcase-bilibili-link${episode.externalPlatform === "xiaohongshu" ? " series-xiaohongshu-link" : ""}`} href={episode.externalUrl} target="_blank" rel="noopener noreferrer" aria-label={`前往${episode.externalPlatform === "xiaohongshu" ? "小红书" : "Bilibili"}查看${episode.title}完整版`}><span>点击查看</span><b>{episode.externalPlatform === "xiaohongshu" ? "小红书完整视频" : "BILIBILI 完整版"}</b><ExternalLink aria-hidden="true" /></a>}
                   <span>{episode.label}{project.episodes.length > 1 ? ` · ${String(episodeIndex + 1).padStart(2, "0")} / ${String(project.episodes.length).padStart(2, "0")}` : ""}</span>
                 </div>;
               })}

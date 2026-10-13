@@ -223,8 +223,8 @@ function EpisodePlayer({ episode, index }: { episode: AiSeriesEpisode; index: nu
         />
         <span className="series-episode-label">{episode.label}</span>
         {episode.externalUrl && (
-          <a className="series-bilibili-link" href={episode.externalUrl} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} aria-label={`前往 Bilibili 查看${episode.title}完整版`}>
-            <span>点击查看</span><b>BILIBILI 完整版</b><ExternalLink aria-hidden="true" />
+          <a className={`series-bilibili-link${episode.externalPlatform === "xiaohongshu" ? " series-xiaohongshu-link" : ""}`} href={episode.externalUrl} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} aria-label={`前往${episode.externalPlatform === "xiaohongshu" ? "小红书" : "Bilibili"}查看${episode.title}完整版`}>
+            <span>点击查看</span><b>{episode.externalPlatform === "xiaohongshu" ? "小红书完整视频" : "BILIBILI 完整版"}</b><ExternalLink aria-hidden="true" />
           </a>
         )}
         {!started && (

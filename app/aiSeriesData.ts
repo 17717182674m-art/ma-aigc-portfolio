@@ -6,6 +6,7 @@ export type AiSeriesEpisode = {
   poster: string;
   orientation: "portrait" | "landscape";
   externalUrl?: string;
+  externalPlatform?: "bilibili" | "xiaohongshu";
 };
 
 export const getAiSeriesPosterSrc = (poster: string) =>
@@ -40,7 +41,7 @@ export const aiSeriesCategories: AiSeriesCategory[] = [
         title: "迟来的爱也很甜",
         note: "都市情感短剧",
         episodes: [
-          { title: "迟来的爱也很甜 · 第 08 集", label: "EP.08 · 第八集", duration: "01:16", src: "/ai-series/video/short-drama/01.mp4", poster: "/ai-series/video/short-drama/01.webp", orientation: "portrait" },
+          { title: "迟来的爱也很甜 · 第 08 集", label: "EP.08 · 第八集", duration: "01:16", src: "/ai-series/video/short-drama/01.mp4", poster: "/ai-series/video/short-drama/01.webp", orientation: "portrait", externalPlatform: "xiaohongshu", externalUrl: "https://www.xiaohongshu.com/discovery/item/6acddcc7000000001b02252d?source=webshare&xhsshare=pc_web&xsec_token=ABOlFjGeGV6elcQt77LV6_e04J06YuUYh--C-xZCeDv6w=&xsec_source=pc_share" },
           { title: "迟来的爱也很甜 · 第 09 集", label: "EP.09 · 第九集", duration: "01:12", src: "/ai-series/video/short-drama/02.mp4", poster: "/ai-series/video/short-drama/02.webp", orientation: "portrait" },
         ],
       },
