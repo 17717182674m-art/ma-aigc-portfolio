@@ -23,6 +23,8 @@ export type AiVisualGroup = {
   images: AiVisualImage[];
 };
 
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const createGroupImages = (
   slug: string,
   title: string,
@@ -46,7 +48,7 @@ const ipViGroups: AiVisualGroup[] = [
 
 const createImages = (theme: AiVisualTheme) =>
   Array.from({ length: theme.count }, (_, index) => ({
-    image: `/ai-visual/${theme.slug}/${String(index + 1).padStart(2, "0")}.webp`,
+    image: `${publicBasePath}/ai-visual/${theme.slug}/${String(index + 1).padStart(2, "0")}.webp`,
     alt: `${theme.title}作品 ${String(index + 1).padStart(2, "0")}`,
   }));
 
