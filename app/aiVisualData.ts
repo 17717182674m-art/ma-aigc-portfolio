@@ -35,7 +35,7 @@ const createGroupImages = (
   title,
   description,
   images: Array.from({ length: count }, (_, index) => ({
-    image: `${publicBasePath}/ai-visual/ip-vi/${slug}/${String(index + 1).padStart(2, "0")}.webp`,
+    image: `/ai-visual/ip-vi/${slug}/${String(index + 1).padStart(2, "0")}.webp`,
     alt: `${title} IP 形象设计 ${String(index + 1).padStart(2, "0")}`,
   })),
 });
