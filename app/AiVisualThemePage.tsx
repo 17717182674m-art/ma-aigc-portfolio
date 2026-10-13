@@ -11,7 +11,7 @@ import { AnimatedDivider, ScrollProgress } from "./components/AdvancedDetails";
 import { RevealText, ease } from "./components/MotionSystem";
 import { SiteHeader } from "./WorkPage";
 
-function ThemeLightbox({
+export function ThemeLightbox({
   theme,
   index,
   onClose,
