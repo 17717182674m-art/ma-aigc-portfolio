@@ -993,17 +993,17 @@ body:has(.apogee-inner-backdrop) :is(.work-title-row>div>span,.tile-meta span,.b
 .series-showcase-project-nav>div button span{color:var(--world-accent);font-size:9px;letter-spacing:.08em}
 .series-showcase-project-nav>div button:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.84)}.series-showcase-project-nav>div button.is-active{background:rgba(255,255,255,.09);color:#fff}
 
-.series-showcase-card{display:grid;grid-template-columns:minmax(0,1.48fr) minmax(340px,.82fr);height:clamp(430px,58svh,540px);min-height:0;overflow:hidden;border-radius:30px;background:rgba(8,10,20,.76);box-shadow:0 28px 80px rgba(0,0,0,.2)}
+.series-showcase-card{display:grid;grid-template-columns:minmax(0,1.48fr) minmax(340px,.82fr);grid-template-rows:minmax(0,1fr);height:clamp(430px,58svh,540px);min-height:0;overflow:hidden;border-radius:30px;background:rgba(8,10,20,.76);box-shadow:0 28px 80px rgba(0,0,0,.2)}
 .series-showcase-card.is-assets-expanded{height:auto;grid-template-rows:clamp(430px,58svh,540px) auto}
-.series-showcase-card.has-multiple-episodes{height:auto;align-items:start}.series-showcase-card.has-multiple-episodes.is-assets-expanded{grid-template-rows:auto auto}
-.series-showcase-episode-list{height:100%;min-width:0}.series-showcase-card.has-multiple-episodes .series-showcase-episode-list{display:grid;height:auto;gap:1px;background:rgba(255,255,255,.08)}
+.series-showcase-card.has-multiple-episodes{grid-template-rows:auto;height:auto;align-items:start}.series-showcase-card.has-multiple-episodes.is-assets-expanded{grid-template-rows:auto auto}
+.series-showcase-episode-list{height:100%;min-width:0;min-height:0}.series-showcase-card.has-multiple-episodes .series-showcase-episode-list{display:grid;height:auto;gap:1px;background:rgba(255,255,255,.08)}
 .series-showcase-media{position:relative;min-width:0;min-height:0;height:100%;overflow:hidden;background:#060912}
 .series-showcase-media video{display:block;width:100%;height:100%;min-height:0;object-fit:contain;background:#05070d}
 .series-showcase-card.has-multiple-episodes .series-showcase-media,.series-showcase-card.has-multiple-episodes .series-showcase-media video{height:auto;aspect-ratio:16/9}
 .series-showcase-media>span{position:absolute;left:24px;top:22px;z-index:2;padding:8px 11px;border-radius:9px;background:rgba(5,7,14,.58);color:rgba(255,255,255,.75);font-size:9px;font-weight:650;letter-spacing:.1em;backdrop-filter:blur(10px)}
 .series-showcase-play{position:absolute;left:50%;top:50%;z-index:3;display:grid;place-items:center;width:82px;height:82px;padding:0;border:0;border-radius:50%;background:rgba(246,247,248,.93);color:#11151e;cursor:pointer;transform:translate(-50%,-50%);transition:transform .2s ease,background .2s ease}
 .series-showcase-play:hover{background:#fff;transform:translate(-50%,-50%) scale(1.035)}.series-showcase-play:active{transform:translate(-50%,-50%) scale(.98)}.series-showcase-play svg{width:28px;height:28px;margin-left:4px;fill:currentColor;stroke-width:1.3}
-.series-showcase-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;padding:48px clamp(30px,3.5vw,58px)}
+.series-showcase-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;min-height:0;padding:48px clamp(30px,3.5vw,58px)}
 .series-showcase-kicker{margin-bottom:18px;color:var(--world-accent);font-size:9px;font-weight:700;letter-spacing:.17em}
 .series-showcase-copy h2{margin:0;color:#f3f4f6;font:580 clamp(32px,3vw,48px)/1.08 var(--sans);letter-spacing:-.047em;text-wrap:balance}
 .series-showcase-copy>strong{display:block;margin-top:12px;color:rgba(235,238,244,.42);font-size:11px;font-weight:650;letter-spacing:.13em;line-height:1.45}
