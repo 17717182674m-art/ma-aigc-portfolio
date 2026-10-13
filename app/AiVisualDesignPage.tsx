@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import type { PortfolioItem } from "./portfolioData";
 import { portfolioItems } from "./portfolioData";
 import { aiVisualThemes, type AiVisualImage } from "./aiVisualData";
+import { ThemeLightbox } from "./AiVisualThemePage";
 import DepthCarousel from "./components/DepthCarousel";
 import { AnimatedDivider, ScrollProgress } from "./components/AdvancedDetails";
 import { Button } from "./components/Button";
@@ -19,7 +20,7 @@ function BannerRail({
   storageKey,
 }: {
   images: AiVisualImage[];
-  onOpen: () => void;
+  onOpen: (index: number) => void;
   storageKey: string;
 }) {
   const railRef = useRef<HTMLDivElement>(null);
@@ -123,7 +124,7 @@ function BannerRail({
               sessionStorage.setItem(storageKey, String(index));
             }}
             onClick={() => {
-              if (!suppressClickRef.current) onOpen();
+              if (!suppressClickRef.current) onOpen(index);
             }}
           >
             <img
@@ -244,6 +245,7 @@ export function AiVisualDesignPage({ item }: { item: PortfolioItem }) {
       aiVisualThemes[0].slug
     );
   });
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const activeTheme =
     aiVisualThemes.find((theme) => theme.slug === activeThemeSlug) ?? aiVisualThemes[0];
 
@@ -252,6 +254,7 @@ export function AiVisualDesignPage({ item }: { item: PortfolioItem }) {
   }, [activeTheme.slug, router]);
 
   const selectTheme = (slug: string) => {
+    setSelectedImage(null);
     setActiveThemeSlug(slug);
     sessionStorage.setItem("ai-visual-active-theme", slug);
     history.replaceState(null, "", `#visual-${slug}`);
@@ -261,6 +264,11 @@ export function AiVisualDesignPage({ item }: { item: PortfolioItem }) {
     sessionStorage.setItem("route-scroll:/works/ai-visual-design", String(scrollY));
     beginRouteTransition();
     router.push(`/works/ai-visual-design/${slug}`);
+  };
+
+  const openImage = (image: string) => {
+    const index = activeTheme.images.findIndex((item) => item.image === image);
+    if (index >= 0) setSelectedImage(index);
   };
 
   return (
@@ -332,7 +340,7 @@ export function AiVisualDesignPage({ item }: { item: PortfolioItem }) {
                   {activeTheme.mode === "banner" ? (
                     <BannerRail
                       images={activeTheme.images}
-                      onOpen={() => openTheme(activeTheme.slug)}
+                      onOpen={setSelectedImage}
                       storageKey={`ai-visual-slide-${activeTheme.slug}`}
                     />
                   ) : (
@@ -352,7 +360,9 @@ export function AiVisualDesignPage({ item }: { item: PortfolioItem }) {
                       autoplay={false}
                       loop
                       storageKey={`ai-visual-slide-${activeTheme.slug}`}
-                      onItemClick={() => openTheme(activeTheme.slug)}
+                      onItemClick={(_item: unknown, index: number) =>
+                        openImage(activeTheme.previewImages[index].image)
+                      }
                     />
                   )}
                 </div>
@@ -363,6 +373,18 @@ export function AiVisualDesignPage({ item }: { item: PortfolioItem }) {
 
         <NextProjectBanner item={next} number="02" />
       </main>
+      <ThemeLightbox
+        theme={activeTheme}
+        index={selectedImage}
+        onClose={() => setSelectedImage(null)}
+        onStep={(step) =>
+          setSelectedImage((current) =>
+            current === null
+              ? null
+              : (current + step + activeTheme.images.length) % activeTheme.images.length,
+          )
+        }
+      />
     </>
   );
 }
