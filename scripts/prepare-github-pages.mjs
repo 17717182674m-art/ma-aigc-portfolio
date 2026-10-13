@@ -3,7 +3,7 @@ import path from "node:path";
 
 const outputDirectory = path.resolve("dist/client");
 const basePath = "/ma-aigc-portfolio";
-const textExtensions = new Set([".css", ".html", ".js", ".json", ".txt", ".xml"]);
+const textExtensions = new Set([".css", ".html", ".js", ".json", ".rsc", ".txt", ".xml"]);
 const publicAssetPaths = [
   "/ai-series/assets/",
   "/ai-series/video/",
