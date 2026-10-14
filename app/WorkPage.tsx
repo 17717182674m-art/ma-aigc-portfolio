@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
+import { usePathname } from "next/navigation";
 import type { PortfolioItem } from "./portfolioData";
 import { portfolioItems } from "./portfolioData";
 import {
@@ -33,23 +34,33 @@ export function PortfolioReturnLink({
 }
 
 export function SiteHeader({ backHref, backLabel = "返回上一级" }: { backHref?: string; backLabel?: string }) {
+  const pathname = usePathname();
+  const showFloatingHome = /(?:^|\/)works\/(?:ai-series|ai-visual-design)(?:\/|$)/.test(pathname ?? "");
   return (
-    <header className="inner-header">
-      <InstantRouteLink className="brand" href="/">
-        <Sparkles size={18} /> MZY
-      </InstantRouteLink>
-      <nav>
-        {backHref && (
-          backHref === "/#portfolio" ? (
-            <PortfolioReturnLink className={buttonClassName({ variant: "minimal", size: "sm", className: "inner-back" })}><ArrowLeft size={16} />{backLabel}</PortfolioReturnLink>
-          ) : (
-            <InstantRouteLink className={buttonClassName({ variant: "minimal", size: "sm", className: "inner-back" })} href={backHref}><ArrowLeft size={16} />{backLabel}</InstantRouteLink>
-          )
-        )}
-        <InstantRouteLink href="/">首页</InstantRouteLink>
-        <InstantRouteLink href="/contact">联系方式</InstantRouteLink>
-      </nav>
-    </header>
+    <>
+      {showFloatingHome && (
+        <InstantRouteLink className="floating-home-link" href="/">
+          <ArrowLeft size={17} aria-hidden="true" />
+          <span>返回首页</span>
+        </InstantRouteLink>
+      )}
+      <header className={showFloatingHome ? "inner-header with-floating-home" : "inner-header"}>
+        <InstantRouteLink className="brand" href="/">
+          <Sparkles size={18} /> MZY
+        </InstantRouteLink>
+        <nav>
+          {backHref && (
+            backHref === "/#portfolio" ? (
+              <PortfolioReturnLink className={buttonClassName({ variant: "minimal", size: "sm", className: "inner-back" })}><ArrowLeft size={16} />{backLabel}</PortfolioReturnLink>
+            ) : (
+              <InstantRouteLink className={buttonClassName({ variant: "minimal", size: "sm", className: "inner-back" })} href={backHref}><ArrowLeft size={16} />{backLabel}</InstantRouteLink>
+            )
+          )}
+          <InstantRouteLink href="/">首页</InstantRouteLink>
+          <InstantRouteLink href="/contact">联系方式</InstantRouteLink>
+        </nav>
+      </header>
+    </>
   );
 }
 

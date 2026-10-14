@@ -67,9 +67,9 @@ manifest["short-drama/heiress-return"].characters.push(
 );
 set(
   "short-drama/time-out-apocalypse",
-  ["《Time Out: The Apocalypse》主视觉"],
-  [],
-  [],
+  ["《Time Out: The Apocalypse》主视觉", "阿德里安 · 三视图", "白色幼龙 · 三视图", "黑甲骑士统帅 · 三视图", "金龙 · 三视图", "老国王 · 三视图", "面具女巫 · 三视图", "伊莎贝拉 · 三视图"],
+  ["哥特大教堂大厅 · 四视图", "封印节点大厅 · 四视图", "王宫军械库走廊 · 四视图", "古籍档案馆 · 四视图", "地牢牢房 · 四视图", "悬浮蓝水晶的都城 · 四视图", "红色五芒星笼罩的都城 · 四视图", "燃烧废墟街道 · 四视图"],
+  ["封印古籍 · 四视图", "国王王冠 · 四视图", "龙纹封印石盘 · 四视图", "王室长剑 · 四视图"],
 );
 
 fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);

@@ -380,10 +380,52 @@
       {
         "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-01.webp",
         "label": "《Time Out: The Apocalypse》主视觉"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-02.webp",
+        "label": "阿德里安 · 三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-03.webp",
+        "label": "白色幼龙 · 三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-04.webp",
+        "label": "黑甲骑士统帅 · 三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-05.webp",
+        "label": "金龙 · 三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-06.webp",
+        "label": "老国王 · 三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-07.webp",
+        "label": "面具女巫 · 三视图"
+      },
+      {
+        "src": "/ai-series/assets/short-drama/time-out-apocalypse/characters-08.webp",
+        "label": "伊莎贝拉 · 三视图"
       }
     ],
-    "scenes": [],
-    "props": []
+    "scenes": [
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/scenes-01.webp", "label": "哥特大教堂大厅 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/scenes-02.webp", "label": "封印节点大厅 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/scenes-03.webp", "label": "王宫军械库走廊 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/scenes-04.webp", "label": "古籍档案馆 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/scenes-05.webp", "label": "地牢牢房 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/scenes-06.webp", "label": "悬浮蓝水晶的都城 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/scenes-07.webp", "label": "红色五芒星笼罩的都城 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/scenes-08.webp", "label": "燃烧废墟街道 · 四视图" }
+    ],
+    "props": [
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/props-01.webp", "label": "封印古籍 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/props-02.webp", "label": "国王王冠 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/props-03.webp", "label": "龙纹封印石盘 · 四视图" },
+      { "src": "/ai-series/assets/short-drama/time-out-apocalypse/props-04.webp", "label": "王室长剑 · 四视图" }
+    ]
   },
   "tvc/ice-age": {
     "characters": [

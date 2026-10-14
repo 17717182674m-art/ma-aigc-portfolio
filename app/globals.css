@@ -989,6 +989,7 @@ body:has(.apogee-inner-backdrop) :is(.work-title-row>div>span,.tile-meta span,.b
 .series-showcase-project-nav>button{display:grid;place-items:center;width:40px;height:40px;padding:0;border:0;border-radius:10px;background:rgba(255,255,255,.055);color:rgba(255,255,255,.7);cursor:pointer;transition:background .18s ease,color .18s ease}
 .series-showcase-project-nav>button:hover{background:rgba(255,255,255,.1);color:#fff}.series-showcase-project-nav>button svg{width:17px;height:17px;stroke-width:1.7}
 .series-showcase-project-nav>div{display:flex;gap:6px;min-width:0;overflow-x:auto;padding:3px;scrollbar-width:none}.series-showcase-project-nav>div::-webkit-scrollbar{display:none}
+.series-showcase-project-nav>div{cursor:grab;user-select:none;-webkit-user-select:none}.series-showcase-project-nav>div button{cursor:grab}.series-showcase-project-nav>div.is-dragging,.series-showcase-project-nav>div.is-dragging button{cursor:grabbing;scroll-behavior:auto}
 .series-showcase-project-nav>div button{display:flex;align-items:center;gap:8px;flex:none;min-height:40px;padding:0 14px;border:0;border-radius:9px;background:transparent;color:rgba(235,238,244,.5);font:550 11px/1 var(--sans);white-space:nowrap;cursor:pointer;transition:background .18s ease,color .18s ease}
 .series-showcase-project-nav>div button span{color:var(--world-accent);font-size:9px;letter-spacing:.08em}
 .series-showcase-project-nav>div button:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.84)}.series-showcase-project-nav>div button.is-active{background:rgba(255,255,255,.09);color:#fff}
@@ -1032,4 +1033,13 @@ body:has(.apogee-inner-backdrop) :is(.work-title-row>div>span,.tile-meta span,.b
 .series-showcase-bilibili-link{bottom:18px}
 @media(max-width:760px){.series-bilibili-link{right:12px;bottom:68px;min-height:36px;padding:0 11px}.series-bilibili-link span{display:none}.series-bilibili-link b{font-size:9px}}
 @media(max-width:760px){.series-showcase-bilibili-link{bottom:12px}}
+
+/* Always-visible return to the portfolio homepage on AI work routes. */
+.floating-home-link{position:fixed;left:24px;top:24px;z-index:1000;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 17px;border:1px solid rgba(255,255,255,.22);border-radius:15px;background:rgba(7,10,22,.76);box-shadow:0 12px 34px rgba(0,0,0,.24);-webkit-backdrop-filter:blur(16px) saturate(120%);backdrop-filter:blur(16px) saturate(120%);color:#f5f6f8;text-decoration:none;font-size:13px;font-weight:650;letter-spacing:.03em;white-space:nowrap;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.floating-home-link:hover{background:rgba(24,31,47,.92);border-color:rgba(255,255,255,.42);transform:translateY(-2px)}
+.floating-home-link:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.work-page>.inner-header.with-floating-home{position:fixed}
+@media(max-width:1600px){.work-page>.inner-header.with-floating-home{right:18px;left:auto;width:calc(100% - 190px);transform:none}}
+@media(max-width:760px){.floating-home-link{left:10px;top:10px;min-height:56px;padding:0 12px;border-radius:15px;font-size:11px}.floating-home-link svg{width:15px;height:15px}.work-page>.inner-header.with-floating-home{right:10px;left:auto;width:calc(100% - 150px);transform:none}.inner-header.with-floating-home .brand{display:none}}
+@media(prefers-reduced-motion:reduce){.floating-home-link{transition:none}}
 

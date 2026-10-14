@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import type { PointerEvent as ReactPointerEvent } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, ExternalLink, Images, Play, Sparkles, X } from "lucide-react";
 import type { PortfolioItem } from "./portfolioData";
@@ -20,6 +21,9 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
   const [storyOpen, setStoryOpen] = useState(false);
   const [assetsExpanded, setAssetsExpanded] = useState(false);
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
+  const projectNavRef = useRef<HTMLDivElement | null>(null);
+  const projectDragRef = useRef<{ pointerId: number; startX: number; startScrollLeft: number; active: boolean } | null>(null);
+  const suppressProjectClickRef = useRef(false);
   const category = aiSeriesCategories[categoryIndex];
   const project = category.projects[projectIndex];
   const story = category.slug === "tvc" ? undefined : aiSeriesStories[`${category.slug}/${project.slug}`];
@@ -48,6 +52,19 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
     };
   }, [storyOpen]);
 
+  useEffect(() => {
+    const nav = projectNavRef.current;
+    const active = nav?.querySelector<HTMLButtonElement>('button[aria-selected="true"]');
+    if (!nav || !active) return;
+    const navBounds = nav.getBoundingClientRect();
+    const activeBounds = active.getBoundingClientRect();
+    if (activeBounds.left >= navBounds.left && activeBounds.right <= navBounds.right) return;
+    nav.scrollTo({
+      left: nav.scrollLeft + activeBounds.left - navBounds.left - (nav.clientWidth - activeBounds.width) / 2,
+      behavior: "smooth",
+    });
+  }, [categoryIndex, projectIndex]);
+
   const chooseCategory = (index: number) => {
     setCategoryIndex(index);
     setProjectIndex(0);
@@ -62,6 +79,31 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
     setAssetsExpanded(false);
   };
   const stepProject = (direction: -1 | 1) => chooseProject((projectIndex + direction + category.projects.length) % category.projects.length);
+  const startProjectDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (event.pointerType !== "mouse" || event.button !== 0 || event.currentTarget.scrollWidth <= event.currentTarget.clientWidth) return;
+    suppressProjectClickRef.current = false;
+    projectDragRef.current = { pointerId: event.pointerId, startX: event.clientX, startScrollLeft: event.currentTarget.scrollLeft, active: false };
+  };
+  const moveProjectDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const drag = projectDragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    const distance = event.clientX - drag.startX;
+    if (!drag.active && Math.abs(distance) < 6) return;
+    if (!drag.active) {
+      drag.active = true;
+      suppressProjectClickRef.current = true;
+      event.currentTarget.setPointerCapture(event.pointerId);
+      event.currentTarget.classList.add("is-dragging");
+    }
+    event.preventDefault();
+    event.currentTarget.scrollLeft = drag.startScrollLeft - distance;
+  };
+  const stopProjectDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (projectDragRef.current?.pointerId !== event.pointerId) return;
+    projectDragRef.current = null;
+    event.currentTarget.classList.remove("is-dragging");
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+  };
   const playPreview = async (index: number) => {
     videoRefs.current.forEach((video, videoIndex) => videoIndex !== index && video?.pause());
     setStartedEpisode(index);
@@ -87,7 +129,7 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
           </div>
           <div className="series-showcase-project-nav" aria-label={`${category.title}项目选择`}>
             <button type="button" onClick={() => stepProject(-1)} aria-label="上一个项目"><ArrowLeft aria-hidden="true" /></button>
-            <div role="tablist" aria-label="项目列表">
+            <div ref={projectNavRef} role="tablist" aria-label="项目列表，可按住鼠标左右拖动" onPointerDown={startProjectDrag} onPointerMove={moveProjectDrag} onPointerUp={stopProjectDrag} onPointerCancel={stopProjectDrag} onLostPointerCapture={stopProjectDrag} onClickCapture={(event) => { if (suppressProjectClickRef.current) { event.preventDefault(); event.stopPropagation(); suppressProjectClickRef.current = false; } }}>
               {category.projects.map((entry, index) => <button type="button" role="tab" aria-selected={projectIndex === index} className={projectIndex === index ? "is-active" : ""} onClick={() => chooseProject(index)} key={entry.slug}><span>{String(index + 1).padStart(2, "0")}</span>{entry.title}</button>)}
             </div>
             <button type="button" onClick={() => stepProject(1)} aria-label="下一个项目"><ArrowRight aria-hidden="true" /></button>
