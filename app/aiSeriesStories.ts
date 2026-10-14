@@ -61,12 +61,6 @@ const videoVerifiedStories: Record<string, AiSeriesStory> = {
     detail: "短片从手机清单、超市停车场和纸袋里的日常物件开始。回到家后，窗外的蓝色孢子与陌生生物逐步侵入现实，熟悉的人出现异变，新闻画面最终确认地外文明已经抵达。日常生活的细节越真实，突如其来的失控就越具有压迫感。",
     theme: "世界改变往往没有预告，它可能从最普通的一次回家开始。",
   },
-  "ai-short-video/working-cat": {
-    en: "A CAT AT WORK",
-    summary: "一只穿衬衫、打领带的小猫完成起床、通勤、开会和下班，把人类职场的一天过得认真又荒诞。",
-    detail: "短片以拟人化日常串联完整的一天：小猫在餐桌吃早餐、等电梯、刷卡进公司、敲键盘、参加会议，最后拖着疲惫的身体回到家。真实办公空间与微缩角色形成反差，让熟悉的上班流程变成轻松而有共鸣的观察。",
-    theme: "再小的身体，也装得下一个完整而疲惫的工作日。",
-  },
   "ai-short-video/forgotten-bureau": {
     en: "THE BUREAU OF FORGOTTEN THINGS",
     summary: "一对恋人走进管理记忆的机构，在一张申请表上决定保留还是删除彼此，也让负责审批的人重新面对自己的遗憾。",
@@ -201,12 +195,6 @@ const aiSeriesStoryDrafts: Record<string, AiSeriesStory> = {
     summary: "异常天象撕开城市上空，普通人被迫面对一场无法解释的外星降临。",
     detail: "城市从熟悉的日常逐渐滑向失序：信号中断、天空异变、巨大结构出现。镜头跟随个体穿过混乱现场，在宏大灾难与私人选择之间建立联系。未知力量真正改变的，不只是城市，也包括人们彼此看待的方式。",
     theme: "面对未知时，选择比答案更能定义一个人。",
-  },
-  "ai-short-video/working-cat": {
-    en: "A CAT AT WORK",
-    summary: "一只猫认真度过它的第一个工作日，把成人世界的忙碌变成温柔喜剧。",
-    detail: "从通勤、打卡到应对临时任务，猫咪用自己的节奏体验人类职场。熟悉的办公室细节因为主角身份而产生反差，轻松叙事背后也保留了对劳动、陪伴与小小成就感的观察。",
-    theme: "再普通的一天，也值得被认真生活。",
   },
   "ai-short-video/forgotten-bureau": {
     en: "THE BUREAU OF FORGOTTEN THINGS",

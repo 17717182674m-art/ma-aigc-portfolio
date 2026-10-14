@@ -738,61 +738,6 @@
     ],
     "props": []
   },
-  "ai-short-video/working-cat": {
-    "characters": [
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-01.webp",
-        "label": "人物资产 01"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-02.webp",
-        "label": "人物资产 02"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-03.webp",
-        "label": "人物资产 03"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-04.webp",
-        "label": "人物资产 04"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-05.webp",
-        "label": "人物资产 05"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-06.webp",
-        "label": "人物资产 06"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-07.webp",
-        "label": "人物资产 07"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-08.webp",
-        "label": "人物资产 08"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-09.webp",
-        "label": "人物资产 09"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-10.webp",
-        "label": "人物资产 10"
-      },
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/characters-11.webp",
-        "label": "人物资产 11"
-      }
-    ],
-    "scenes": [
-      {
-        "src": "/ai-series/assets/ai-short-video/working-cat/scenes-01.webp",
-        "label": "场景资产 01"
-      }
-    ],
-    "props": []
-  },
   "ai-short-video/visual-experiment": {
     "characters": [
       {
