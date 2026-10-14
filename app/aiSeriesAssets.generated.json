@@ -738,6 +738,30 @@
     ],
     "props": []
   },
+  "tvc/headphones": {
+    "characters": [
+      {
+        "src": "/ai-series/assets/tvc/headphones/characters-01.webp",
+        "label": "黑银造型模特 · 四格设定"
+      }
+    ],
+    "scenes": [
+      {
+        "src": "/ai-series/assets/tvc/headphones/scenes-01.webp",
+        "label": "金属展台 · 正视场景"
+      },
+      {
+        "src": "/ai-series/assets/tvc/headphones/scenes-02.webp",
+        "label": "金属展台 · 俯视场景"
+      }
+    ],
+    "props": [
+      {
+        "src": "/ai-series/assets/tvc/headphones/props-01.webp",
+        "label": "深灰无线耳机 · 六视图"
+      }
+    ]
+  },
   "ai-short-video/visual-experiment": {
     "characters": [
       {
