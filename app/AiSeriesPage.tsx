@@ -9,7 +9,9 @@ import { portfolioItems } from "./portfolioData";
 import { aiSeriesCategories, getAiSeriesPosterSrc } from "./aiSeriesData";
 import { aiSeriesStories } from "./aiSeriesStories";
 import { aiSeriesAssets } from "./aiSeriesAssetCatalog";
+import { portfolioAssetUrl } from "./portfolioAssetUrl";
 import { AnimatedDivider, ScrollProgress } from "./components/AdvancedDetails";
+import { SeriesAssetLightbox } from "./components/SeriesAssetLightbox";
 import { RevealText, ease } from "./components/MotionSystem";
 import { NextProjectBanner, SiteHeader } from "./WorkPage";
 
@@ -20,6 +22,7 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
   const [startedEpisode, setStartedEpisode] = useState<number | null>(null);
   const [storyOpen, setStoryOpen] = useState(false);
   const [assetsExpanded, setAssetsExpanded] = useState(false);
+  const [selectedAsset, setSelectedAsset] = useState<number | null>(null);
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
   const projectNavRef = useRef<HTMLDivElement | null>(null);
   const projectDragRef = useRef<{ pointerId: number; startX: number; startScrollLeft: number; active: boolean } | null>(null);
@@ -71,12 +74,14 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
     setStartedEpisode(null);
     setStoryOpen(false);
     setAssetsExpanded(false);
+    setSelectedAsset(null);
   };
   const chooseProject = (index: number) => {
     setProjectIndex(index);
     setStartedEpisode(null);
     setStoryOpen(false);
     setAssetsExpanded(false);
+    setSelectedAsset(null);
   };
   const stepProject = (direction: -1 | 1) => chooseProject((projectIndex + direction + category.projects.length) % category.projects.length);
   const startProjectDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
@@ -155,13 +160,13 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
               <h2>{project.title}</h2>
               <strong>{story?.en ?? project.note}</strong>
               <p>{story?.summary ?? project.note}</p>
-              {!assetsExpanded && storyImages.length > 0 && <div className="series-showcase-thumbs">{storyImages.slice(0, 3).map((asset) => <a href={asset.src} target="_blank" rel="noreferrer" aria-label={`查看${asset.label}原图`} key={asset.src}><img src={asset.src} alt={asset.label} loading="lazy" decoding="async" /></a>)}</div>}
+              {!assetsExpanded && storyImages.length > 0 && <div className="series-showcase-thumbs">{storyImages.slice(0, 3).map((asset, index) => <button type="button" onClick={() => setSelectedAsset(index)} aria-label={`预览${asset.label}`} key={asset.src}><img src={portfolioAssetUrl(asset.src)} alt={asset.label} loading="lazy" decoding="async" /></button>)}</div>}
               <div className="series-showcase-actions">
                 {storyImages.length > 3 && <button type="button" className="series-showcase-assets-toggle" aria-expanded={assetsExpanded} aria-controls={`${category.slug}-${project.slug}-assets`} onClick={() => setAssetsExpanded((current) => !current)}><Images aria-hidden="true" /><span>{assetsExpanded ? "收起资产" : `展开全部资产 · ${String(storyImages.length).padStart(2, "0")}`}</span><ChevronDown aria-hidden="true" /></button>}
                 {story && <button type="button" className="series-showcase-story" onClick={() => setStoryOpen(true)}><BookOpen aria-hidden="true" /><span>查看故事设定</span><ArrowRight aria-hidden="true" /></button>}
               </div>
             </div>
-            {assetsExpanded && <motion.section className="series-showcase-assets-panel" id={`${category.slug}-${project.slug}-assets`} aria-label={`${project.title}全部资产`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.24, ease }}><header><span>PRODUCTION ASSETS</span><h3>全部资产 · {String(storyImages.length).padStart(2, "0")}</h3></header><div>{storyImages.map((asset) => <a href={asset.src} target="_blank" rel="noreferrer" aria-label={`查看${asset.label}原图`} key={asset.src}><img src={asset.src} alt={asset.label} loading="lazy" decoding="async" /><span>{asset.label}</span></a>)}</div></motion.section>}
+            {assetsExpanded && <motion.section className="series-showcase-assets-panel" id={`${category.slug}-${project.slug}-assets`} aria-label={`${project.title}全部资产`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.24, ease }}><header><span>PRODUCTION ASSETS</span><h3>全部资产 · {String(storyImages.length).padStart(2, "0")}</h3></header><div>{storyImages.map((asset, index) => <button type="button" onClick={() => setSelectedAsset(index)} aria-label={`预览${asset.label}`} key={asset.src}><img src={portfolioAssetUrl(asset.src)} alt={asset.label} loading="lazy" decoding="async" /><span>{asset.label}</span></button>)}</div></motion.section>}
           </motion.article>
         </section>
 
@@ -172,9 +177,10 @@ export function AiSeriesPage({ item }: { item: PortfolioItem }) {
             <button type="button" className="series-story-close" onClick={() => setStoryOpen(false)} aria-label="关闭故事设定"><X aria-hidden="true" /></button>
             <header><span>STORY SETTING / {category.en}</span><h2 id="showcase-story-title">{project.title}</h2><strong>{story.en}</strong></header>
             <div className="series-story-body"><span>故事简介</span><p id="showcase-story-description">{story.detail}</p><blockquote><Sparkles aria-hidden="true" /><b>核心主题：</b>{story.theme}</blockquote></div>
-            {storyImages.length > 0 && <div className="series-story-gallery"><h3>设定图 · {String(storyImages.length).padStart(2, "0")}</h3><div>{storyImages.map((asset) => <a href={asset.src} target="_blank" rel="noreferrer" key={asset.src}><img src={asset.src} alt={asset.label} loading="lazy" decoding="async" /><span>{asset.label}</span></a>)}</div></div>}
+            {storyImages.length > 0 && <div className="series-story-gallery"><h3>设定图 · {String(storyImages.length).padStart(2, "0")}</h3><div>{storyImages.map((asset, index) => <button type="button" onClick={() => setSelectedAsset(index)} aria-label={`预览${asset.label}`} key={asset.src}><img src={portfolioAssetUrl(asset.src)} alt={asset.label} loading="lazy" decoding="async" /><span>{asset.label}</span></button>)}</div></div>}
           </section>
         </div>}
+        <SeriesAssetLightbox assets={storyImages} selectedIndex={selectedAsset} onClose={() => setSelectedAsset(null)} onSelect={setSelectedAsset} />
       </main>
     </>
   );

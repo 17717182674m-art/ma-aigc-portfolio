@@ -6,7 +6,9 @@ import { ArrowRight, BookOpen, ExternalLink, Layers3, Maximize2, Pause, Play, Sp
 import { getAiSeriesPosterSrc, type AiSeriesCategory, type AiSeriesEpisode, type AiSeriesProject } from "./aiSeriesData";
 import { aiSeriesStories } from "./aiSeriesStories";
 import { aiSeriesAssets } from "./aiSeriesAssetCatalog";
+import { portfolioAssetUrl } from "./portfolioAssetUrl";
 import { ScrollProgress } from "./components/AdvancedDetails";
+import { SeriesAssetLightbox } from "./components/SeriesAssetLightbox";
 import { InstantRouteLink, RevealText, ease } from "./components/MotionSystem";
 import { SiteHeader } from "./WorkPage";
 import { Button } from "./components/Button";
@@ -271,6 +273,7 @@ function EpisodePlayer({ episode, index }: { episode: AiSeriesEpisode; index: nu
 }
 
 function ProjectAssetGallery({ category, project }: { category: AiSeriesCategory; project: AiSeriesProject }) {
+  const [selectedAsset, setSelectedAsset] = useState<number | null>(null);
   const assets = aiSeriesAssets[`${category.slug}/${project.slug}`];
   if (!assets) return null;
   const groups = [
@@ -280,6 +283,7 @@ function ProjectAssetGallery({ category, project }: { category: AiSeriesCategory
   ];
   const total = groups.reduce((sum, group) => sum + assets[group.key].length, 0);
   if (total === 0) return null;
+  const allAssets = groups.flatMap((group) => assets[group.key]);
 
   return (
     <section className="series-assets" aria-labelledby="series-assets-title">
@@ -301,23 +305,25 @@ function ProjectAssetGallery({ category, project }: { category: AiSeriesCategory
             {assets[group.key].length > 0 ? (
               <div className="series-asset-grid">
                 {assets[group.key].map((asset, index) => (
-                  <a href={asset.src} target="_blank" rel="noreferrer" key={asset.src} aria-label={`查看${asset.label}原图`}>
-                    <img src={asset.src} alt={asset.label} loading="lazy" decoding="async" />
+                  <button type="button" onClick={() => setSelectedAsset(allAssets.findIndex((entry) => entry.src === asset.src))} key={asset.src} aria-label={`预览${asset.label}`}>
+                    <img src={portfolioAssetUrl(asset.src)} alt={asset.label} loading="lazy" decoding="async" />
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <em>{asset.label}</em>
-                  </a>
+                  </button>
                 ))}
               </div>
             ) : <p className="series-assets-empty">该作品暂无独立{group.title}设定图</p>}
           </section>
         ))}
       </div>
+      <SeriesAssetLightbox assets={allAssets} selectedIndex={selectedAsset} onClose={() => setSelectedAsset(null)} onSelect={setSelectedAsset} />
     </section>
   );
 }
 
 function ProjectStorySetting({ category, project }: { category: AiSeriesCategory; project: AiSeriesProject }) {
   const [open, setOpen] = useState(false);
+  const [selectedAsset, setSelectedAsset] = useState<number | null>(null);
   const story = category.slug === "tvc" ? undefined : aiSeriesStories[`${category.slug}/${project.slug}`];
   const assets = aiSeriesAssets[`${category.slug}/${project.slug}`];
   const storyImages = useMemo(() => {
@@ -361,7 +367,7 @@ function ProjectStorySetting({ category, project }: { category: AiSeriesCategory
         <p>{story.summary}</p>
         {storyImages.length > 0 && (
           <div className="series-story-thumbs" aria-label="故事设定图预览">
-            {storyImages.slice(0, 3).map((asset) => <img key={asset.src} src={asset.src} alt={asset.label} loading="lazy" decoding="async" />)}
+            {storyImages.slice(0, 3).map((asset) => <img key={asset.src} src={portfolioAssetUrl(asset.src)} alt={asset.label} loading="lazy" decoding="async" />)}
           </div>
         )}
         <button type="button" className="series-story-open" onClick={() => setOpen(true)} aria-haspopup="dialog">
@@ -388,12 +394,13 @@ function ProjectStorySetting({ category, project }: { category: AiSeriesCategory
             {storyImages.length > 0 && (
               <div className="series-story-gallery" aria-label="设定图">
                 <h3>设定图 · {String(storyImages.length).padStart(2, "0")}</h3>
-                <div>{storyImages.map((asset) => <a href={asset.src} target="_blank" rel="noreferrer" key={asset.src}><img src={asset.src} alt={asset.label} loading="lazy" decoding="async" /><span>{asset.label}</span></a>)}</div>
+                <div>{storyImages.map((asset, index) => <button type="button" onClick={() => setSelectedAsset(index)} aria-label={`预览${asset.label}`} key={asset.src}><img src={portfolioAssetUrl(asset.src)} alt={asset.label} loading="lazy" decoding="async" /><span>{asset.label}</span></button>)}</div>
               </div>
             )}
           </section>
         </div>
       )}
+      <SeriesAssetLightbox assets={storyImages} selectedIndex={selectedAsset} onClose={() => setSelectedAsset(null)} onSelect={setSelectedAsset} />
     </section>
   );
 }

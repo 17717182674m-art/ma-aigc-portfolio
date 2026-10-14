@@ -51,9 +51,9 @@ export function SiteHeader({ backHref, backLabel = "返回上一级" }: { backHr
         <nav>
           {backHref && (
             backHref === "/#portfolio" ? (
-              <PortfolioReturnLink className={buttonClassName({ variant: "minimal", size: "sm", className: "inner-back" })}><ArrowLeft size={16} />{backLabel}</PortfolioReturnLink>
+              <PortfolioReturnLink className={buttonClassName({ variant: "minimal", size: "sm", className: "inner-back" })}><ArrowLeft size={16} /><span className="inner-back-label">{backLabel}</span><span className="inner-back-label-mobile" aria-hidden="true">返回</span></PortfolioReturnLink>
             ) : (
-              <InstantRouteLink className={buttonClassName({ variant: "minimal", size: "sm", className: "inner-back" })} href={backHref}><ArrowLeft size={16} />{backLabel}</InstantRouteLink>
+              <InstantRouteLink className={buttonClassName({ variant: "minimal", size: "sm", className: "inner-back" })} href={backHref}><ArrowLeft size={16} /><span className="inner-back-label">{backLabel}</span><span className="inner-back-label-mobile" aria-hidden="true">返回</span></InstantRouteLink>
             )
           )}
           <InstantRouteLink href="/">首页</InstantRouteLink>
