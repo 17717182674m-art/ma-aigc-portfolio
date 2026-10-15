@@ -125,7 +125,7 @@ export const aiSeriesCategories: AiSeriesCategory[] = [
       { slug: "crazy-water-world", title: "疯狂水世界", note: "概念场景广告", episodes: [{ title: "疯狂水世界", label: "完整版", duration: "00:16", src: "/ai-series/video/tvc/05.mp4", poster: "/ai-series/video/tvc/05.webp", orientation: "portrait", externalUrl: "https://www.bilibili.com/video/BV1MWps6VETF" }] },
       { slug: "blank-fragrance", title: "留白香氛", note: "香氛品牌短片", episodes: [{ title: "留白香氛", label: "完整版", duration: "01:07", src: "/ai-series/video/tvc/06.mp4", poster: "/ai-series/video/tvc/06.webp", orientation: "landscape", externalUrl: "https://www.bilibili.com/video/BV1MWps6VECg" }] },
       { slug: "perfume", title: "香水广告", note: "香水产品广告", episodes: [{ title: "香水广告", label: "完整版", duration: "00:20", src: "/ai-series/video/tvc/07.mp4", poster: "/ai-series/video/tvc/07.webp", orientation: "portrait", externalUrl: "https://www.bilibili.com/video/BV1uHps6yEnM" }] },
-      { slug: "headphones", title: "耳机广告", note: "无线头戴式耳机 · 黑银未来感产品短片", episodes: [{ title: "耳机广告", label: "完整版", duration: "00:19", src: "/ai-series/video/tvc/headphones.mp4", poster: "/ai-series/video/tvc/headphones.webp", orientation: "portrait" }] },
+      { slug: "headphones", title: "耳机广告", note: "无线头戴式耳机 · 黑银未来感产品短片", episodes: [{ title: "耳机广告", label: "完整版", duration: "00:19", src: "/ai-series/video/tvc/headphones.mp4", poster: "/ai-series/video/tvc/headphones.webp", orientation: "portrait", externalPlatform: "bilibili", externalUrl: "https://www.bilibili.com/video/BV1DPJr6JE31" }] },
     ],
   },
   {
